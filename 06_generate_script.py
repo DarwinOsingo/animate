@@ -27,9 +27,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from retrieval import retrieve_context, _approx_tokens
 
 OLLAMA_URL   = "http://localhost:11434/api/generate"
-MODEL        = "phi4"          # change to your exact ollama model name if different
+MODEL        = "qwen3:4b"
 BLENDER_BIN  = os.path.expanduser("~/blender51/blender")
-TIMEOUT      = 120             # seconds to wait for Phi-4 response
+TIMEOUT      = 300             # seconds to wait for model response
 
 
 # ── System prompt ─────────────────────────────────────────────────────────────
@@ -90,10 +90,11 @@ def call_phi4(prompt: str) -> str | None:
         "system": SYSTEM_PROMPT,
         "stream": False,
         "options": {
-            "temperature": 0.2,    # low temp for code — deterministic
+            "temperature": 0.2,
             "top_p": 0.9,
-            "num_ctx": 4096,       # context window
-            "num_predict": 2048,   # max output tokens
+            "num_ctx": 4096,
+            "num_predict": 2048,
+            "think": False,        # disable qwen3 thinking mode — much faster
         },
     }
     try:
