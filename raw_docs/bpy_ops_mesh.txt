@@ -1,0 +1,10074 @@
+MODULE: bpy.ops.mesh
+SOURCE: https://docs.blender.org/api/5.1/bpy.ops.mesh.html
+
+Contents
+Menu
+Expand
+Light mode
+Dark mode
+Auto light/dark, in light mode
+Auto light/dark, in dark mode
+Hide navigation sidebar
+Hide table of contents sidebar
+Skip to content
+Toggle site navigation sidebar
+Blender Python API
+Toggle Light / Dark / Auto color theme
+Toggle table of contents sidebar
+Blender Python API
+Documentation
+Quickstart
+API Overview
+API Reference Usage
+Best Practice
+Tips and Tricks
+Gotchas
+Toggle navigation of Gotchas
+Troubleshooting Errors & Crashes
+Python Threads are Not Supported
+Internal Data & Their Python Objects
+Using Operators
+Modes and Mesh Access
+Bones & Armatures
+File Paths & String Encoding
+Advanced
+Toggle navigation of Advanced
+Blender as a Python Module
+Change Log
+Contribute Documentation
+Application Modules
+Context Access (bpy.context)
+Data Access (bpy.data)
+Message Bus (bpy.msgbus)
+Operators (bpy.ops)
+Toggle navigation of Operators (bpy.ops)
+Action Operators
+Anim Operators
+Armature Operators
+Asset Operators
+Boid Operators
+Brush Operators
+Buttons Operators
+Cachefile Operators
+Camera Operators
+Clip Operators
+Cloth Operators
+Collection Operators
+Console Operators
+Constraint Operators
+Curve Operators
+Curves Operators
+Cycles Operators
+Dpaint Operators
+Ed Operators
+Export Anim Operators
+Export Scene Operators
+Extensions Operators
+File Operators
+Fluid Operators
+Font Operators
+Geometry Operators
+Gizmogroup Operators
+Gpencil Operators
+Graph Operators
+Grease Pencil Operators
+Image Operators
+Import Anim Operators
+Import Curve Operators
+Import Scene Operators
+Info Operators
+Lattice Operators
+Marker Operators
+Mask Operators
+Material Operators
+Mball Operators
+Mesh Operators
+Nla Operators
+Node Operators
+Object Operators
+Outliner Operators
+Paint Operators
+Paintcurve Operators
+Palette Operators
+Particle Operators
+Pointcloud Operators
+Pose Operators
+Poselib Operators
+Preferences Operators
+Ptcache Operators
+Render Operators
+Rigidbody Operators
+Scene Operators
+Screen Operators
+Script Operators
+Sculpt Operators
+Sculpt Curves Operators
+Sequencer Operators
+Sound Operators
+Spreadsheet Operators
+Surface Operators
+Text Operators
+Text Editor Operators
+Texture Operators
+Transform Operators
+Ui Operators
+Uilist Operators
+Uv Operators
+View2D Operators
+View3D Operators
+Wm Operators
+Workspace Operators
+World Operators
+Types (bpy.types)
+Toggle navigation of Types (bpy.types)
+AOV(bpy_struct)
+AOVs(bpy_prop_collection)
+ASSETBROWSER_UL_metadata_tags(UIList)
+Action(ID)
+ActionChannelbag(bpy_struct)
+ActionChannelbagFCurves(bpy_prop_collection)
+ActionChannelbagGroups(bpy_prop_collection)
+ActionChannelbags(bpy_prop_collection)
+ActionConstraint(Constraint)
+ActionGroup(bpy_struct)
+ActionKeyframeStrip(ActionStrip)
+ActionLayer(bpy_struct)
+ActionLayers(bpy_prop_collection)
+ActionPoseMarkers(bpy_prop_collection)
+ActionSlot(bpy_struct)
+ActionSlots(bpy_prop_collection)
+ActionStrip(bpy_struct)
+ActionStrips(bpy_prop_collection)
+AddStrip(EffectStrip)
+Addon(bpy_struct)
+AddonPreferences(bpy_struct)
+Addons(bpy_prop_collection)
+AdjustmentStrip(EffectStrip)
+AlphaOverStrip(EffectStrip)
+AlphaUnderStrip(EffectStrip)
+AnimData(bpy_struct)
+AnimDataDrivers(bpy_prop_collection)
+AnimViz(bpy_struct)
+AnimVizMotionPaths(bpy_struct)
+Annotation(ID)
+AnnotationFrame(bpy_struct)
+AnnotationFrames(bpy_prop_collection)
+AnnotationLayer(bpy_struct)
+AnnotationLayers(bpy_prop_collection)
+AnnotationStroke(bpy_struct)
+AnnotationStrokePoint(bpy_struct)
+AnyType(bpy_struct)
+Area(bpy_struct)
+AreaLight(Light)
+AreaSpaces(bpy_prop_collection)
+Armature(ID)
+ArmatureBones(bpy_prop_collection)
+ArmatureConstraint(Constraint)
+ArmatureConstraintTargets(bpy_prop_collection)
+ArmatureEditBones(bpy_prop_collection)
+ArmatureModifier(Modifier)
+ArrayModifier(Modifier)
+AssetLibraryCollection(bpy_prop_collection)
+AssetLibraryReference(bpy_struct)
+AssetMetaData(bpy_struct)
+AssetRepresentation(bpy_struct)
+AssetShelf(bpy_struct)
+AssetTag(bpy_struct)
+AssetTags(bpy_prop_collection)
+AssetWeakReference(bpy_struct)
+Attribute(bpy_struct)
+AttributeGroupCurves(bpy_prop_collection)
+AttributeGroupGreasePencil(bpy_prop_collection)
+AttributeGroupGreasePencilDrawing(bpy_prop_collection)
+AttributeGroupMesh(bpy_prop_collection)
+AttributeGroupPointCloud(bpy_prop_collection)
+BakeSettings(bpy_struct)
+BevelModifier(Modifier)
+BezierSplinePoint(bpy_struct)
+BlendData(bpy_struct)
+BlendDataActions(bpy_prop_collection)
+BlendDataAnnotations(bpy_prop_collection)
+BlendDataArmatures(bpy_prop_collection)
+BlendDataBrushes(bpy_prop_collection)
+BlendDataCacheFiles(bpy_prop_collection)
+BlendDataCameras(bpy_prop_collection)
+BlendDataCollections(bpy_prop_collection)
+BlendDataCurves(bpy_prop_collection)
+BlendDataFonts(bpy_prop_collection)
+BlendDataGreasePencilsV3(bpy_prop_collection)
+BlendDataHairCurves(bpy_prop_collection)
+BlendDataImages(bpy_prop_collection)
+BlendDataLattices(bpy_prop_collection)
+BlendDataLibraries(bpy_prop_collection)
+BlendDataLights(bpy_prop_collection)
+BlendDataLineStyles(bpy_prop_collection)
+BlendDataMasks(bpy_prop_collection)
+BlendDataMaterials(bpy_prop_collection)
+BlendDataMeshes(bpy_prop_collection)
+BlendDataMetaBalls(bpy_prop_collection)
+BlendDataMovieClips(bpy_prop_collection)
+BlendDataNodeTrees(bpy_prop_collection)
+BlendDataObjects(bpy_prop_collection)
+BlendDataPaintCurves(bpy_prop_collection)
+BlendDataPalettes(bpy_prop_collection)
+BlendDataParticles(bpy_prop_collection)
+BlendDataPointClouds(bpy_prop_collection)
+BlendDataProbes(bpy_prop_collection)
+BlendDataScenes(bpy_prop_collection)
+BlendDataScreens(bpy_prop_collection)
+BlendDataSounds(bpy_prop_collection)
+BlendDataSpeakers(bpy_prop_collection)
+BlendDataTexts(bpy_prop_collection)
+BlendDataTextures(bpy_prop_collection)
+BlendDataVolumes(bpy_prop_collection)
+BlendDataWindowManagers(bpy_prop_collection)
+BlendDataWorkSpaces(bpy_prop_collection)
+BlendDataWorlds(bpy_prop_collection)
+BlendFileColorspace(bpy_struct)
+BlendImportContext(bpy_struct)
+BlendImportContextItem(bpy_struct)
+BlendImportContextItems(bpy_prop_collection)
+BlendImportContextLibraries(bpy_prop_collection)
+BlendImportContextLibrary(bpy_struct)
+BlendTexture(Texture)
+BlenderRNA(bpy_struct)
+BoidRule(bpy_struct)
+BoidRuleAverageSpeed(BoidRule)
+BoidRuleAvoid(BoidRule)
+BoidRuleAvoidCollision(BoidRule)
+BoidRuleFight(BoidRule)
+BoidRuleFollowLeader(BoidRule)
+BoidRuleGoal(BoidRule)
+BoidSettings(bpy_struct)
+BoidState(bpy_struct)
+Bone(bpy_struct)
+BoneCollection(bpy_struct)
+BoneCollectionMemberships(bpy_prop_collection)
+BoneCollections(bpy_prop_collection)
+BoneColor(bpy_struct)
+BoolAttribute(Attribute)
+BoolAttributeValue(bpy_struct)
+BoolProperty(Property)
+BooleanModifier(Modifier)
+BrightContrastModifier(StripModifier)
+Brush(ID)
+BrushCapabilities(bpy_struct)
+BrushCapabilitiesImagePaint(bpy_struct)
+BrushCapabilitiesSculpt(bpy_struct)
+BrushCapabilitiesVertexPaint(bpy_struct)
+BrushCapabilitiesWeightPaint(bpy_struct)
+BrushCurvesSculptSettings(bpy_struct)
+BrushGpencilSettings(bpy_struct)
+BrushTextureSlot(TextureSlot)
+BuildModifier(Modifier)
+ByteColorAttribute(Attribute)
+ByteColorAttributeValue(bpy_struct)
+ByteIntAttribute(Attribute)
+ByteIntAttributeValue(bpy_struct)
+CLIP_UL_tracking_objects(UIList)
+CURVES_UL_attributes(UIList)
+CacheFile(ID)
+CacheFileLayer(bpy_struct)
+CacheFileLayers(bpy_prop_collection)
+CacheObjectPath(bpy_struct)
+CacheObjectPaths(bpy_prop_collection)
+Camera(ID)
+CameraBackgroundImage(bpy_struct)
+CameraBackgroundImages(bpy_prop_collection)
+CameraDOFSettings(bpy_struct)
+CameraSolverConstraint(Constraint)
+CameraStereoData(bpy_struct)
+CastModifier(Modifier)
+ChannelDriverVariables(bpy_prop_collection)
+ChildOfConstraint(Constraint)
+ChildParticle(bpy_struct)
+ClampToConstraint(Constraint)
+ClothCollisionSettings(bpy_struct)
+ClothModifier(Modifier)
+ClothSettings(bpy_struct)
+ClothSolverResult(bpy_struct)
+CloudsTexture(Texture)
+Collection(ID)
+CollectionChild(bpy_struct)
+CollectionChildren(bpy_prop_collection)
+CollectionExport(bpy_struct)
+CollectionExports(bpy_prop_collection)
+CollectionLightLinking(bpy_struct)
+CollectionObject(bpy_struct)
+CollectionObjects(bpy_prop_collection)
+CollectionProperty(Property)
+CollisionModifier(Modifier)
+CollisionSettings(bpy_struct)
+ColorBalanceModifier(StripModifier)
+ColorManagedDisplaySettings(bpy_struct)
+ColorManagedInputColorspaceSettings(bpy_struct)
+ColorManagedSequencerColorspaceSettings(bpy_struct)
+ColorManagedViewSettings(bpy_struct)
+ColorMapping(bpy_struct)
+ColorMixStrip(EffectStrip)
+ColorRamp(bpy_struct)
+ColorRampElement(bpy_struct)
+ColorRampElements(bpy_prop_collection)
+ColorStrip(EffectStrip)
+CompositorNode(NodeInternal)
+CompositorNodeAlphaOver(CompositorNode)
+CompositorNodeAntiAliasing(CompositorNode)
+CompositorNodeBilateralblur(CompositorNode)
+CompositorNodeBlur(CompositorNode)
+CompositorNodeBokehBlur(CompositorNode)
+CompositorNodeBokehImage(CompositorNode)
+CompositorNodeBoxMask(CompositorNode)
+CompositorNodeBrightContrast(CompositorNode)
+CompositorNodeChannelMatte(CompositorNode)
+CompositorNodeChromaMatte(CompositorNode)
+CompositorNodeColorBalance(CompositorNode)
+CompositorNodeColorCorrection(CompositorNode)
+CompositorNodeColorMatte(CompositorNode)
+CompositorNodeColorSpill(CompositorNode)
+CompositorNodeCombineColor(CompositorNode)
+CompositorNodeConvertColorSpace(CompositorNode)
+CompositorNodeConvertToDisplay(CompositorNode)
+CompositorNodeConvolve(CompositorNode)
+CompositorNodeCornerPin(CompositorNode)
+CompositorNodeCrop(CompositorNode)
+CompositorNodeCryptomatte(CompositorNode)
+CompositorNodeCryptomatteV2(CompositorNode)
+CompositorNodeCurveRGB(CompositorNode)
+CompositorNodeCustomGroup(CompositorNode)
+CompositorNodeDBlur(CompositorNode)
+CompositorNodeDefocus(CompositorNode)
+CompositorNodeDenoise(CompositorNode)
+CompositorNodeDespeckle(CompositorNode)
+CompositorNodeDiffMatte(CompositorNode)
+CompositorNodeDilateErode(CompositorNode)
+CompositorNodeDisplace(CompositorNode)
+CompositorNodeDistanceMatte(CompositorNode)
+CompositorNodeDoubleEdgeMask(CompositorNode)
+CompositorNodeEllipseMask(CompositorNode)
+CompositorNodeExposure(CompositorNode)
+CompositorNodeFilter(CompositorNode)
+CompositorNodeFlip(CompositorNode)
+CompositorNodeGamma(CompositorNode)
+CompositorNodeGlare(CompositorNode)
+CompositorNodeGroup(CompositorNode)
+CompositorNodeHueCorrect(CompositorNode)
+CompositorNodeHueSat(CompositorNode)
+CompositorNodeIDMask(CompositorNode)
+CompositorNodeImage(CompositorNode)
+CompositorNodeImageCoordinates(CompositorNode)
+CompositorNodeImageInfo(CompositorNode)
+CompositorNodeInpaint(CompositorNode)
+CompositorNodeInvert(CompositorNode)
+CompositorNodeKeying(CompositorNode)
+CompositorNodeKeyingScreen(CompositorNode)
+CompositorNodeKuwahara(CompositorNode)
+CompositorNodeLensdist(CompositorNode)
+CompositorNodeLevels(CompositorNode)
+CompositorNodeLumaMatte(CompositorNode)
+CompositorNodeMapUV(CompositorNode)
+CompositorNodeMask(CompositorNode)
+CompositorNodeMaskToSDF(CompositorNode)
+CompositorNodeMovieClip(CompositorNode)
+CompositorNodeMovieDistortion(CompositorNode)
+CompositorNodeNormal(CompositorNode)
+CompositorNodeNormalize(CompositorNode)
+CompositorNodeOutputFile(CompositorNode)
+CompositorNodePixelate(CompositorNode)
+CompositorNodePlaneTrackDeform(CompositorNode)
+CompositorNodePosterize(CompositorNode)
+CompositorNodePremulKey(CompositorNode)
+CompositorNodeRGB(CompositorNode)
+CompositorNodeRGBToBW(CompositorNode)
+CompositorNodeRLayers(CompositorNode)
+CompositorNodeRelativeToPixel(CompositorNode)
+CompositorNodeRotate(CompositorNode)
+CompositorNodeScale(CompositorNode)
+CompositorNodeSceneTime(CompositorNode)
+CompositorNodeSeparateColor(CompositorNode)
+CompositorNodeSequencerStripInfo(CompositorNode)
+CompositorNodeSetAlpha(CompositorNode)
+CompositorNodeSplit(CompositorNode)
+CompositorNodeStabilize(CompositorNode)
+CompositorNodeSwitch(CompositorNode)
+CompositorNodeSwitchView(CompositorNode)
+CompositorNodeTime(CompositorNode)
+CompositorNodeTonemap(CompositorNode)
+CompositorNodeTrackPos(CompositorNode)
+CompositorNodeTransform(CompositorNode)
+CompositorNodeTranslate(CompositorNode)
+CompositorNodeTree(NodeTree)
+CompositorNodeVecBlur(CompositorNode)
+CompositorNodeViewer(CompositorNode)
+CompositorNodeZcombine(CompositorNode)
+ConsoleLine(bpy_struct)
+Constraint(bpy_struct)
+ConstraintTarget(bpy_struct)
+ConstraintTargetBone(bpy_struct)
+Context(bpy_struct)
+CopyLocationConstraint(Constraint)
+CopyRotationConstraint(Constraint)
+CopyScaleConstraint(Constraint)
+CopyTransformsConstraint(Constraint)
+CorrectiveSmoothModifier(Modifier)
+CrossStrip(EffectStrip)
+CryptomatteEntry(bpy_struct)
+Curve(ID)
+CurveMap(bpy_struct)
+CurveMapPoint(bpy_struct)
+CurveMapPoints(bpy_prop_collection)
+CurveMapping(bpy_struct)
+CurveModifier(Modifier)
+CurvePaintSettings(bpy_struct)
+CurvePoint(bpy_struct)
+CurveProfile(bpy_struct)
+CurveProfilePoint(bpy_struct)
+CurveProfilePoints(bpy_prop_collection)
+CurveSlice(bpy_struct)
+CurveSplines(bpy_prop_collection)
+Curves(ID)
+CurvesModifier(StripModifier)
+CurvesSculpt(Paint)
+DATA_UL_bone_collections(UIList)
+DampedTrackConstraint(Constraint)
+DataTransferModifier(Modifier)
+DecimateModifier(Modifier)
+Depsgraph(bpy_struct)
+DepsgraphObjectInstance(bpy_struct)
+DepsgraphUpdate(bpy_struct)
+DisplaceModifier(Modifier)
+DisplaySafeAreas(bpy_struct)
+DistortedNoiseTexture(Texture)
+DopeSheet(bpy_struct)
+Driver(bpy_struct)
+DriverTarget(bpy_struct)
+DriverVariable(bpy_struct)
+DynamicPaintBrushSettings(bpy_struct)
+DynamicPaintCanvasSettings(bpy_struct)
+DynamicPaintModifier(Modifier)
+DynamicPaintSurface(bpy_struct)
+DynamicPaintSurfaces(bpy_prop_collection)
+EQCurveMappingData(bpy_struct)
+EchoModifier(StripModifier)
+EdgeSplitModifier(Modifier)
+EditBone(bpy_struct)
+EffectStrip(Strip)
+EffectorWeights(bpy_struct)
+EnumProperty(Property)
+EnumPropertyItem(bpy_struct)
+EvaluateClosureNodeViewerPathElem(ViewerPathElem)
+Event(bpy_struct)
+ExplodeModifier(Modifier)
+FCurve(bpy_struct)
+FCurveKeyframePoints(bpy_prop_collection)
+FCurveModifiers(bpy_prop_collection)
+FCurveSample(bpy_struct)
+FFmpegSettings(bpy_struct)
+FILEBROWSER_UL_dir(UIList)
+FModifier(bpy_struct)
+FModifierCycles(FModifier)
+FModifierEnvelope(FModifier)
+FModifierEnvelopeControlPoint(bpy_struct)
+FModifierEnvelopeControlPoints(bpy_prop_collection)
+FModifierFunctionGenerator(FModifier)
+FModifierGenerator(FModifier)
+FModifierLimits(FModifier)
+FModifierNoise(FModifier)
+FModifierSmooth(FModifier)
+FModifierStepped(FModifier)
+FieldSettings(bpy_struct)
+FileAssetSelectIDFilter(bpy_struct)
+FileAssetSelectParams(FileSelectParams)
+FileBrowserFSMenuEntry(bpy_struct)
+FileHandler(bpy_struct)
+FileSelectEntry(bpy_struct)
+FileSelectIDFilter(bpy_struct)
+FileSelectParams(bpy_struct)
+Float2Attribute(Attribute)
+Float2AttributeValue(bpy_struct)
+Float4x4Attribute(Attribute)
+Float4x4AttributeValue(bpy_struct)
+FloatAttribute(Attribute)
+FloatAttributeValue(bpy_struct)
+FloatColorAttribute(Attribute)
+FloatColorAttributeValue(bpy_struct)
+FloatProperty(Property)
+FloatVectorAttribute(Attribute)
+FloatVectorAttributeValue(bpy_struct)
+FloatVectorValueReadOnly(bpy_struct)
+FloorConstraint(Constraint)
+FluidDomainSettings(bpy_struct)
+FluidEffectorSettings(bpy_struct)
+FluidFlowSettings(bpy_struct)
+FluidModifier(Modifier)
+FollowPathConstraint(Constraint)
+FollowTrackConstraint(Constraint)
+ForeachGeometryElementGenerationItem(bpy_struct)
+ForeachGeometryElementInputItem(bpy_struct)
+ForeachGeometryElementMainItem(bpy_struct)
+ForeachGeometryElementZoneViewerPathElem(ViewerPathElem)
+FreestyleLineSet(bpy_struct)
+FreestyleLineStyle(ID)
+FreestyleModuleSettings(bpy_struct)
+FreestyleModules(bpy_prop_collection)
+FreestyleSettings(bpy_struct)
+Function(bpy_struct)
+FunctionNode(NodeInternal)
+FunctionNodeAlignEulerToVector(FunctionNode)
+FunctionNodeAlignRotationToVector(FunctionNode)
+FunctionNodeAxesToRotation(FunctionNode)
+FunctionNodeAxisAngleToRotation(FunctionNode)
+FunctionNodeBitMath(FunctionNode)
+FunctionNodeBooleanMath(FunctionNode)
+FunctionNodeCombineColor(FunctionNode)
+FunctionNodeCombineMatrix(FunctionNode)
+FunctionNodeCombineTransform(FunctionNode)
+FunctionNodeCompare(FunctionNode)
+FunctionNodeEulerToRotation(FunctionNode)
+FunctionNodeFindInString(FunctionNode)
+FunctionNodeFloatToInt(FunctionNode)
+FunctionNodeFormatString(FunctionNode)
+FunctionNodeHashValue(FunctionNode)
+FunctionNodeInputBool(FunctionNode)
+FunctionNodeInputColor(FunctionNode)
+FunctionNodeInputInt(FunctionNode)
+FunctionNodeInputRotation(FunctionNode)
+FunctionNodeInputSpecialCharacters(FunctionNode)
+FunctionNodeInputString(FunctionNode)
+FunctionNodeInputVector(FunctionNode)
+FunctionNodeIntegerMath(FunctionNode)
+FunctionNodeInvertMatrix(FunctionNode)
+FunctionNodeInvertRotation(FunctionNode)
+FunctionNodeMatchString(FunctionNode)
+FunctionNodeMatrixDeterminant(FunctionNode)
+FunctionNodeMatrixMultiply(FunctionNode)
+FunctionNodeMatrixSVD(FunctionNode)
+FunctionNodeProjectPoint(FunctionNode)
+FunctionNodeQuaternionToRotation(FunctionNode)
+FunctionNodeRandomValue(FunctionNode)
+FunctionNodeReplaceString(FunctionNode)
+FunctionNodeRotateEuler(FunctionNode)
+FunctionNodeRotateRotation(FunctionNode)
+FunctionNodeRotateVector(FunctionNode)
+FunctionNodeRotationToAxisAngle(FunctionNode)
+FunctionNodeRotationToEuler(FunctionNode)
+FunctionNodeRotationToQuaternion(FunctionNode)
+FunctionNodeSeparateColor(FunctionNode)
+FunctionNodeSeparateMatrix(FunctionNode)
+FunctionNodeSeparateTransform(FunctionNode)
+FunctionNodeSliceString(FunctionNode)
+FunctionNodeStringLength(FunctionNode)
+FunctionNodeStringToValue(FunctionNode)
+FunctionNodeTransformDirection(FunctionNode)
+FunctionNodeTransformPoint(FunctionNode)
+FunctionNodeTransposeMatrix(FunctionNode)
+FunctionNodeValueToString(FunctionNode)
+GPENCIL_UL_annotation_layer(UIList)
+GPENCIL_UL_matslots(UIList)
+GPencilInterpolateSettings(bpy_struct)
+GPencilSculptGuide(bpy_struct)
+GPencilSculptSettings(bpy_struct)
+GREASE_PENCIL_UL_attributes(UIList)
+GREASE_PENCIL_UL_masks(UIList)
+GammaCrossStrip(EffectStrip)
+GaussianBlurStrip(EffectStrip)
+GeometryAttributeConstraint(Constraint)
+GeometryNode(NodeInternal)
+GeometryNodeAccumulateField(GeometryNode)
+GeometryNodeAttributeDomainSize(GeometryNode)
+GeometryNodeAttributeStatistic(GeometryNode)
+GeometryNodeBake(GeometryNode)
+GeometryNodeBlurAttribute(GeometryNode)
+GeometryNodeBoneInfo(GeometryNode)
+GeometryNodeBoundBox(GeometryNode)
+GeometryNodeCameraInfo(GeometryNode)
+GeometryNodeCaptureAttribute(GeometryNode)
+GeometryNodeCollectionInfo(GeometryNode)
+GeometryNodeConvexHull(GeometryNode)
+GeometryNodeCornersOfEdge(GeometryNode)
+GeometryNodeCornersOfFace(GeometryNode)
+GeometryNodeCornersOfVertex(GeometryNode)
+GeometryNodeCubeGridTopology(GeometryNode)
+GeometryNodeCurveArc(GeometryNode)
+GeometryNodeCurveEndpointSelection(GeometryNode)
+GeometryNodeCurveHandleTypeSelection(GeometryNode)
+GeometryNodeCurveLength(GeometryNode)
+GeometryNodeCurveOfPoint(GeometryNode)
+GeometryNodeCurvePrimitiveBezierSegment(GeometryNode)
+GeometryNodeCurvePrimitiveCircle(GeometryNode)
+GeometryNodeCurvePrimitiveLine(GeometryNode)
+GeometryNodeCurvePrimitiveQuadrilateral(GeometryNode)
+GeometryNodeCurveQuadraticBezier(GeometryNode)
+GeometryNodeCurveSetHandles(GeometryNode)
+GeometryNodeCurveSpiral(GeometryNode)
+GeometryNodeCurveSplineType(GeometryNode)
+GeometryNodeCurveStar(GeometryNode)
+GeometryNodeCurveToMesh(GeometryNode)
+GeometryNodeCurveToPoints(GeometryNode)
+GeometryNodeCurvesToGreasePencil(GeometryNode)
+GeometryNodeCustomGroup(GeometryNode)
+GeometryNodeDeformCurvesOnSurface(GeometryNode)
+GeometryNodeDeleteGeometry(GeometryNode)
+GeometryNodeDistributePointsInGrid(GeometryNode)
+GeometryNodeDistributePointsInVolume(GeometryNode)
+GeometryNodeDistributePointsOnFaces(GeometryNode)
+GeometryNodeDualMesh(GeometryNode)
+GeometryNodeDuplicateElements(GeometryNode)
+GeometryNodeEdgePathsToCurves(GeometryNode)
+GeometryNodeEdgePathsToSelection(GeometryNode)
+GeometryNodeEdgesOfCorner(GeometryNode)
+GeometryNodeEdgesOfVertex(GeometryNode)
+GeometryNodeEdgesToFaceGroups(GeometryNode)
+GeometryNodeExtrudeMesh(GeometryNode)
+GeometryNodeFaceOfCorner(GeometryNode)
+GeometryNodeFieldAtIndex(GeometryNode)
+GeometryNodeFieldAverage(GeometryNode)
+GeometryNodeFieldMinAndMax(GeometryNode)
+GeometryNodeFieldOnDomain(GeometryNode)
+GeometryNodeFieldToGrid(GeometryNode)
+GeometryNodeFieldToGridItem(bpy_struct)
+GeometryNodeFieldToGridItems(bpy_prop_collection)
+GeometryNodeFieldToList(GeometryNode)
+GeometryNodeFieldToListItem(bpy_struct)
+GeometryNodeFieldToListItems(bpy_prop_collection)
+GeometryNodeFieldVariance(GeometryNode)
+GeometryNodeFillCurve(GeometryNode)
+GeometryNodeFilletCurve(GeometryNode)
+GeometryNodeFlipFaces(GeometryNode)
+GeometryNodeForeachGeometryElementInput(GeometryNode)
+GeometryNodeForeachGeometryElementOutput(GeometryNode)
+GeometryNodeGeometryToInstance(GeometryNode)
+GeometryNodeGetGeometryBundle(GeometryNode)
+GeometryNodeGetNamedGrid(GeometryNode)
+GeometryNodeGizmoDial(GeometryNode)
+GeometryNodeGizmoLinear(GeometryNode)
+GeometryNodeGizmoTransform(GeometryNode)
+GeometryNodeGreasePencilToCurves(GeometryNode)
+GeometryNodeGridAdvect(GeometryNode)
+GeometryNodeGridClip(GeometryNode)
+GeometryNodeGridCurl(GeometryNode)
+GeometryNodeGridDilateAndErode(GeometryNode)
+GeometryNodeGridDivergence(GeometryNode)
+GeometryNodeGridGradient(GeometryNode)
+GeometryNodeGridInfo(GeometryNode)
+GeometryNodeGridLaplacian(GeometryNode)
+GeometryNodeGridMean(GeometryNode)
+GeometryNodeGridMedian(GeometryNode)
+GeometryNodeGridPrune(GeometryNode)
+GeometryNodeGridToMesh(GeometryNode)
+GeometryNodeGridToPoints(GeometryNode)
+GeometryNodeGridVoxelize(GeometryNode)
+GeometryNodeGroup(GeometryNode)
+GeometryNodeImageInfo(GeometryNode)
+GeometryNodeImageTexture(GeometryNode)
+GeometryNodeImportCSV(GeometryNode)
+GeometryNodeImportOBJ(GeometryNode)
+GeometryNodeImportPLY(GeometryNode)
+GeometryNodeImportSTL(GeometryNode)
+GeometryNodeImportText(GeometryNode)
+GeometryNodeImportVDB(GeometryNode)
+GeometryNodeIndexOfNearest(GeometryNode)
+GeometryNodeIndexSwitch(GeometryNode)
+GeometryNodeInputActiveCamera(GeometryNode)
+GeometryNodeInputCollection(GeometryNode)
+GeometryNodeInputCurveHandlePositions(GeometryNode)
+GeometryNodeInputCurveTilt(GeometryNode)
+GeometryNodeInputEdgeSmooth(GeometryNode)
+GeometryNodeInputID(GeometryNode)
+GeometryNodeInputImage(GeometryNode)
+GeometryNodeInputIndex(GeometryNode)
+GeometryNodeInputInstanceBounds(GeometryNode)
+GeometryNodeInputInstanceRotation(GeometryNode)
+GeometryNodeInputInstanceScale(GeometryNode)
+GeometryNodeInputMaterial(GeometryNode)
+GeometryNodeInputMaterialIndex(GeometryNode)
+GeometryNodeInputMeshEdgeAngle(GeometryNode)
+GeometryNodeInputMeshEdgeNeighbors(GeometryNode)
+GeometryNodeInputMeshEdgeVertices(GeometryNode)
+GeometryNodeInputMeshFaceArea(GeometryNode)
+GeometryNodeInputMeshFaceIsPlanar(GeometryNode)
+GeometryNodeInputMeshFaceNeighbors(GeometryNode)
+GeometryNodeInputMeshIsland(GeometryNode)
+GeometryNodeInputMeshVertexNeighbors(GeometryNode)
+GeometryNodeInputNamedAttribute(GeometryNode)
+GeometryNodeInputNamedLayerSelection(GeometryNode)
+GeometryNodeInputNormal(GeometryNode)
+GeometryNodeInputObject(GeometryNode)
+GeometryNodeInputPosition(GeometryNode)
+GeometryNodeInputRadius(GeometryNode)
+GeometryNodeInputSceneTime(GeometryNode)
+GeometryNodeInputShadeSmooth(GeometryNode)
+GeometryNodeInputShortestEdgePaths(GeometryNode)
+GeometryNodeInputSplineCyclic(GeometryNode)
+GeometryNodeInputSplineResolution(GeometryNode)
+GeometryNodeInputTangent(GeometryNode)
+GeometryNodeInputVoxelIndex(GeometryNode)
+GeometryNodeInstanceOnPoints(GeometryNode)
+GeometryNodeInstanceTransform(GeometryNode)
+GeometryNodeInstancesToPoints(GeometryNode)
+GeometryNodeInterpolateCurves(GeometryNode)
+GeometryNodeIsViewport(GeometryNode)
+GeometryNodeJoinGeometry(GeometryNode)
+GeometryNodeListGetItem(GeometryNode)
+GeometryNodeListLength(GeometryNode)
+GeometryNodeMaterialSelection(GeometryNode)
+GeometryNodeMenuSwitch(GeometryNode)
+GeometryNodeMergeByDistance(GeometryNode)
+GeometryNodeMergeLayers(GeometryNode)
+GeometryNodeMeshBoolean(GeometryNode)
+GeometryNodeMeshCircle(GeometryNode)
+GeometryNodeMeshCone(GeometryNode)
+GeometryNodeMeshCube(GeometryNode)
+GeometryNodeMeshCylinder(GeometryNode)
+GeometryNodeMeshFaceSetBoundaries(GeometryNode)
+GeometryNodeMeshGrid(GeometryNode)
+GeometryNodeMeshIcoSphere(GeometryNode)
+GeometryNodeMeshLine(GeometryNode)
+GeometryNodeMeshToCurve(GeometryNode)
+GeometryNodeMeshToDensityGrid(GeometryNode)
+GeometryNodeMeshToPoints(GeometryNode)
+GeometryNodeMeshToSDFGrid(GeometryNode)
+GeometryNodeMeshToVolume(GeometryNode)
+GeometryNodeMeshUVSphere(GeometryNode)
+GeometryNodeObjectInfo(GeometryNode)
+GeometryNodeOffsetCornerInFace(GeometryNode)
+GeometryNodeOffsetPointInCurve(GeometryNode)
+GeometryNodePoints(GeometryNode)
+GeometryNodePointsOfCurve(GeometryNode)
+GeometryNodePointsToCurves(GeometryNode)
+GeometryNodePointsToSDFGrid(GeometryNode)
+GeometryNodePointsToVertices(GeometryNode)
+GeometryNodePointsToVolume(GeometryNode)
+GeometryNodeProximity(GeometryNode)
+GeometryNodeRaycast(GeometryNode)
+GeometryNodeRealizeInstances(GeometryNode)
+GeometryNodeRemoveAttribute(GeometryNode)
+GeometryNodeRepeatInput(GeometryNode)
+GeometryNodeRepeatOutput(GeometryNode)
+GeometryNodeReplaceMaterial(GeometryNode)
+GeometryNodeResampleCurve(GeometryNode)
+GeometryNodeReverseCurve(GeometryNode)
+GeometryNodeRotateInstances(GeometryNode)
+GeometryNodeSDFGridBoolean(GeometryNode)
+GeometryNodeSDFGridFillet(GeometryNode)
+GeometryNodeSDFGridLaplacian(GeometryNode)
+GeometryNodeSDFGridMean(GeometryNode)
+GeometryNodeSDFGridMeanCurvature(GeometryNode)
+GeometryNodeSDFGridMedian(GeometryNode)
+GeometryNodeSDFGridOffset(GeometryNode)
+GeometryNodeSampleCurve(GeometryNode)
+GeometryNodeSampleGrid(GeometryNode)
+GeometryNodeSampleGridIndex(GeometryNode)
+GeometryNodeSampleIndex(GeometryNode)
+GeometryNodeSampleNearest(GeometryNode)
+GeometryNodeSampleNearestSurface(GeometryNode)
+GeometryNodeSampleUVSurface(GeometryNode)
+GeometryNodeScaleElements(GeometryNode)
+GeometryNodeScaleInstances(GeometryNode)
+GeometryNodeSelfObject(GeometryNode)
+GeometryNodeSeparateComponents(GeometryNode)
+GeometryNodeSeparateGeometry(GeometryNode)
+GeometryNodeSetCurveHandlePositions(GeometryNode)
+GeometryNodeSetCurveNormal(GeometryNode)
+GeometryNodeSetCurveRadius(GeometryNode)
+GeometryNodeSetCurveTilt(GeometryNode)
+GeometryNodeSetGeometryBundle(GeometryNode)
+GeometryNodeSetGeometryName(GeometryNode)
+GeometryNodeSetGreasePencilColor(GeometryNode)
+GeometryNodeSetGreasePencilDepth(GeometryNode)
+GeometryNodeSetGreasePencilSoftness(GeometryNode)
+GeometryNodeSetGridBackground(GeometryNode)
+GeometryNodeSetGridTransform(GeometryNode)
+GeometryNodeSetID(GeometryNode)
+GeometryNodeSetInstanceTransform(GeometryNode)
+GeometryNodeSetMaterial(GeometryNode)
+GeometryNodeSetMaterialIndex(GeometryNode)
+GeometryNodeSetMeshNormal(GeometryNode)
+GeometryNodeSetPointRadius(GeometryNode)
+GeometryNodeSetPosition(GeometryNode)
+GeometryNodeSetShadeSmooth(GeometryNode)
+GeometryNodeSetSplineCyclic(GeometryNode)
+GeometryNodeSetSplineResolution(GeometryNode)
+GeometryNodeSimulationInput(GeometryNode)
+GeometryNodeSimulationOutput(GeometryNode)
+GeometryNodeSortElements(GeometryNode)
+GeometryNodeSplineLength(GeometryNode)
+GeometryNodeSplineParameter(GeometryNode)
+GeometryNodeSplitEdges(GeometryNode)
+GeometryNodeSplitToInstances(GeometryNode)
+GeometryNodeStoreNamedAttribute(GeometryNode)
+GeometryNodeStoreNamedGrid(GeometryNode)
+GeometryNodeStringJoin(GeometryNode)
+GeometryNodeStringToCurves(GeometryNode)
+GeometryNodeSubdivideCurve(GeometryNode)
+GeometryNodeSubdivideMesh(GeometryNode)
+GeometryNodeSubdivisionSurface(GeometryNode)
+GeometryNodeSwitch(GeometryNode)
+GeometryNodeTool3DCursor(GeometryNode)
+GeometryNodeToolActiveElement(GeometryNode)
+GeometryNodeToolFaceSet(GeometryNode)
+GeometryNodeToolMousePosition(GeometryNode)
+GeometryNodeToolSelection(GeometryNode)
+GeometryNodeToolSetFaceSet(GeometryNode)
+GeometryNodeToolSetSelection(GeometryNode)
+GeometryNodeTransform(GeometryNode)
+GeometryNodeTranslateInstances(GeometryNode)
+GeometryNodeTree(NodeTree)
+GeometryNodeTriangulate(GeometryNode)
+GeometryNodeTrimCurve(GeometryNode)
+GeometryNodeUVPackIslands(GeometryNode)
+GeometryNodeUVTangent(GeometryNode)
+GeometryNodeUVUnwrap(GeometryNode)
+GeometryNodeVertexOfCorner(GeometryNode)
+GeometryNodeViewer(GeometryNode)
+GeometryNodeViewportTransform(GeometryNode)
+GeometryNodeVolumeCube(GeometryNode)
+GeometryNodeVolumeToMesh(GeometryNode)
+GeometryNodeWarning(GeometryNode)
+GeometrySet
+Gizmo(bpy_struct)
+GizmoGroup(bpy_struct)
+GizmoGroupProperties(bpy_struct)
+GizmoProperties(bpy_struct)
+Gizmos(bpy_prop_collection)
+GlowStrip(EffectStrip)
+GpPaint(Paint)
+GpSculptPaint(Paint)
+GpVertexPaint(Paint)
+GpWeightPaint(Paint)
+GreasePencil(ID)
+GreasePencilArmatureModifier(Modifier)
+GreasePencilArrayModifier(Modifier)
+GreasePencilBuildModifier(Modifier)
+GreasePencilColorModifier(Modifier)
+GreasePencilDashModifierData(Modifier)
+GreasePencilDashModifierSegment(bpy_struct)
+GreasePencilDrawing(bpy_struct)
+GreasePencilEnvelopeModifier(Modifier)
+GreasePencilFrame(bpy_struct)
+GreasePencilFrames(bpy_prop_collection)
+GreasePencilHookModifier(Modifier)
+GreasePencilLatticeModifier(Modifier)
+GreasePencilLayer(GreasePencilTreeNode)
+GreasePencilLayerGroup(GreasePencilTreeNode)
+GreasePencilLayerMask(bpy_struct)
+GreasePencilLayerMasks(bpy_prop_collection)
+GreasePencilLengthModifier(Modifier)
+GreasePencilLineartModifier(Modifier)
+GreasePencilMirrorModifier(Modifier)
+GreasePencilMultiplyModifier(Modifier)
+GreasePencilNoiseModifier(Modifier)
+GreasePencilOffsetModifier(Modifier)
+GreasePencilOpacityModifier(Modifier)
+GreasePencilOutlineModifier(Modifier)
+GreasePencilShrinkwrapModifier(Modifier)
+GreasePencilSimplifyModifier(Modifier)
+GreasePencilSmoothModifier(Modifier)
+GreasePencilSubdivModifier(Modifier)
+GreasePencilTextureModifier(Modifier)
+GreasePencilThickModifierData(Modifier)
+GreasePencilTimeModifier(Modifier)
+GreasePencilTimeModifierSegment(bpy_struct)
+GreasePencilTintModifier(Modifier)
+GreasePencilTreeNode(bpy_struct)
+GreasePencilWeightAngleModifier(Modifier)
+GreasePencilWeightProximityModifier(Modifier)
+GreasePencilv3LayerGroup(bpy_prop_collection)
+GreasePencilv3Layers(bpy_prop_collection)
+GroupNodeViewerPathElem(ViewerPathElem)
+Header(bpy_struct)
+Histogram(bpy_struct)
+HookModifier(Modifier)
+HueCorrectModifier(StripModifier)
+HydraRenderEngine(RenderEngine)
+ID(bpy_struct)
+IDMaterials(bpy_prop_collection)
+IDOverrideLibrary(bpy_struct)
+IDOverrideLibraryProperties(bpy_prop_collection)
+IDOverrideLibraryProperty(bpy_struct)
+IDOverrideLibraryPropertyOperation(bpy_struct)
+IDOverrideLibraryPropertyOperations(bpy_prop_collection)
+IDPropertyWrapPtr(bpy_struct)
+IDViewerPathElem(ViewerPathElem)
+IKParam(bpy_struct)
+IMAGE_AST_brush_paint(AssetShelf)
+IMAGE_FH_drop_handler(FileHandler)
+IMAGE_UL_render_slots(UIList)
+IMAGE_UL_udim_tiles(UIList)
+IO_FH_gltf2(FileHandler)
+IO_FH_svg_as_curves(FileHandler)
+Image(ID)
+ImageFormatSettings(bpy_struct)
+ImagePackedFile(bpy_struct)
+ImagePaint(Paint)
+ImagePreview(bpy_struct)
+ImageStrip(Strip)
+ImageTexture(Texture)
+ImageUser(bpy_struct)
+IndexSwitchItem(bpy_struct)
+InlineShaderNodes
+Int2Attribute(Attribute)
+Int2AttributeValue(bpy_struct)
+IntAttribute(Attribute)
+IntAttributeValue(bpy_struct)
+IntProperty(Property)
+Itasc(IKParam)
+Key(ID)
+KeyConfig(bpy_struct)
+KeyConfigPreferences(bpy_struct)
+KeyConfigurations(bpy_prop_collection)
+KeyMap(bpy_struct)
+KeyMapItem(bpy_struct)
+KeyMapItems(bpy_prop_collection)
+KeyMaps(bpy_prop_collection)
+Keyframe(bpy_struct)
+KeyingSet(bpy_struct)
+KeyingSetInfo(bpy_struct)
+KeyingSetPath(bpy_struct)
+KeyingSetPaths(bpy_prop_collection)
+KeyingSets(bpy_prop_collection)
+KeyingSetsAll(bpy_prop_collection)
+KinematicConstraint(Constraint)
+LaplacianDeformModifier(Modifier)
+LaplacianSmoothModifier(Modifier)
+Lattice(ID)
+LatticeModifier(Modifier)
+LatticePoint(bpy_struct)
+LayerCollection(bpy_struct)
+LayerObjects(bpy_prop_collection)
+LayoutPanelState(bpy_struct)
+Library(ID)
+LibraryWeakReference(bpy_struct)
+Light(ID)
+LightProbe(ID)
+LightProbePlane(LightProbe)
+LightProbeSphere(LightProbe)
+LightProbeVolume(LightProbe)
+Lightgroup(bpy_struct)
+Lightgroups(bpy_prop_collection)
+LimitDistanceConstraint(Constraint)
+LimitLocationConstraint(Constraint)
+LimitRotationConstraint(Constraint)
+LimitScaleConstraint(Constraint)
+LineStyleAlphaModifier(LineStyleModifier)
+LineStyleAlphaModifier_AlongStroke(LineStyleAlphaModifier)
+LineStyleAlphaModifier_CreaseAngle(LineStyleAlphaModifier)
+LineStyleAlphaModifier_Curvature_3D(LineStyleAlphaModifier)
+LineStyleAlphaModifier_DistanceFromCamera(LineStyleAlphaModifier)
+LineStyleAlphaModifier_DistanceFromObject(LineStyleAlphaModifier)
+LineStyleAlphaModifier_Material(LineStyleAlphaModifier)
+LineStyleAlphaModifier_Noise(LineStyleAlphaModifier)
+LineStyleAlphaModifier_Tangent(LineStyleAlphaModifier)
+LineStyleAlphaModifiers(bpy_prop_collection)
+LineStyleColorModifier(LineStyleModifier)
+LineStyleColorModifier_AlongStroke(LineStyleColorModifier)
+LineStyleColorModifier_CreaseAngle(LineStyleColorModifier)
+LineStyleColorModifier_Curvature_3D(LineStyleColorModifier)
+LineStyleColorModifier_DistanceFromCamera(LineStyleColorModifier)
+LineStyleColorModifier_DistanceFromObject(LineStyleColorModifier)
+LineStyleColorModifier_Material(LineStyleColorModifier)
+LineStyleColorModifier_Noise(LineStyleColorModifier)
+LineStyleColorModifier_Tangent(LineStyleColorModifier)
+LineStyleColorModifiers(bpy_prop_collection)
+LineStyleGeometryModifier(LineStyleModifier)
+LineStyleGeometryModifier_2DOffset(LineStyleGeometryModifier)
+LineStyleGeometryModifier_2DTransform(LineStyleGeometryModifier)
+LineStyleGeometryModifier_BackboneStretcher(LineStyleGeometryModifier)
+LineStyleGeometryModifier_BezierCurve(LineStyleGeometryModifier)
+LineStyleGeometryModifier_Blueprint(LineStyleGeometryModifier)
+LineStyleGeometryModifier_GuidingLines(LineStyleGeometryModifier)
+LineStyleGeometryModifier_PerlinNoise1D(LineStyleGeometryModifier)
+LineStyleGeometryModifier_PerlinNoise2D(LineStyleGeometryModifier)
+LineStyleGeometryModifier_Polygonalization(LineStyleGeometryModifier)
+LineStyleGeometryModifier_Sampling(LineStyleGeometryModifier)
+LineStyleGeometryModifier_Simplification(LineStyleGeometryModifier)
+LineStyleGeometryModifier_SinusDisplacement(LineStyleGeometryModifier)
+LineStyleGeometryModifier_SpatialNoise(LineStyleGeometryModifier)
+LineStyleGeometryModifier_TipRemover(LineStyleGeometryModifier)
+LineStyleGeometryModifiers(bpy_prop_collection)
+LineStyleModifier(bpy_struct)
+LineStyleTextureSlot(TextureSlot)
+LineStyleTextureSlots(bpy_prop_collection)
+LineStyleThicknessModifier(LineStyleModifier)
+LineStyleThicknessModifier_AlongStroke(LineStyleThicknessModifier)
+LineStyleThicknessModifier_Calligraphy(LineStyleThicknessModifier)
+LineStyleThicknessModifier_CreaseAngle(LineStyleThicknessModifier)
+LineStyleThicknessModifier_Curvature_3D(LineStyleThicknessModifier)
+LineStyleThicknessModifier_DistanceFromCamera(LineStyleThicknessModifier)
+LineStyleThicknessModifier_DistanceFromObject(LineStyleThicknessModifier)
+LineStyleThicknessModifier_Material(LineStyleThicknessModifier)
+LineStyleThicknessModifier_Noise(LineStyleThicknessModifier)
+LineStyleThicknessModifier_Tangent(LineStyleThicknessModifier)
+LineStyleThicknessModifiers(bpy_prop_collection)
+Linesets(bpy_prop_collection)
+LockedTrackConstraint(Constraint)
+LoopColors(bpy_prop_collection)
+MASK_UL_layers(UIList)
+MATERIAL_UL_matslots(UIList)
+MESH_UL_attributes(UIList)
+MESH_UL_color_attributes(UIList)
+MESH_UL_color_attributes_selector(UIList)
+MESH_UL_uvmaps(UIList)
+MESH_UL_vgroups(UIList)
+Macro(bpy_struct)
+MagicTexture(Texture)
+MaintainVolumeConstraint(Constraint)
+MarbleTexture(Texture)
+Mask(ID)
+MaskLayer(bpy_struct)
+MaskLayers(bpy_prop_collection)
+MaskModifier(Modifier)
+MaskParent(bpy_struct)
+MaskSpline(bpy_struct)
+MaskSplinePoint(bpy_struct)
+MaskSplinePointUW(bpy_struct)
+MaskSplinePoints(bpy_prop_collection)
+MaskSplines(bpy_prop_collection)
+MaskStrip(Strip)
+MaskStripModifier(StripModifier)
+Material(ID)
+MaterialGPencilStyle(bpy_struct)
+MaterialLineArt(bpy_struct)
+MaterialSlot(bpy_struct)
+Menu(bpy_struct)
+Mesh(ID)
+MeshCacheModifier(Modifier)
+MeshDeformModifier(Modifier)
+MeshEdge(bpy_struct)
+MeshEdges(bpy_prop_collection)
+MeshLoop(bpy_struct)
+MeshLoopColor(bpy_struct)
+MeshLoopColorLayer(bpy_struct)
+MeshLoopTriangle(bpy_struct)
+MeshLoopTriangles(bpy_prop_collection)
+MeshLoops(bpy_prop_collection)
+MeshNormalValue(bpy_struct)
+MeshPolygon(bpy_struct)
+MeshPolygons(bpy_prop_collection)
+MeshSequenceCacheModifier(Modifier)
+MeshSkinVertex(bpy_struct)
+MeshSkinVertexLayer(bpy_struct)
+MeshStatVis(bpy_struct)
+MeshToVolumeModifier(Modifier)
+MeshUVLoop(bpy_struct)
+MeshUVLoopLayer(bpy_struct)
+MeshVertex(bpy_struct)
+MeshVertices(bpy_prop_collection)
+MetaBall(ID)
+MetaBallElements(bpy_prop_collection)
+MetaElement(bpy_struct)
+MetaStrip(Strip)
+MirrorModifier(Modifier)
+Modifier(bpy_struct)
+ModifierViewerPathElem(ViewerPathElem)
+MotionPath(bpy_struct)
+MotionPathVert(bpy_struct)
+MovieClip(ID)
+MovieClipProxy(bpy_struct)
+MovieClipScopes(bpy_struct)
+MovieClipStrip(Strip)
+MovieClipUser(bpy_struct)
+MovieReconstructedCamera(bpy_struct)
+MovieStrip(Strip)
+MovieTracking(bpy_struct)
+MovieTrackingCamera(bpy_struct)
+MovieTrackingDopesheet(bpy_struct)
+MovieTrackingMarker(bpy_struct)
+MovieTrackingMarkers(bpy_prop_collection)
+MovieTrackingObject(bpy_struct)
+MovieTrackingObjectPlaneTracks(bpy_prop_collection)
+MovieTrackingObjectTracks(bpy_prop_collection)
+MovieTrackingObjects(bpy_prop_collection)
+MovieTrackingPlaneMarker(bpy_struct)
+MovieTrackingPlaneMarkers(bpy_prop_collection)
+MovieTrackingPlaneTrack(bpy_struct)
+MovieTrackingPlaneTracks(bpy_prop_collection)
+MovieTrackingReconstructedCameras(bpy_prop_collection)
+MovieTrackingReconstruction(bpy_struct)
+MovieTrackingSettings(bpy_struct)
+MovieTrackingStabilization(bpy_struct)
+MovieTrackingTrack(bpy_struct)
+MovieTrackingTracks(bpy_prop_collection)
+MulticamStrip(EffectStrip)
+MultiplyStrip(EffectStrip)
+MultiresModifier(Modifier)
+MusgraveTexture(Texture)
+NDOFMotionEventData(bpy_struct)
+NODE_AST_compositor(AssetShelf)
+NODE_FH_image_node(FileHandler)
+NlaStrip(bpy_struct)
+NlaStripFCurves(bpy_prop_collection)
+NlaStrips(bpy_prop_collection)
+NlaTrack(bpy_struct)
+NlaTracks(bpy_prop_collection)
+Node(bpy_struct)
+NodeClosureInput(NodeInternal)
+NodeClosureInputItem(bpy_struct)
+NodeClosureInputItems(bpy_prop_collection)
+NodeClosureOutput(NodeInternal)
+NodeClosureOutputItem(bpy_struct)
+NodeClosureOutputItems(bpy_prop_collection)
+NodeCombineBundle(NodeInternal)
+NodeCombineBundleItem(bpy_struct)
+NodeCombineBundleItems(bpy_prop_collection)
+NodeCompositorFileOutputItem(bpy_struct)
+NodeCompositorFileOutputItems(bpy_prop_collection)
+NodeCustomGroup(Node)
+NodeEnableOutput(NodeInternal)
+NodeEnumItem(bpy_struct)
+NodeEvaluateClosure(NodeInternal)
+NodeEvaluateClosureInputItem(bpy_struct)
+NodeEvaluateClosureInputItems(bpy_prop_collection)
+NodeEvaluateClosureOutputItem(bpy_struct)
+NodeEvaluateClosureOutputItems(bpy_prop_collection)
+NodeFrame(NodeInternal)
+NodeFunctionFormatStringItem(bpy_struct)
+NodeFunctionFormatStringItems(bpy_prop_collection)
+NodeGeometryBakeItem(bpy_struct)
+NodeGeometryBakeItems(bpy_prop_collection)
+NodeGeometryCaptureAttributeItem(bpy_struct)
+NodeGeometryCaptureAttributeItems(bpy_prop_collection)
+NodeGeometryForeachGeometryElementGenerationItems(bpy_prop_collection)
+NodeGeometryForeachGeometryElementInputItems(bpy_prop_collection)
+NodeGeometryForeachGeometryElementMainItems(bpy_prop_collection)
+NodeGeometryRepeatOutputItems(bpy_prop_collection)
+NodeGeometrySimulationOutputItems(bpy_prop_collection)
+NodeGeometryViewerItem(bpy_struct)
+NodeGeometryViewerItems(bpy_prop_collection)
+NodeGetBundleItem(NodeInternal)
+NodeGroup(NodeInternal)
+NodeGroupInput(NodeInternal)
+NodeGroupOutput(NodeInternal)
+NodeIndexSwitchItems(bpy_prop_collection)
+NodeInputs(bpy_prop_collection)
+NodeInstanceHash(bpy_struct)
+NodeInternal(Node)
+NodeInternalSocketTemplate(bpy_struct)
+NodeJoinBundle(NodeInternal)
+NodeLink(bpy_struct)
+NodeLinks(bpy_prop_collection)
+NodeMenuSwitchItems(bpy_prop_collection)
+NodeOutputs(bpy_prop_collection)
+NodeReroute(NodeInternal)
+NodeSeparateBundle(NodeInternal)
+NodeSeparateBundleItem(bpy_struct)
+NodeSeparateBundleItems(bpy_prop_collection)
+NodeSocket(bpy_struct)
+NodeSocketBool(NodeSocketStandard)
+NodeSocketBundle(NodeSocketStandard)
+NodeSocketClosure(NodeSocketStandard)
+NodeSocketCollection(NodeSocketStandard)
+NodeSocketColor(NodeSocketStandard)
+NodeSocketFloat(NodeSocketStandard)
+NodeSocketFloatAngle(NodeSocketStandard)
+NodeSocketFloatColorTemperature(NodeSocketStandard)
+NodeSocketFloatDistance(NodeSocketStandard)
+NodeSocketFloatFactor(NodeSocketStandard)
+NodeSocketFloatFrequency(NodeSocketStandard)
+NodeSocketFloatMass(NodeSocketStandard)
+NodeSocketFloatPercentage(NodeSocketStandard)
+NodeSocketFloatTime(NodeSocketStandard)
+NodeSocketFloatTimeAbsolute(NodeSocketStandard)
+NodeSocketFloatUnsigned(NodeSocketStandard)
+NodeSocketFloatWavelength(NodeSocketStandard)
+NodeSocketFont(NodeSocketStandard)
+NodeSocketGeometry(NodeSocketStandard)
+NodeSocketImage(NodeSocketStandard)
+NodeSocketInt(NodeSocketStandard)
+NodeSocketIntFactor(NodeSocketStandard)
+NodeSocketIntPercentage(NodeSocketStandard)
+NodeSocketIntUnsigned(NodeSocketStandard)
+NodeSocketMask(NodeSocketStandard)
+NodeSocketMaterial(NodeSocketStandard)
+NodeSocketMatrix(NodeSocketStandard)
+NodeSocketMenu(NodeSocketStandard)
+NodeSocketObject(NodeSocketStandard)
+NodeSocketRotation(NodeSocketStandard)
+NodeSocketScene(NodeSocketStandard)
+NodeSocketShader(NodeSocketStandard)
+NodeSocketSound(NodeSocketStandard)
+NodeSocketStandard(NodeSocket)
+NodeSocketString(NodeSocketStandard)
+NodeSocketStringFilePath(NodeSocketStandard)
+NodeSocketText(NodeSocketStandard)
+NodeSocketTexture(NodeSocketStandard)
+NodeSocketVector(NodeSocketStandard)
+NodeSocketVector2D(NodeSocketStandard)
+NodeSocketVector4D(NodeSocketStandard)
+NodeSocketVectorAcceleration(NodeSocketStandard)
+NodeSocketVectorAcceleration2D(NodeSocketStandard)
+NodeSocketVectorAcceleration4D(NodeSocketStandard)
+NodeSocketVectorDirection(NodeSocketStandard)
+NodeSocketVectorDirection2D(NodeSocketStandard)
+NodeSocketVectorDirection4D(NodeSocketStandard)
+NodeSocketVectorEuler(NodeSocketStandard)
+NodeSocketVectorEuler2D(NodeSocketStandard)
+NodeSocketVectorEuler4D(NodeSocketStandard)
+NodeSocketVectorFactor(NodeSocketStandard)
+NodeSocketVectorFactor2D(NodeSocketStandard)
+NodeSocketVectorFactor4D(NodeSocketStandard)
+NodeSocketVectorPercentage(NodeSocketStandard)
+NodeSocketVectorPercentage2D(NodeSocketStandard)
+NodeSocketVectorPercentage4D(NodeSocketStandard)
+NodeSocketVectorTranslation(NodeSocketStandard)
+NodeSocketVectorTranslation2D(NodeSocketStandard)
+NodeSocketVectorTranslation4D(NodeSocketStandard)
+NodeSocketVectorVelocity(NodeSocketStandard)
+NodeSocketVectorVelocity2D(NodeSocketStandard)
+NodeSocketVectorVelocity4D(NodeSocketStandard)
+NodeSocketVectorXYZ(NodeSocketStandard)
+NodeSocketVectorXYZ2D(NodeSocketStandard)
+NodeSocketVectorXYZ4D(NodeSocketStandard)
+NodeSocketVirtual(NodeSocketStandard)
+NodeStoreBundleItem(NodeInternal)
+NodeTree(ID)
+NodeTreeInterface(bpy_struct)
+NodeTreeInterfaceItem(bpy_struct)
+NodeTreeInterfacePanel(NodeTreeInterfaceItem)
+NodeTreeInterfaceSocket(NodeTreeInterfaceItem)
+NodeTreeInterfaceSocketBool(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketBundle(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketClosure(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketCollection(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketColor(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFloat(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFloatAngle(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFloatColorTemperature(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFloatDistance(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFloatFactor(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFloatFrequency(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFloatMass(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFloatPercentage(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFloatTime(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFloatTimeAbsolute(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFloatUnsigned(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFloatWavelength(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketFont(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketGeometry(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketImage(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketInt(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketIntFactor(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketIntPercentage(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketIntUnsigned(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketMask(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketMaterial(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketMatrix(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketMenu(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketObject(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketRotation(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketScene(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketShader(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketSound(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketString(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketStringFilePath(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketText(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketTexture(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVector(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVector2D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVector4D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorAcceleration(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorAcceleration2D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorAcceleration4D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorDirection(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorDirection2D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorDirection4D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorEuler(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorEuler2D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorEuler4D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorFactor(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorFactor2D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorFactor4D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorPercentage(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorPercentage2D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorPercentage4D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorTranslation(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorTranslation2D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorTranslation4D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorVelocity(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorVelocity2D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorVelocity4D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorXYZ(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorXYZ2D(NodeTreeInterfaceSocket)
+NodeTreeInterfaceSocketVectorXYZ4D(NodeTreeInterfaceSocket)
+NodeTreePath(bpy_struct)
+Nodes(bpy_prop_collection)
+NodesModifier(Modifier)
+NodesModifierBake(bpy_struct)
+NodesModifierBakeDataBlocks(bpy_prop_collection)
+NodesModifierBakes(bpy_prop_collection)
+NodesModifierDataBlock(bpy_struct)
+NodesModifierPanel(bpy_struct)
+NodesModifierPanels(bpy_prop_collection)
+NodesModifierWarning(bpy_struct)
+NoiseTexture(Texture)
+NormalEditModifier(Modifier)
+Object(ID)
+ObjectBase(bpy_struct)
+ObjectConstraints(bpy_prop_collection)
+ObjectDisplay(bpy_struct)
+ObjectLightLinking(bpy_struct)
+ObjectLineArt(bpy_struct)
+ObjectModifiers(bpy_prop_collection)
+ObjectShaderFx(bpy_prop_collection)
+ObjectSolverConstraint(Constraint)
+OceanModifier(Modifier)
+Operator(bpy_struct)
+OperatorFileListElement(PropertyGroup)
+OperatorMacro(bpy_struct)
+OperatorMousePath(PropertyGroup)
+OperatorOptions(bpy_struct)
+OperatorProperties(bpy_struct)
+OperatorStrokeElement(PropertyGroup)
+PARTICLE_UL_particle_systems(UIList)
+PHYSICS_UL_dynapaint_surfaces(UIList)
+POINTCLOUD_UL_attributes(UIList)
+POSE_UL_selection_set(UIList)
+PackedFile(bpy_struct)
+Paint(bpy_struct)
+PaintCurve(ID)
+PaintModeSettings(bpy_struct)
+Palette(ID)
+PaletteColor(bpy_struct)
+PaletteColors(bpy_prop_collection)
+Panel(bpy_struct)
+Particle(bpy_struct)
+ParticleBrush(bpy_struct)
+ParticleDupliWeight(bpy_struct)
+ParticleEdit(bpy_struct)
+ParticleHairKey(bpy_struct)
+ParticleInstanceModifier(Modifier)
+ParticleKey(bpy_struct)
+ParticleSettings(ID)
+ParticleSettingsTextureSlot(TextureSlot)
+ParticleSettingsTextureSlots(bpy_prop_collection)
+ParticleSystem(bpy_struct)
+ParticleSystemModifier(Modifier)
+ParticleSystems(bpy_prop_collection)
+ParticleTarget(bpy_struct)
+PathCompare(bpy_struct)
+PathCompareCollection(bpy_prop_collection)
+PitchModifier(StripModifier)
+PivotConstraint(Constraint)
+Point(bpy_struct)
+PointCache(bpy_struct)
+PointCacheItem(bpy_struct)
+PointCaches(bpy_prop_collection)
+PointCloud(ID)
+PointLight(Light)
+PointerProperty(Property)
+Pose(bpy_struct)
+PoseBone(bpy_struct)
+PoseBoneConstraints(bpy_prop_collection)
+Preferences(bpy_struct)
+PreferencesApps(bpy_struct)
+PreferencesEdit(bpy_struct)
+PreferencesExperimental(bpy_struct)
+PreferencesExtensions(bpy_struct)
+PreferencesFilePaths(bpy_struct)
+PreferencesInput(bpy_struct)
+PreferencesKeymap(bpy_struct)
+PreferencesSystem(bpy_struct)
+PreferencesView(bpy_struct)
+PrimitiveBoolean(bpy_struct)
+PrimitiveFloat(bpy_struct)
+PrimitiveInt(bpy_struct)
+PrimitiveString(bpy_struct)
+Property(bpy_struct)
+PropertyGroup(bpy_struct)
+PropertyGroupItem(bpy_struct)
+QuaternionAttribute(Attribute)
+QuaternionAttributeValue(bpy_struct)
+RENDER_UL_renderviews(UIList)
+RaytraceEEVEE(bpy_struct)
+ReadOnlyInteger(bpy_struct)
+Region(bpy_struct)
+RegionView3D(bpy_struct)
+RemeshModifier(Modifier)
+RenderEngine(bpy_struct)
+RenderLayer(bpy_struct)
+RenderPass(bpy_struct)
+RenderPasses(bpy_prop_collection)
+RenderResult(bpy_struct)
+RenderSettings(bpy_struct)
+RenderSlot(bpy_struct)
+RenderSlots(bpy_prop_collection)
+RenderView(bpy_struct)
+RenderViews(bpy_prop_collection)
+RepeatItem(bpy_struct)
+RepeatZoneViewerPathElem(ViewerPathElem)
+RetimingKey(bpy_struct)
+RetimingKeys(bpy_prop_collection)
+RigidBodyConstraint(bpy_struct)
+RigidBodyObject(bpy_struct)
+RigidBodyWorld(bpy_struct)
+SCENE_UL_gltf2_filter_action(UIList)
+SCENE_UL_keying_set_paths(UIList)
+SEQUENCER_FH_image_strip(FileHandler)
+SEQUENCER_FH_movie_strip(FileHandler)
+SEQUENCER_FH_sound_strip(FileHandler)
+SPHFluidSettings(bpy_struct)
+Scene(ID)
+SceneDisplay(bpy_struct)
+SceneEEVEE(bpy_struct)
+SceneGpencil(bpy_struct)
+SceneHydra(bpy_struct)
+SceneObjects(bpy_prop_collection)
+SceneRenderView(bpy_struct)
+SceneStrip(Strip)
+Scopes(bpy_struct)
+Screen(ID)
+ScrewModifier(Modifier)
+ScriptDirectory(bpy_struct)
+ScriptDirectoryCollection(bpy_prop_collection)
+Sculpt(Paint)
+SelectedUvElement(PropertyGroup)
+SequenceEditor(bpy_struct)
+SequenceTimelineChannel(bpy_struct)
+SequencerCacheOverlay(bpy_struct)
+SequencerCompositorModifierData(StripModifier)
+SequencerPreviewOverlay(bpy_struct)
+SequencerTimelineOverlay(bpy_struct)
+SequencerTonemapModifierData(StripModifier)
+SequencerToolSettings(bpy_struct)
+ShaderFx(bpy_struct)
+ShaderFxBlur(ShaderFx)
+ShaderFxColorize(ShaderFx)
+ShaderFxFlip(ShaderFx)
+ShaderFxGlow(ShaderFx)
+ShaderFxPixel(ShaderFx)
+ShaderFxRim(ShaderFx)
+ShaderFxShadow(ShaderFx)
+ShaderFxSwirl(ShaderFx)
+ShaderFxWave(ShaderFx)
+ShaderNode(NodeInternal)
+ShaderNodeAddShader(ShaderNode)
+ShaderNodeAmbientOcclusion(ShaderNode)
+ShaderNodeAttribute(ShaderNode)
+ShaderNodeBackground(ShaderNode)
+ShaderNodeBevel(ShaderNode)
+ShaderNodeBlackbody(ShaderNode)
+ShaderNodeBrightContrast(ShaderNode)
+ShaderNodeBsdfAnisotropic(ShaderNode)
+ShaderNodeBsdfDiffuse(ShaderNode)
+ShaderNodeBsdfGlass(ShaderNode)
+ShaderNodeBsdfHair(ShaderNode)
+ShaderNodeBsdfHairPrincipled(ShaderNode)
+ShaderNodeBsdfMetallic(ShaderNode)
+ShaderNodeBsdfPrincipled(ShaderNode)
+ShaderNodeBsdfRayPortal(ShaderNode)
+ShaderNodeBsdfRefraction(ShaderNode)
+ShaderNodeBsdfSheen(ShaderNode)
+ShaderNodeBsdfToon(ShaderNode)
+ShaderNodeBsdfTranslucent(ShaderNode)
+ShaderNodeBsdfTransparent(ShaderNode)
+ShaderNodeBump(ShaderNode)
+ShaderNodeCameraData(ShaderNode)
+ShaderNodeClamp(ShaderNode)
+ShaderNodeCombineColor(ShaderNode)
+ShaderNodeCombineXYZ(ShaderNode)
+ShaderNodeCustomGroup(ShaderNode)
+ShaderNodeDisplacement(ShaderNode)
+ShaderNodeEeveeSpecular(ShaderNode)
+ShaderNodeEmission(ShaderNode)
+ShaderNodeFloatCurve(ShaderNode)
+ShaderNodeFresnel(ShaderNode)
+ShaderNodeGamma(ShaderNode)
+ShaderNodeGroup(ShaderNode)
+ShaderNodeHairInfo(ShaderNode)
+ShaderNodeHoldout(ShaderNode)
+ShaderNodeHueSaturation(ShaderNode)
+ShaderNodeInvert(ShaderNode)
+ShaderNodeLayerWeight(ShaderNode)
+ShaderNodeLightFalloff(ShaderNode)
+ShaderNodeLightPath(ShaderNode)
+ShaderNodeMapRange(ShaderNode)
+ShaderNodeMapping(ShaderNode)
+ShaderNodeMath(ShaderNode)
+ShaderNodeMix(ShaderNode)
+ShaderNodeMixRGB(ShaderNode)
+ShaderNodeMixShader(ShaderNode)
+ShaderNodeNewGeometry(ShaderNode)
+ShaderNodeNormal(ShaderNode)
+ShaderNodeNormalMap(ShaderNode)
+ShaderNodeObjectInfo(ShaderNode)
+ShaderNodeOutputAOV(ShaderNode)
+ShaderNodeOutputLight(ShaderNode)
+ShaderNodeOutputLineStyle(ShaderNode)
+ShaderNodeOutputMaterial(ShaderNode)
+ShaderNodeOutputWorld(ShaderNode)
+ShaderNodeParticleInfo(ShaderNode)
+ShaderNodePointInfo(ShaderNode)
+ShaderNodeRGB(ShaderNode)
+ShaderNodeRGBCurve(ShaderNode)
+ShaderNodeRGBToBW(ShaderNode)
+ShaderNodeRadialTiling(ShaderNode)
+ShaderNodeRaycast(ShaderNode)
+ShaderNodeScript(ShaderNode)
+ShaderNodeSeparateColor(ShaderNode)
+ShaderNodeSeparateXYZ(ShaderNode)
+ShaderNodeShaderToRGB(ShaderNode)
+ShaderNodeSqueeze(ShaderNode)
+ShaderNodeSubsurfaceScattering(ShaderNode)
+ShaderNodeTangent(ShaderNode)
+ShaderNodeTexBrick(ShaderNode)
+ShaderNodeTexChecker(ShaderNode)
+ShaderNodeTexCoord(ShaderNode)
+ShaderNodeTexEnvironment(ShaderNode)
+ShaderNodeTexGabor(ShaderNode)
+ShaderNodeTexGradient(ShaderNode)
+ShaderNodeTexIES(ShaderNode)
+ShaderNodeTexImage(ShaderNode)
+ShaderNodeTexMagic(ShaderNode)
+ShaderNodeTexNoise(ShaderNode)
+ShaderNodeTexSky(ShaderNode)
+ShaderNodeTexVoronoi(ShaderNode)
+ShaderNodeTexWave(ShaderNode)
+ShaderNodeTexWhiteNoise(ShaderNode)
+ShaderNodeTree(NodeTree)
+ShaderNodeUVAlongStroke(ShaderNode)
+ShaderNodeUVMap(ShaderNode)
+ShaderNodeValToRGB(ShaderNode)
+ShaderNodeValue(ShaderNode)
+ShaderNodeVectorCurve(ShaderNode)
+ShaderNodeVectorDisplacement(ShaderNode)
+ShaderNodeVectorMath(ShaderNode)
+ShaderNodeVectorRotate(ShaderNode)
+ShaderNodeVectorTransform(ShaderNode)
+ShaderNodeVertexColor(ShaderNode)
+ShaderNodeVolumeAbsorption(ShaderNode)
+ShaderNodeVolumeCoefficients(ShaderNode)
+ShaderNodeVolumeInfo(ShaderNode)
+ShaderNodeVolumePrincipled(ShaderNode)
+ShaderNodeVolumeScatter(ShaderNode)
+ShaderNodeWavelength(ShaderNode)
+ShaderNodeWireframe(ShaderNode)
+ShapeKey(bpy_struct)
+ShapeKeyBezierPoint(bpy_struct)
+ShapeKeyCurvePoint(bpy_struct)
+ShapeKeyPoint(bpy_struct)
+Short2Attribute(Attribute)
+Short2AttributeValue(bpy_struct)
+ShrinkwrapConstraint(Constraint)
+ShrinkwrapModifier(Modifier)
+SimpleDeformModifier(Modifier)
+SimulationStateItem(bpy_struct)
+SimulationZoneViewerPathElem(ViewerPathElem)
+SkinModifier(Modifier)
+SmoothModifier(Modifier)
+SoftBodyModifier(Modifier)
+SoftBodySettings(bpy_struct)
+SolidifyModifier(Modifier)
+Sound(ID)
+SoundEqualizerModifier(StripModifier)
+SoundStrip(Strip)
+Space(bpy_struct)
+SpaceClipEditor(Space)
+SpaceClipOverlay(bpy_struct)
+SpaceConsole(Space)
+SpaceDopeSheetEditor(Space)
+SpaceDopeSheetOverlay(bpy_struct)
+SpaceFileBrowser(Space)
+SpaceGraphEditor(Space)
+SpaceImageEditor(Space)
+SpaceImageOverlay(bpy_struct)
+SpaceInfo(Space)
+SpaceNLA(Space)
+SpaceNodeEditor(Space)
+SpaceNodeEditorPath(bpy_prop_collection)
+SpaceNodeOverlay(bpy_struct)
+SpaceOutliner(Space)
+SpacePreferences(Space)
+SpaceProperties(Space)
+SpaceSequenceEditor(Space)
+SpaceSpreadsheet(Space)
+SpaceTextEditor(Space)
+SpaceUVEditor(bpy_struct)
+SpaceView3D(Space)
+Speaker(ID)
+SpeedControlStrip(EffectStrip)
+Spline(bpy_struct)
+SplineBezierPoints(bpy_prop_collection)
+SplineIKConstraint(Constraint)
+SplinePoint(bpy_struct)
+SplinePoints(bpy_prop_collection)
+SpotLight(Light)
+SpreadsheetColumn(bpy_struct)
+SpreadsheetColumnID(bpy_struct)
+SpreadsheetRowFilter(bpy_struct)
+SpreadsheetTable(bpy_struct)
+SpreadsheetTableID(bpy_struct)
+SpreadsheetTableIDGeometry(SpreadsheetTableID)
+SpreadsheetTables(bpy_prop_collection)
+Stereo3dDisplay(bpy_struct)
+Stereo3dFormat(bpy_struct)
+StretchToConstraint(Constraint)
+StringAttribute(Attribute)
+StringAttributeValue(bpy_struct)
+StringProperty(Property)
+Strip(bpy_struct)
+StripColorBalance(StripColorBalanceData)
+StripColorBalanceData(bpy_struct)
+StripCrop(bpy_struct)
+StripElement(bpy_struct)
+StripElements(bpy_prop_collection)
+StripModifier(bpy_struct)
+StripModifiers(bpy_prop_collection)
+StripProxy(bpy_struct)
+StripTransform(bpy_struct)
+StripsMeta(bpy_prop_collection)
+StripsTopLevel(bpy_prop_collection)
+Struct(bpy_struct)
+StucciTexture(Texture)
+StudioLight(bpy_struct)
+StudioLights(bpy_prop_collection)
+SubsurfModifier(Modifier)
+SubtractStrip(EffectStrip)
+SunLight(Light)
+SurfaceCurve(Curve)
+SurfaceDeformModifier(Modifier)
+SurfaceModifier(Modifier)
+TEXTURE_UL_texpaintslots(UIList)
+TEXTURE_UL_texslots(UIList)
+TexMapping(bpy_struct)
+TexPaintSlot(bpy_struct)
+Text(ID)
+TextBox(bpy_struct)
+TextCharacterFormat(bpy_struct)
+TextCurve(Curve)
+TextLine(bpy_struct)
+TextStrip(EffectStrip)
+Texture(ID)
+TextureNode(NodeInternal)
+TextureNodeAt(TextureNode)
+TextureNodeBricks(TextureNode)
+TextureNodeChecker(TextureNode)
+TextureNodeCombineColor(TextureNode)
+TextureNodeCompose(TextureNode)
+TextureNodeCoordinates(TextureNode)
+TextureNodeCurveRGB(TextureNode)
+TextureNodeCurveTime(TextureNode)
+TextureNodeDecompose(TextureNode)
+TextureNodeDistance(TextureNode)
+TextureNodeGroup(TextureNode)
+TextureNodeHueSaturation(TextureNode)
+TextureNodeImage(TextureNode)
+TextureNodeInvert(TextureNode)
+TextureNodeMath(TextureNode)
+TextureNodeMixRGB(TextureNode)
+TextureNodeOutput(TextureNode)
+TextureNodeRGBToBW(TextureNode)
+TextureNodeRotate(TextureNode)
+TextureNodeScale(TextureNode)
+TextureNodeSeparateColor(TextureNode)
+TextureNodeTexBlend(TextureNode)
+TextureNodeTexClouds(TextureNode)
+TextureNodeTexDistNoise(TextureNode)
+TextureNodeTexMagic(TextureNode)
+TextureNodeTexMarble(TextureNode)
+TextureNodeTexMusgrave(TextureNode)
+TextureNodeTexNoise(TextureNode)
+TextureNodeTexStucci(TextureNode)
+TextureNodeTexVoronoi(TextureNode)
+TextureNodeTexWood(TextureNode)
+TextureNodeTexture(TextureNode)
+TextureNodeTranslate(TextureNode)
+TextureNodeTree(NodeTree)
+TextureNodeValToNor(TextureNode)
+TextureNodeValToRGB(TextureNode)
+TextureNodeViewer(TextureNode)
+TextureSlot(bpy_struct)
+Theme(bpy_struct)
+ThemeBoneColorSet(bpy_struct)
+ThemeClipEditor(bpy_struct)
+ThemeCollectionColor(bpy_struct)
+ThemeCommon(bpy_struct)
+ThemeCommonAnim(bpy_struct)
+ThemeCommonCurves(bpy_struct)
+ThemeConsole(bpy_struct)
+ThemeDopeSheet(bpy_struct)
+ThemeFileBrowser(bpy_struct)
+ThemeFontStyle(bpy_struct)
+ThemeGradientColors(bpy_struct)
+ThemeGraphEditor(bpy_struct)
+ThemeImageEditor(bpy_struct)
+ThemeInfo(bpy_struct)
+ThemeNLAEditor(bpy_struct)
+ThemeNodeEditor(bpy_struct)
+ThemeOutliner(bpy_struct)
+ThemePreferences(bpy_struct)
+ThemeProperties(bpy_struct)
+ThemeRegions(bpy_struct)
+ThemeRegionsAssetShelf(bpy_struct)
+ThemeRegionsChannels(bpy_struct)
+ThemeRegionsScrubbing(bpy_struct)
+ThemeRegionsSidebars(bpy_struct)
+ThemeSequenceEditor(bpy_struct)
+ThemeSpaceGeneric(bpy_struct)
+ThemeSpaceGradient(bpy_struct)
+ThemeSpreadsheet(bpy_struct)
+ThemeStatusBar(bpy_struct)
+ThemeStripColor(bpy_struct)
+ThemeStyle(bpy_struct)
+ThemeTextEditor(bpy_struct)
+ThemeTopBar(bpy_struct)
+ThemeUserInterface(bpy_struct)
+ThemeView3D(bpy_struct)
+ThemeWidgetColors(bpy_struct)
+ThemeWidgetStateColors(bpy_struct)
+TimelineMarker(bpy_struct)
+TimelineMarkers(bpy_prop_collection)
+Timer(bpy_struct)
+ToolSettings(bpy_struct)
+TrackToConstraint(Constraint)
+TransformCacheConstraint(Constraint)
+TransformConstraint(Constraint)
+TransformOrientation(bpy_struct)
+TransformOrientationSlot(bpy_struct)
+TriangulateModifier(Modifier)
+UDIMTile(bpy_struct)
+UDIMTiles(bpy_prop_collection)
+UILayout(bpy_struct)
+UIList(bpy_struct)
+UIPieMenu(bpy_struct)
+UIPopover(bpy_struct)
+UIPopupMenu(bpy_struct)
+UI_UL_list(UIList)
+USDHook(bpy_struct)
+USERPREF_UL_asset_libraries(UIList)
+USERPREF_UL_extension_repos(UIList)
+UVLoopLayers(bpy_prop_collection)
+UVProjectModifier(Modifier)
+UVProjector(bpy_struct)
+UVWarpModifier(Modifier)
+UnifiedPaintSettings(bpy_struct)
+UnitSettings(bpy_struct)
+UnknownType(bpy_struct)
+UserAssetLibrary(bpy_struct)
+UserExtensionRepo(bpy_struct)
+UserExtensionRepoCollection(bpy_prop_collection)
+UserSolidLight(bpy_struct)
+UvSculpt(bpy_struct)
+VIEW3D_AST_brush_gpencil_paint(AssetShelf)
+VIEW3D_AST_brush_gpencil_sculpt(AssetShelf)
+VIEW3D_AST_brush_gpencil_vertex(AssetShelf)
+VIEW3D_AST_brush_gpencil_weight(AssetShelf)
+VIEW3D_AST_brush_sculpt(AssetShelf)
+VIEW3D_AST_brush_sculpt_curves(AssetShelf)
+VIEW3D_AST_brush_texture_paint(AssetShelf)
+VIEW3D_AST_brush_vertex_paint(AssetShelf)
+VIEW3D_AST_brush_weight_paint(AssetShelf)
+VIEW3D_AST_pose_library(AssetShelf)
+VIEW3D_FH_camera_background_image(FileHandler)
+VIEW3D_FH_empty_image(FileHandler)
+VIEW3D_FH_vdb_volume(FileHandler)
+VIEWLAYER_UL_aov(UIList)
+VIEWLAYER_UL_linesets(UIList)
+VOLUME_UL_grids(UIList)
+VectorFont(ID)
+VertexGroup(bpy_struct)
+VertexGroupElement(bpy_struct)
+VertexGroups(bpy_prop_collection)
+VertexPaint(Paint)
+VertexWeightEditModifier(Modifier)
+VertexWeightMixModifier(Modifier)
+VertexWeightProximityModifier(Modifier)
+View2D(bpy_struct)
+View3DCursor(bpy_struct)
+View3DOverlay(bpy_struct)
+View3DShading(bpy_struct)
+ViewLayer(bpy_struct)
+ViewLayerEEVEE(bpy_struct)
+ViewLayers(bpy_prop_collection)
+ViewerNodeViewerPathElem(ViewerPathElem)
+ViewerPath(bpy_struct)
+ViewerPathElem(bpy_struct)
+Volume(ID)
+VolumeDisplaceModifier(Modifier)
+VolumeDisplay(bpy_struct)
+VolumeGrid(bpy_struct)
+VolumeGrids(bpy_prop_collection)
+VolumeRender(bpy_struct)
+VolumeToMeshModifier(Modifier)
+VoronoiTexture(Texture)
+WORKSPACE_UL_addons_items(UIList)
+WalkNavigation(bpy_struct)
+WarpModifier(Modifier)
+WaveModifier(Modifier)
+WeightedNormalModifier(Modifier)
+WeldModifier(Modifier)
+WhiteBalanceModifier(StripModifier)
+Window(bpy_struct)
+WindowManager(ID)
+Windows(bpy_prop_collection)
+WipeStrip(EffectStrip)
+WireframeModifier(Modifier)
+WoodTexture(Texture)
+WorkSpace(ID)
+WorkSpaceTool(bpy_struct)
+World(ID)
+WorldLighting(bpy_struct)
+WorldMistSettings(bpy_struct)
+XrActionMap(bpy_struct)
+XrActionMapBinding(bpy_struct)
+XrActionMapBindings(bpy_prop_collection)
+XrActionMapItem(bpy_struct)
+XrActionMapItems(bpy_prop_collection)
+XrActionMaps(bpy_prop_collection)
+XrComponentPath(bpy_struct)
+XrComponentPaths(bpy_prop_collection)
+XrEventData(bpy_struct)
+XrNavigation(bpy_struct)
+XrSessionSettings(bpy_struct)
+XrSessionState(bpy_struct)
+XrUserPath(bpy_struct)
+XrUserPaths(bpy_prop_collection)
+bpy_prop
+bpy_prop_array
+bpy_prop_collection
+bpy_prop_collection_idprop
+bpy_struct
+wmOwnerID(bpy_struct)
+wmOwnerIDs(bpy_prop_collection)
+wmTools(bpy_prop_collection)
+Shared Enum Types
+Toggle navigation of Shared Enum Types
+Id Type Items
+Object Mode Items
+Workspace Object Mode Items
+Object Empty Drawtype Items
+Object Gpencil Type Items
+Metaelem Type Items
+Color Space Convert Default Items
+Proportional Falloff Items
+Proportional Falloff Curve Only Items
+Snap Source Items
+Snap Element Items
+Snap Animation Element Items
+Curve Fit Method Items
+Mesh Select Mode Items
+Mesh Select Mode Uv Items
+Mesh Delimit Mode Items
+Mesh Walk Delimit Edge Loop Items
+Mesh Walk Delimit Edge Ring Items
+Mesh Walk Delimit Face Loop Items
+Space Graph Mode Items
+Space File Browse Mode Items
+Space Sequencer View Type Items
+Space Type Items
+Space Image Mode Items
+Space Image Mode All Items
+Space Action Mode Items
+Fileselect Params Sort Items
+Region Type Items
+Region Panel Category Items
+Object Modifier Type Items
+Constraint Type Items
+Boidrule Type Items
+Strip Modifier Type Items
+Strip Video Modifier Type Items
+Strip Sound Modifier Type Items
+Strip Scale Method Items
+Object Shaderfx Type Items
+Modifier Triangulate Quad Method Items
+Modifier Triangulate Ngon Method Items
+Modifier Shrinkwrap Mode Items
+Shrinkwrap Type Items
+Shrinkwrap Face Cull Items
+Node Warning Type Items
+Image Type All Items
+Image Color Mode Items
+Image Color Depth Items
+Image Generated Type Items
+Normal Space Items
+Normal Swizzle Items
+Bake Save Mode Items
+Bake Margin Type Items
+Bake Target Items
+Views Format Items
+Views Format Multilayer Items
+Views Format Multiview Items
+Stereo3D Display Items
+Stereo3D Anaglyph Type Items
+Stereo3D Interlace Type Items
+Exr Codec Items
+Color Sets Items
+Beztriple Keyframe Type Items
+Beztriple Interpolation Mode Items
+Beztriple Interpolation Easing Items
+Fcurve Auto Smoothing Items
+Keyframe Handle Type Items
+Driver Target Rotation Mode Items
+Keyingset Path Grouping Items
+Keying Flag Items
+Keying Flag Api Items
+Fmodifier Type Items
+Motionpath Bake Location Items
+Motionpath Display Type Items
+Motionpath Range Items
+Event Value Items
+Event Direction Items
+Event Type Items
+Event Type Mask Items
+Operator Type Flag Items
+Operator Return Items
+Operator Property Tag Items
+Brush Automasking Flag Items
+Brush Sculpt Brush Type Items
+Brush Vertex Brush Type Items
+Brush Weight Brush Type Items
+Brush Gpencil Types Items
+Brush Gpencil Vertex Types Items
+Brush Gpencil Sculpt Types Items
+Brush Gpencil Weight Types Items
+Brush Curves Sculpt Brush Type Items
+Brush Image Brush Type Items
+Brush Curve Preset Items
+Grease Pencil Selectmode Items
+Stroke Depth Order Items
+Axis Xy Items
+Axis Xyz Items
+Axis Flag Xyz Items
+Symmetrize Direction Items
+Texture Type Items
+Light Type Items
+Lightprobes Type Items
+Unpack Method Items
+Object Type Items
+Object Rotation Mode Items
+Object Type Curve Items
+Rigidbody Object Type Items
+Rigidbody Object Shape Items
+Rigidbody Constraint Type Items
+Object Axis Items
+Bake Pass Type Items
+Bake Pass Filter Type Items
+Keymap Propvalue Items
+Operator Context Items
+Wm Report Items
+Wm Job Type Items
+Property Type Items
+Property Subtype Items
+Property Subtype String Items
+Property Subtype Number Items
+Property Subtype Number Array Items
+Property Unit Items
+Property Flag Items
+Property Flag Enum Items
+Property Override Flag Items
+Property Override Flag Collection Items
+Property String Search Flag Items
+Shading Type Items
+Navigation Mode Items
+Node Socket In Out Items
+Node Socket Type Items
+Node Tree Interface Item Type Items
+Node Socket Structure Type Items
+Node Math Items
+Mapping Type Items
+Node Vec Math Items
+Node Boolean Math Items
+Node Compare Operation Items
+Node Integer Math Items
+Node Float To Int Items
+Node Map Range Items
+Node Clamp Items
+Node Compositor Extension Items
+Node Compositor Interpolation Items
+Ramp Blend Items
+Prop Dynamicpaint Type Items
+Clip Editor Mode Items
+Icon Items
+Uilist Layout Type Items
+Linestyle Color Modifier Type Items
+Linestyle Alpha Modifier Type Items
+Linestyle Thickness Modifier Type Items
+Linestyle Geometry Modifier Type Items
+Window Cursor Items
+Dt Method Vertex Items
+Dt Method Edge Items
+Dt Method Loop Items
+Dt Method Poly Items
+Dt Mix Mode Items
+Dt Layers Select Src Items
+Dt Layers Select Dst Items
+Context Mode Items
+Preference Section Items
+Attribute Type Items
+Attr Storage Type Items
+Color Attribute Type Items
+Attribute Type With Auto Items
+Attribute Domain Items
+Attribute Domain Edge Face Items
+Attribute Domain Only Mesh Items
+Attribute Domain Only Mesh No Edge Items
+Attribute Domain Only Mesh No Corner Items
+Attribute Domain Point Face Curve Items
+Attribute Domain Point Edge Face Curve Items
+Attribute Curves Domain Items
+Color Attribute Domain Items
+Attribute Domain Without Corner Items
+Attribute Domain With Auto Items
+Geometry Component Type Items
+Node Combsep Color Items
+Node Socket Data Type Items
+Node Geometry Curve Handle Side Items
+Node Geometry Mesh Circle Fill Type Items
+Volume Grid Data Type Items
+Collection Color Items
+Strip Color Items
+Subdivision Uv Smooth Items
+Subdivision Boundary Smooth Items
+Transform Orientation Items
+Velocity Unit Items
+Curves Type Items
+Curves Handle Type Items
+Curve Normal Mode Items
+Geometry Nodes Gizmo Color Items
+Geometry Nodes Linear Gizmo Draw Style Items
+Particle Edit Hair Brush Items
+Particle Edit Disconnected Hair Brush Items
+Keyframe Paste Offset Items
+Keyframe Paste Offset Value Items
+Keyframe Paste Merge Items
+Transform Pivot Full Items
+Transform Mode Type Items
+Nla Mode Extend Items
+Nla Mode Blend Items
+Keyblock Type Items
+Asset Library Type Items
+File Path Foreach Flag Items
+Types with Custom Property Support
+Utilities (bpy.utils)
+Toggle navigation of Utilities (bpy.utils)
+bpy.utils submodule (bpy.utils.previews)
+bpy.utils submodule (bpy.utils.units)
+Path Utilities (bpy.path)
+Application Data (bpy.app)
+Toggle navigation of Application Data (bpy.app)
+Application Handlers (bpy.app.handlers)
+Application Translations (bpy.app.translations)
+Application Icons (bpy.app.icons)
+Application Timers (bpy.app.timers)
+Property Definitions (bpy.props)
+Standalone Modules
+Audio System (aud)
+Additional Math Functions (bl_math)
+Font Drawing (blf)
+BMesh Module (bmesh)
+Toggle navigation of BMesh Module (bmesh)
+BMesh Operators (bmesh.ops)
+BMesh Types (bmesh.types)
+BMesh Utilities (bmesh.utils)
+BMesh Geometry Utilities (bmesh.geometry)
+Extra Utilities (bpy_extras)
+Toggle navigation of Extra Utilities (bpy_extras)
+bpy_extras submodule (bpy_extras.anim_utils)
+bpy_extras submodule (bpy_extras.asset_utils)
+bpy_extras submodule (bpy_extras.object_utils)
+bpy_extras submodule (bpy_extras.io_utils)
+bpy_extras submodule (bpy_extras.image_utils)
+bpy_extras submodule (bpy_extras.keyconfig_utils)
+bpy_extras submodule (bpy_extras.mesh_utils)
+bpy_extras submodule (bpy_extras.node_utils)
+bpy_extras submodule (bpy_extras.view3d_utils)
+bpy_extras submodule (bpy_extras.id_map_utils)
+Freestyle Module (freestyle)
+Toggle navigation of Freestyle Module (freestyle)
+Freestyle Types (freestyle.types)
+Freestyle Predicates (freestyle.predicates)
+Freestyle Functions (freestyle.functions)
+Freestyle Chaining Iterators (freestyle.chainingiterators)
+Freestyle Shaders (freestyle.shaders)
+Freestyle Utilities (freestyle.utils)
+Toggle navigation of Freestyle Utilities (freestyle.utils)
+freestyle.utils submodule (freestyle.utils.ContextFunctions)
+GPU Module (gpu)
+Toggle navigation of GPU Module (gpu)
+GPU Types (gpu.types)
+GPU Matrix Utilities (gpu.matrix)
+GPU Select Utilities (gpu.select)
+GPU Shader Utilities (gpu.shader)
+GPU State Utilities (gpu.state)
+GPU Texture Utilities (gpu.texture)
+GPU Platform Utilities (gpu.platform)
+GPU Capabilities Utilities (gpu.capabilities)
+GPU Utilities (gpu_extras)
+Toggle navigation of GPU Utilities (gpu_extras)
+gpu_extras submodule (gpu_extras.batch)
+gpu_extras submodule (gpu_extras.presets)
+ID Properties Module (idprop)
+Toggle navigation of ID Properties Module (idprop)
+ID Property Access (idprop.types)
+Image Buffer (imbuf)
+Toggle navigation of Image Buffer (imbuf)
+Image Buffer Types (imbuf.types)
+Math Types & Utilities (mathutils)
+Toggle navigation of Math Types & Utilities (mathutils)
+Geometry Utilities (mathutils.geometry)
+BVHTree Utilities (mathutils.bvhtree)
+KDTree Utilities (mathutils.kdtree)
+Interpolation Utilities (mathutils.interpolate)
+Noise Utilities (mathutils.noise)
+5.1
+Versions
+Loading...
+Back to top
+Toggle Light / Dark / Auto color theme
+Toggle table of contents sidebar
+Mesh Operators
+Â¶
+bpy.ops.mesh.
+attribute_set
+(
+*
+,
+value_float
+=
+0.0
+,
+value_float_vector_2d
+=
+(0.0,
+0.0)
+,
+value_float_vector_3d
+=
+(0.0,
+0.0,
+0.0)
+,
+value_int
+=
+0
+,
+value_int_vector_2d
+=
+(0,
+0)
+,
+value_color
+=
+(1.0,
+1.0,
+1.0,
+1.0)
+,
+value_bool
+=
+False
+)
+Â¶
+Set values of the active attribute for selected elements
+Parameters
+:
+value_float
+(
+float
+) â Value, (in [-inf, inf], optional)
+value_float_vector_2d
+(
+Sequence
+[
+float
+]
+) â Value, (array of 2 items, in [-inf, inf], optional)
+value_float_vector_3d
+(
+Sequence
+[
+float
+]
+) â Value, (array of 3 items, in [-inf, inf], optional)
+value_int
+(
+int
+) â Value, (in [-inf, inf], optional)
+value_int_vector_2d
+(
+Sequence
+[
+int
+]
+) â Value, (array of 2 items, in [-inf, inf], optional)
+value_color
+(
+Sequence
+[
+float
+]
+) â Value, (array of 4 items, in [-inf, inf], optional)
+value_bool
+(
+bool
+) â Value, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+average_normals
+(
+*
+,
+average_type
+=
+'CUSTOM_NORMAL'
+,
+weight
+=
+50
+,
+threshold
+=
+0.01
+)
+Â¶
+Average custom normals of selected vertices
+Parameters
+:
+average_type
+(
+Literal
+[
+'CUSTOM_NORMAL'
+,
+'FACE_AREA'
+,
+'CORNER_ANGLE'
+]
+) â
+Type, Averaging method (optional)
+CUSTOM_NORMAL
+Custom Normal â Take average of vertex normals.
+FACE_AREA
+Face Area â Set all vertex normals by face area.
+CORNER_ANGLE
+Corner Angle â Set all vertex normals by corner angle.
+weight
+(
+int
+) â Weight, Weight applied per face (in [1, 100], optional)
+threshold
+(
+float
+) â Threshold, Threshold value for different weights to be considered equal (in [0, 10], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+beautify_fill
+(
+*
+,
+angle_limit
+=
+3.14159
+)
+Â¶
+Rearrange some faces to try to get less degenerated geometry
+Parameters
+:
+angle_limit
+(
+float
+) â Max Angle, Angle limit (in [0, 3.14159], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+bevel
+(
+*
+,
+offset_type
+=
+'OFFSET'
+,
+offset
+=
+0.0
+,
+profile_type
+=
+'SUPERELLIPSE'
+,
+offset_pct
+=
+0.0
+,
+segments
+=
+1
+,
+profile
+=
+0.5
+,
+affect
+=
+'EDGES'
+,
+clamp_overlap
+=
+False
+,
+loop_slide
+=
+True
+,
+mark_seam
+=
+False
+,
+mark_sharp
+=
+False
+,
+material
+=
+-1
+,
+harden_normals
+=
+False
+,
+face_strength_mode
+=
+'NONE'
+,
+miter_outer
+=
+'SHARP'
+,
+miter_inner
+=
+'SHARP'
+,
+spread
+=
+0.1
+,
+vmesh_method
+=
+'ADJ'
+,
+release_confirm
+=
+False
+)
+Â¶
+Cut into selected items at an angle to create bevel or chamfer
+Parameters
+:
+offset_type
+(
+Literal
+[
+'OFFSET'
+,
+'WIDTH'
+,
+'DEPTH'
+,
+'PERCENT'
+,
+'ABSOLUTE'
+]
+) â
+Width Type, The method for determining the size of the bevel (optional)
+OFFSET
+Offset â Amount is offset of new edges from original.
+WIDTH
+Width â Amount is width of new face.
+DEPTH
+Depth â Amount is perpendicular distance from original edge to bevel face.
+PERCENT
+Percent â Amount is percent of adjacent edge length.
+ABSOLUTE
+Absolute â Amount is absolute distance along adjacent edge.
+offset
+(
+float
+) â Width, Bevel amount (in [0, 1e+06], optional)
+profile_type
+(
+Literal
+[
+'SUPERELLIPSE'
+,
+'CUSTOM'
+]
+) â
+Profile Type, The type of shape used to rebuild a beveled section (optional)
+SUPERELLIPSE
+Superellipse â The profile can be a concave or convex curve.
+CUSTOM
+Custom â The profile can be any arbitrary path between its endpoints.
+offset_pct
+(
+float
+) â Width Percent, Bevel amount for percentage method (in [0, 100], optional)
+segments
+(
+int
+) â Segments, Segments for curved edge (in [1, 1000], optional)
+profile
+(
+float
+) â Profile, Controls profile shape (0.5 = round) (in [0, 1], optional)
+affect
+(
+Literal
+[
+'VERTICES'
+,
+'EDGES'
+]
+) â
+Affect, Affect edges or vertices (optional)
+VERTICES
+Vertices â Affect only vertices.
+EDGES
+Edges â Affect only edges.
+clamp_overlap
+(
+bool
+) â Clamp Overlap, Do not allow beveled edges/vertices to overlap each other (optional)
+loop_slide
+(
+bool
+) â Loop Slide, Prefer sliding along edges to even widths (optional)
+mark_seam
+(
+bool
+) â Mark Seams, Preserve seams along beveled edges (optional)
+mark_sharp
+(
+bool
+) â Mark Sharp, Preserve sharp edges along beveled edges (optional)
+material
+(
+int
+) â Material Index, Material for bevel faces (-1 means use adjacent faces) (in [-1, inf], optional)
+harden_normals
+(
+bool
+) â Harden Normals, Match normals of new faces to adjacent faces (optional)
+face_strength_mode
+(
+Literal
+[
+'NONE'
+,
+'NEW'
+,
+'AFFECTED'
+,
+'ALL'
+]
+) â
+Face Strength Mode, Whether to set face strength, and which faces to set face strength on (optional)
+NONE
+None â Do not set face strength.
+NEW
+New â Set face strength on new faces only.
+AFFECTED
+Affected â Set face strength on new and modified faces only.
+ALL
+All â Set face strength on all faces.
+miter_outer
+(
+Literal
+[
+'SHARP'
+,
+'PATCH'
+,
+'ARC'
+]
+) â
+Outer Miter, Pattern to use for outside of miters (optional)
+SHARP
+Sharp â Outside of miter is sharp.
+PATCH
+Patch â Outside of miter is squared-off patch.
+ARC
+Arc â Outside of miter is arc.
+miter_inner
+(
+Literal
+[
+'SHARP'
+,
+'ARC'
+]
+) â
+Inner Miter, Pattern to use for inside of miters (optional)
+SHARP
+Sharp â Inside of miter is sharp.
+ARC
+Arc â Inside of miter is arc.
+spread
+(
+float
+) â Spread, Amount to spread arcs for arc inner miters (in [0, 1e+06], optional)
+vmesh_method
+(
+Literal
+[
+'ADJ'
+,
+'CUTOFF'
+]
+) â
+Vertex Mesh Method, The method to use to create meshes at intersections (optional)
+ADJ
+Grid Fill â Default patterned fill.
+CUTOFF
+Cutoff â A cutoff at each profileâs end before the intersection.
+release_confirm
+(
+bool
+) â Confirm on Release, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+bisect
+(
+*
+,
+plane_co
+=
+(0.0,
+0.0,
+0.0)
+,
+plane_no
+=
+(0.0,
+0.0,
+0.0)
+,
+use_fill
+=
+False
+,
+clear_inner
+=
+False
+,
+clear_outer
+=
+False
+,
+threshold
+=
+0.0001
+,
+xstart
+=
+0
+,
+xend
+=
+0
+,
+ystart
+=
+0
+,
+yend
+=
+0
+,
+flip
+=
+False
+,
+cursor
+=
+5
+)
+Â¶
+Cut geometry along a plane (click-drag to define plane)
+Parameters
+:
+plane_co
+(
+mathutils.Vector
+) â Plane Point, A point on the plane (array of 3 items, in [-inf, inf], optional)
+plane_no
+(
+mathutils.Vector
+) â Plane Normal, The direction the plane points (array of 3 items, in [-1, 1], optional)
+use_fill
+(
+bool
+) â Fill, Fill in the cut (optional)
+clear_inner
+(
+bool
+) â Clear Inner, Remove geometry behind the plane (optional)
+clear_outer
+(
+bool
+) â Clear Outer, Remove geometry in front of the plane (optional)
+threshold
+(
+float
+) â Axis Threshold, Preserves the existing geometry along the cut plane (in [0, 10], optional)
+xstart
+(
+int
+) â X Start, (in [-inf, inf], optional)
+xend
+(
+int
+) â X End, (in [-inf, inf], optional)
+ystart
+(
+int
+) â Y Start, (in [-inf, inf], optional)
+yend
+(
+int
+) â Y End, (in [-inf, inf], optional)
+flip
+(
+bool
+) â Flip, (optional)
+cursor
+(
+int
+) â Cursor, Mouse cursor style to use during the modal operator (in [0, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+blend_from_shape
+(
+*
+,
+shape
+=
+''
+,
+blend
+=
+1.0
+,
+add
+=
+True
+)
+Â¶
+Blend in shape from a shape key
+Parameters
+:
+shape
+(
+str
+) â Shape, Shape key to use for blending (optional)
+blend
+(
+float
+) â Blend, Blending factor (in [-1000, 1000], optional)
+add
+(
+bool
+) â Add, Add rather than blend between shapes (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+bridge_edge_loops
+(
+*
+,
+type
+=
+'SINGLE'
+,
+use_merge
+=
+False
+,
+merge_factor
+=
+0.5
+,
+twist_offset
+=
+0
+,
+number_cuts
+=
+0
+,
+interpolation
+=
+'PATH'
+,
+smoothness
+=
+1.0
+,
+profile_shape_factor
+=
+0.0
+,
+profile_shape
+=
+'SMOOTH'
+)
+Â¶
+Create a bridge of faces between two or more selected edge loops
+Parameters
+:
+type
+(
+Literal
+[
+'SINGLE'
+,
+'CLOSED'
+,
+'PAIRS'
+]
+) â Connect Loops, Method of bridging multiple loops (optional)
+use_merge
+(
+bool
+) â Merge, Merge rather than creating faces (optional)
+merge_factor
+(
+float
+) â Merge Factor, (in [0, 1], optional)
+twist_offset
+(
+int
+) â Twist, Twist offset for closed loops (in [-1000, 1000], optional)
+number_cuts
+(
+int
+) â Number of Cuts, (in [0, 1000], optional)
+interpolation
+(
+Literal
+[
+'LINEAR'
+,
+'PATH'
+,
+'SURFACE'
+]
+) â Interpolation, Interpolation method (optional)
+smoothness
+(
+float
+) â Smoothness, Smoothness factor (in [0, 1000], optional)
+profile_shape_factor
+(
+float
+) â Profile Factor, How much intermediary new edges are shrunk/expanded (in [-1000, 1000], optional)
+profile_shape
+(Literal[
+Proportional Falloff Curve Only Items
+]) â Profile Shape, Shape of the profile (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+colors_reverse
+(
+)
+Â¶
+Flip direction of face corner color attribute inside faces
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+colors_rotate
+(
+*
+,
+use_ccw
+=
+False
+)
+Â¶
+Rotate face corner color attribute inside faces
+Parameters
+:
+use_ccw
+(
+bool
+) â Counter Clockwise, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+convex_hull
+(
+*
+,
+delete_unused
+=
+True
+,
+use_existing_faces
+=
+True
+,
+make_holes
+=
+False
+,
+join_triangles
+=
+True
+,
+face_threshold
+=
+0.698132
+,
+shape_threshold
+=
+0.698132
+,
+topology_influence
+=
+0.0
+,
+uvs
+=
+False
+,
+vcols
+=
+False
+,
+seam
+=
+False
+,
+sharp
+=
+False
+,
+materials
+=
+False
+,
+deselect_joined
+=
+False
+)
+Â¶
+Enclose selected vertices in a convex polyhedron
+Parameters
+:
+delete_unused
+(
+bool
+) â Delete Unused, Delete selected elements that are not used by the hull (optional)
+use_existing_faces
+(
+bool
+) â Use Existing Faces, Skip hull triangles that are covered by a pre-existing face (optional)
+make_holes
+(
+bool
+) â Make Holes, Delete selected faces that are used by the hull (optional)
+join_triangles
+(
+bool
+) â Join Triangles, Merge adjacent triangles into quads (optional)
+face_threshold
+(
+float
+) â Max Face Angle, Face angle limit (in [0, 3.14159], optional)
+shape_threshold
+(
+float
+) â Max Shape Angle, Shape angle limit (in [0, 3.14159], optional)
+topology_influence
+(
+float
+) â Topology Influence, How much to prioritize regular grids of quads as well as quads that touch existing quads (in [0, 2], optional)
+uvs
+(
+bool
+) â Compare UVs, (optional)
+vcols
+(
+bool
+) â Compare Color Attributes, (optional)
+seam
+(
+bool
+) â Compare Seam, (optional)
+sharp
+(
+bool
+) â Compare Sharp, (optional)
+materials
+(
+bool
+) â Compare Materials, (optional)
+deselect_joined
+(
+bool
+) â Deselect Joined, Only select remaining triangles that were not merged (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+customdata_custom_splitnormals_add
+(
+)
+Â¶
+Add a custom normals layer, if none exists yet
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+customdata_custom_splitnormals_clear
+(
+)
+Â¶
+Remove the custom normals layer, if it exists
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+customdata_mask_clear
+(
+)
+Â¶
+Clear vertex sculpt masking data from the mesh
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+customdata_skin_add
+(
+)
+Â¶
+Add a vertex skin layer
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+customdata_skin_clear
+(
+)
+Â¶
+Clear vertex skin layer
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+decimate
+(
+*
+,
+ratio
+=
+1.0
+,
+use_vertex_group
+=
+False
+,
+vertex_group_factor
+=
+1.0
+,
+invert_vertex_group
+=
+False
+,
+use_symmetry
+=
+False
+,
+symmetry_axis
+=
+'Y'
+)
+Â¶
+Simplify geometry by collapsing edges
+Parameters
+:
+ratio
+(
+float
+) â Ratio, (in [0, 1], optional)
+use_vertex_group
+(
+bool
+) â Vertex Group, Use active vertex group as an influence (optional)
+vertex_group_factor
+(
+float
+) â Weight, Vertex group strength (in [0, 1000], optional)
+invert_vertex_group
+(
+bool
+) â Invert, Invert vertex group influence (optional)
+use_symmetry
+(
+bool
+) â Symmetry, Maintain symmetry on an axis (optional)
+symmetry_axis
+(Literal[
+Axis Xyz Items
+]) â Axis, Axis of symmetry (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+delete
+(
+*
+,
+type
+=
+'VERT'
+)
+Â¶
+Delete selected vertices, edges or faces
+Parameters
+:
+type
+(
+Literal
+[
+'VERT'
+,
+'EDGE'
+,
+'FACE'
+,
+'EDGE_FACE'
+,
+'ONLY_FACE'
+]
+) â Type, Method used for deleting mesh data (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+delete_edgeloop
+(
+*
+,
+use_face_split
+=
+True
+)
+Â¶
+Delete an edge loop by merging the faces on each side
+Parameters
+:
+use_face_split
+(
+bool
+) â Face Split, Split off face corners to maintain surrounding geometry (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+delete_loose
+(
+*
+,
+use_verts
+=
+True
+,
+use_edges
+=
+True
+,
+use_faces
+=
+False
+)
+Â¶
+Delete loose vertices, edges or faces
+Parameters
+:
+use_verts
+(
+bool
+) â Vertices, Remove loose vertices (optional)
+use_edges
+(
+bool
+) â Edges, Remove loose edges (optional)
+use_faces
+(
+bool
+) â Faces, Remove loose faces (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+dissolve_degenerate
+(
+*
+,
+threshold
+=
+0.0001
+)
+Â¶
+Dissolve zero area faces and zero length edges
+Parameters
+:
+threshold
+(
+float
+) â Merge Distance, Maximum distance between elements to merge (in [1e-06, 50], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+dissolve_edges
+(
+*
+,
+use_verts
+=
+True
+,
+angle_threshold
+=
+3.14159
+,
+use_face_split
+=
+False
+)
+Â¶
+Dissolve edges, merging faces
+Parameters
+:
+use_verts
+(
+bool
+) â Dissolve Vertices, Dissolve remaining vertices which connect to only two edges (optional)
+angle_threshold
+(
+float
+) â Angle Threshold, Remaining vertices which separate edge pairs are preserved if their edge angle exceeds this threshold. (in [0, 3.14159], optional)
+use_face_split
+(
+bool
+) â Face Split, Split off face corners to maintain surrounding geometry (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+dissolve_faces
+(
+*
+,
+use_verts
+=
+False
+)
+Â¶
+Dissolve faces
+Parameters
+:
+use_verts
+(
+bool
+) â Dissolve Vertices, Dissolve remaining vertices which connect to only two edges (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+dissolve_limited
+(
+*
+,
+angle_limit
+=
+0.0872665
+,
+use_dissolve_boundaries
+=
+False
+,
+delimit
+=
+{'NORMAL'}
+)
+Â¶
+Dissolve selected edges and vertices, limited by the angle of surrounding geometry
+Parameters
+:
+angle_limit
+(
+float
+) â Max Angle, Angle limit (in [0, 3.14159], optional)
+use_dissolve_boundaries
+(
+bool
+) â All Boundaries, Dissolve all vertices in between face boundaries (optional)
+delimit
+(set[Literal[
+Mesh Delimit Mode Items
+]]) â Delimit, Delimit dissolve operation (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+dissolve_mode
+(
+*
+,
+use_verts
+=
+False
+,
+angle_threshold
+=
+3.14159
+,
+use_face_split
+=
+False
+,
+use_boundary_tear
+=
+False
+)
+Â¶
+Dissolve geometry based on the selection mode
+Parameters
+:
+use_verts
+(
+bool
+) â Dissolve Vertices, Dissolve remaining vertices which connect to only two edges (optional)
+angle_threshold
+(
+float
+) â Angle Threshold, Remaining vertices which separate edge pairs are preserved if their edge angle exceeds this threshold. (in [0, 3.14159], optional)
+use_face_split
+(
+bool
+) â Face Split, Split off face corners to maintain surrounding geometry (optional)
+use_boundary_tear
+(
+bool
+) â Tear Boundary, Split off face corners instead of merging faces (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+dissolve_verts
+(
+*
+,
+use_face_split
+=
+False
+,
+use_boundary_tear
+=
+False
+)
+Â¶
+Dissolve vertices, merge edges and faces
+Parameters
+:
+use_face_split
+(
+bool
+) â Face Split, Split off face corners to maintain surrounding geometry (optional)
+use_boundary_tear
+(
+bool
+) â Tear Boundary, Split off face corners instead of merging faces (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+dupli_extrude_cursor
+(
+*
+,
+rotate_source
+=
+True
+)
+Â¶
+Duplicate and extrude selected vertices, edges or faces towards the mouse cursor
+Parameters
+:
+rotate_source
+(
+bool
+) â Rotate Source, Rotate initial selection giving better shape (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+duplicate
+(
+*
+,
+mode
+=
+1
+)
+Â¶
+Duplicate selected vertices, edges or faces
+Parameters
+:
+mode
+(
+int
+) â Mode, (in [0, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+duplicate_move
+(
+*
+,
+MESH_OT_duplicate
+=
+{}
+,
+TRANSFORM_OT_translate
+=
+{}
+)
+Â¶
+Duplicate mesh and move
+Parameters
+:
+MESH_OT_duplicate
+(
+dict
+[
+str
+,
+Any
+]
+) â Duplicate, Duplicate selected vertices, edges or faces (optional,
+bpy.ops.mesh.duplicate()
+keyword arguments)
+TRANSFORM_OT_translate
+(
+dict
+[
+str
+,
+Any
+]
+) â Move, Move selected items (optional,
+bpy.ops.transform.translate()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+edge_collapse
+(
+)
+Â¶
+Collapse isolated edge and face regions, merging data such as UVs and color attributes. This can collapse edge-rings as well as regions of connected faces into vertices
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+edge_face_add
+(
+)
+Â¶
+Add an edge or face to selected
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+edge_rotate
+(
+*
+,
+use_ccw
+=
+False
+)
+Â¶
+Rotate selected edge or adjoining faces
+Parameters
+:
+use_ccw
+(
+bool
+) â Counter Clockwise, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+edge_split
+(
+*
+,
+type
+=
+'EDGE'
+)
+Â¶
+Split selected edges so that each neighbor face gets its own copy
+Parameters
+:
+type
+(
+Literal
+[
+'EDGE'
+,
+'VERT'
+]
+) â
+Type, Method to use for splitting (optional)
+EDGE
+Faces by Edges â Split faces along selected edges.
+VERT
+Faces & Edges by Vertices â Split faces and edges connected to selected vertices.
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+edgering_select
+(
+*
+,
+delimit_edge_ring
+=
+{'NGONS'}
+,
+extend
+=
+False
+,
+deselect
+=
+False
+,
+toggle
+=
+False
+,
+object_index
+=
+-1
+,
+edge_index
+=
+-1
+,
+vert_index
+=
+-1
+,
+face_index
+=
+-1
+)
+Â¶
+Select an edge ring
+Parameters
+:
+delimit_edge_ring
+(set[Literal[
+Mesh Walk Delimit Edge Ring Items
+]]) â Edge Ring Delimit, Delimit edge ring selection (optional)
+extend
+(
+bool
+) â Extend Select, Extend the selection (optional)
+deselect
+(
+bool
+) â Deselect, Remove from the selection (optional)
+toggle
+(
+bool
+) â Toggle Select, Toggle the selection (optional)
+object_index
+(
+int
+) â (in [-1, inf], optional)
+edge_index
+(
+int
+) â (in [-1, inf], optional)
+vert_index
+(
+int
+) â (in [-1, inf], optional)
+face_index
+(
+int
+) â (in [-1, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+edges_select_sharp
+(
+*
+,
+sharpness
+=
+0.523599
+)
+Â¶
+Select all sharp enough edges
+Parameters
+:
+sharpness
+(
+float
+) â Sharpness, (in [0.000174533, 3.14159], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_context
+(
+*
+,
+use_normal_flip
+=
+False
+,
+use_dissolve_ortho_edges
+=
+False
+,
+mirror
+=
+False
+)
+Â¶
+Extrude selection
+Parameters
+:
+use_normal_flip
+(
+bool
+) â Flip Normals, (optional)
+use_dissolve_ortho_edges
+(
+bool
+) â Dissolve Orthogonal Edges, (optional)
+mirror
+(
+bool
+) â Mirror Editing, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_context_move
+(
+*
+,
+MESH_OT_extrude_context
+=
+{}
+,
+TRANSFORM_OT_translate
+=
+{}
+)
+Â¶
+Extrude region together along the average normal
+Parameters
+:
+MESH_OT_extrude_context
+(
+dict
+[
+str
+,
+Any
+]
+) â Extrude Context, Extrude selection (optional,
+bpy.ops.mesh.extrude_context()
+keyword arguments)
+TRANSFORM_OT_translate
+(
+dict
+[
+str
+,
+Any
+]
+) â Move, Move selected items (optional,
+bpy.ops.transform.translate()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_edges_indiv
+(
+*
+,
+use_normal_flip
+=
+False
+,
+mirror
+=
+False
+)
+Â¶
+Extrude individual edges only
+Parameters
+:
+use_normal_flip
+(
+bool
+) â Flip Normals, (optional)
+mirror
+(
+bool
+) â Mirror Editing, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_edges_move
+(
+*
+,
+MESH_OT_extrude_edges_indiv
+=
+{}
+,
+TRANSFORM_OT_translate
+=
+{}
+)
+Â¶
+Extrude edges and move result
+Parameters
+:
+MESH_OT_extrude_edges_indiv
+(
+dict
+[
+str
+,
+Any
+]
+) â Extrude Only Edges, Extrude individual edges only (optional,
+bpy.ops.mesh.extrude_edges_indiv()
+keyword arguments)
+TRANSFORM_OT_translate
+(
+dict
+[
+str
+,
+Any
+]
+) â Move, Move selected items (optional,
+bpy.ops.transform.translate()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_faces_indiv
+(
+*
+,
+mirror
+=
+False
+)
+Â¶
+Extrude individual faces only
+Parameters
+:
+mirror
+(
+bool
+) â Mirror Editing, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_faces_move
+(
+*
+,
+MESH_OT_extrude_faces_indiv
+=
+{}
+,
+TRANSFORM_OT_shrink_fatten
+=
+{}
+)
+Â¶
+Extrude each individual face separately along local normals
+Parameters
+:
+MESH_OT_extrude_faces_indiv
+(
+dict
+[
+str
+,
+Any
+]
+) â Extrude Individual Faces, Extrude individual faces only (optional,
+bpy.ops.mesh.extrude_faces_indiv()
+keyword arguments)
+TRANSFORM_OT_shrink_fatten
+(
+dict
+[
+str
+,
+Any
+]
+) â Shrink/Fatten, Shrink/fatten selected vertices along normals (optional,
+bpy.ops.transform.shrink_fatten()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_manifold
+(
+*
+,
+MESH_OT_extrude_region
+=
+{}
+,
+TRANSFORM_OT_translate
+=
+{}
+)
+Â¶
+Extrude, dissolves edges whose faces form a flat surface and intersect new edges
+Parameters
+:
+MESH_OT_extrude_region
+(
+dict
+[
+str
+,
+Any
+]
+) â Extrude Region, Extrude region of faces (optional,
+bpy.ops.mesh.extrude_region()
+keyword arguments)
+TRANSFORM_OT_translate
+(
+dict
+[
+str
+,
+Any
+]
+) â Move, Move selected items (optional,
+bpy.ops.transform.translate()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_region
+(
+*
+,
+use_normal_flip
+=
+False
+,
+use_dissolve_ortho_edges
+=
+False
+,
+mirror
+=
+False
+)
+Â¶
+Extrude region of faces
+Parameters
+:
+use_normal_flip
+(
+bool
+) â Flip Normals, (optional)
+use_dissolve_ortho_edges
+(
+bool
+) â Dissolve Orthogonal Edges, (optional)
+mirror
+(
+bool
+) â Mirror Editing, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_region_move
+(
+*
+,
+MESH_OT_extrude_region
+=
+{}
+,
+TRANSFORM_OT_translate
+=
+{}
+)
+Â¶
+Extrude region and move result
+Parameters
+:
+MESH_OT_extrude_region
+(
+dict
+[
+str
+,
+Any
+]
+) â Extrude Region, Extrude region of faces (optional,
+bpy.ops.mesh.extrude_region()
+keyword arguments)
+TRANSFORM_OT_translate
+(
+dict
+[
+str
+,
+Any
+]
+) â Move, Move selected items (optional,
+bpy.ops.transform.translate()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_region_shrink_fatten
+(
+*
+,
+MESH_OT_extrude_region
+=
+{}
+,
+TRANSFORM_OT_shrink_fatten
+=
+{}
+)
+Â¶
+Extrude region together along local normals
+Parameters
+:
+MESH_OT_extrude_region
+(
+dict
+[
+str
+,
+Any
+]
+) â Extrude Region, Extrude region of faces (optional,
+bpy.ops.mesh.extrude_region()
+keyword arguments)
+TRANSFORM_OT_shrink_fatten
+(
+dict
+[
+str
+,
+Any
+]
+) â Shrink/Fatten, Shrink/fatten selected vertices along normals (optional,
+bpy.ops.transform.shrink_fatten()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_repeat
+(
+*
+,
+steps
+=
+10
+,
+offset
+=
+(0.0,
+0.0,
+0.0)
+,
+scale_offset
+=
+1.0
+)
+Â¶
+Extrude selected vertices, edges or faces repeatedly
+Parameters
+:
+steps
+(
+int
+) â Steps, (in [0, 1000000], optional)
+offset
+(
+mathutils.Vector
+) â Offset, Offset vector (array of 3 items, in [-100000, 100000], optional)
+scale_offset
+(
+float
+) â Scale Offset, (in [0, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_vertices_move
+(
+*
+,
+MESH_OT_extrude_verts_indiv
+=
+{}
+,
+TRANSFORM_OT_translate
+=
+{}
+)
+Â¶
+Extrude vertices and move result
+Parameters
+:
+MESH_OT_extrude_verts_indiv
+(
+dict
+[
+str
+,
+Any
+]
+) â Extrude Only Vertices, Extrude individual vertices only (optional,
+bpy.ops.mesh.extrude_verts_indiv()
+keyword arguments)
+TRANSFORM_OT_translate
+(
+dict
+[
+str
+,
+Any
+]
+) â Move, Move selected items (optional,
+bpy.ops.transform.translate()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+extrude_verts_indiv
+(
+*
+,
+mirror
+=
+False
+)
+Â¶
+Extrude individual vertices only
+Parameters
+:
+mirror
+(
+bool
+) â Mirror Editing, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+face_make_planar
+(
+*
+,
+factor
+=
+1.0
+,
+repeat
+=
+1
+)
+Â¶
+Flatten selected faces
+Parameters
+:
+factor
+(
+float
+) â Factor, (in [-10, 10], optional)
+repeat
+(
+int
+) â Iterations, (in [1, 10000], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+face_split_by_edges
+(
+)
+Â¶
+Weld loose edges into faces (splitting them into new faces)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+faces_select_linked_flat
+(
+*
+,
+sharpness
+=
+0.0174533
+)
+Â¶
+Select linked faces by angle
+Parameters
+:
+sharpness
+(
+float
+) â Sharpness, (in [0.000174533, 3.14159], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+faces_shade_flat
+(
+)
+Â¶
+Display faces flat
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+faces_shade_smooth
+(
+)
+Â¶
+Display faces smooth (using vertex normals)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+fill
+(
+*
+,
+use_beauty
+=
+True
+)
+Â¶
+Fill a selected edge loop with faces
+Parameters
+:
+use_beauty
+(
+bool
+) â Beauty, Use best triangulation division (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+fill_grid
+(
+*
+,
+span
+=
+1
+,
+offset
+=
+0
+,
+use_interp_simple
+=
+False
+)
+Â¶
+Fill grid from two loops
+Parameters
+:
+span
+(
+int
+) â Span, Number of grid columns (in [1, 1000], optional)
+offset
+(
+int
+) â Offset, Vertex that is the corner of the grid (in [-1000, 1000], optional)
+use_interp_simple
+(
+bool
+) â Simple Blending, Use simple interpolation of grid vertices (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+fill_holes
+(
+*
+,
+sides
+=
+4
+)
+Â¶
+Fill in holes (boundary edge loops)
+Parameters
+:
+sides
+(
+int
+) â Sides, Number of sides in hole required to fill (zero fills all holes) (in [0, 1000], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+flip_normals
+(
+*
+,
+only_clnors
+=
+False
+)
+Â¶
+Flip the direction of selected facesâ normals (and of their vertices)
+Parameters
+:
+only_clnors
+(
+bool
+) â Custom Normals Only, Only flip the custom loop normals of the selected elements (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+flip_quad_tessellation
+(
+)
+Â¶
+Flips the tessellation of selected quads
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+hide
+(
+*
+,
+unselected
+=
+False
+)
+Â¶
+Hide (un)selected vertices, edges or faces
+Parameters
+:
+unselected
+(
+bool
+) â Unselected, Hide unselected rather than selected (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+inset
+(
+*
+,
+use_boundary
+=
+True
+,
+use_even_offset
+=
+True
+,
+use_relative_offset
+=
+False
+,
+use_edge_rail
+=
+False
+,
+thickness
+=
+0.0
+,
+depth
+=
+0.0
+,
+use_outset
+=
+False
+,
+use_select_inset
+=
+False
+,
+use_individual
+=
+False
+,
+use_interpolate
+=
+True
+,
+release_confirm
+=
+False
+)
+Â¶
+Inset new faces into selected faces
+Parameters
+:
+use_boundary
+(
+bool
+) â Boundary, Inset face boundaries (optional)
+use_even_offset
+(
+bool
+) â Offset Even, Scale the offset to give more even thickness (optional)
+use_relative_offset
+(
+bool
+) â Offset Relative, Scale the offset by surrounding geometry (optional)
+use_edge_rail
+(
+bool
+) â Edge Rail, Inset the region along existing edges (optional)
+thickness
+(
+float
+) â Thickness, (in [0, inf], optional)
+depth
+(
+float
+) â Depth, (in [-inf, inf], optional)
+use_outset
+(
+bool
+) â Outset, Outset rather than inset (optional)
+use_select_inset
+(
+bool
+) â Select Outer, Select the new inset faces (optional)
+use_individual
+(
+bool
+) â Individual, Individual face inset (optional)
+use_interpolate
+(
+bool
+) â Interpolate, Blend face data across the inset (optional)
+release_confirm
+(
+bool
+) â Confirm on Release, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+intersect
+(
+*
+,
+mode
+=
+'SELECT_UNSELECT'
+,
+separate_mode
+=
+'CUT'
+,
+threshold
+=
+1e-06
+,
+solver
+=
+'EXACT'
+)
+Â¶
+Cut an intersection into faces
+Parameters
+:
+mode
+(
+Literal
+[
+'SELECT'
+,
+'SELECT_UNSELECT'
+]
+) â
+Source, (optional)
+SELECT
+Self Intersect â Self intersect selected faces.
+SELECT_UNSELECT
+Selected/Unselected â Intersect selected with unselected faces.
+separate_mode
+(
+Literal
+[
+'ALL'
+,
+'CUT'
+,
+'NONE'
+]
+) â
+Separate Mode, (optional)
+ALL
+All â Separate all geometry from intersections.
+CUT
+Cut â Cut into geometry keeping each side separate (Selected/Unselected only).
+NONE
+Merge â Merge all geometry from the intersection.
+threshold
+(
+float
+) â Merge Threshold, (in [0, 0.01], optional)
+solver
+(
+Literal
+[
+'FLOAT'
+,
+'EXACT'
+]
+) â
+Solver, Which Intersect solver to use (optional)
+FLOAT
+Float â Simple solver with good performance, without support for overlapping geometry.
+EXACT
+Exact â Slower solver with the best results for coplanar faces.
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+intersect_boolean
+(
+*
+,
+operation
+=
+'DIFFERENCE'
+,
+use_swap
+=
+False
+,
+use_self
+=
+False
+,
+threshold
+=
+1e-06
+,
+solver
+=
+'EXACT'
+)
+Â¶
+Cut solid geometry from selected to unselected
+Parameters
+:
+operation
+(
+Literal
+[
+'INTERSECT'
+,
+'UNION'
+,
+'DIFFERENCE'
+]
+) â Boolean Operation, Which boolean operation to apply (optional)
+use_swap
+(
+bool
+) â Swap, Use with difference intersection to swap which side is kept (optional)
+use_self
+(
+bool
+) â Self Intersection, Do self-union or self-intersection (optional)
+threshold
+(
+float
+) â Merge Threshold, (in [0, 0.01], optional)
+solver
+(
+Literal
+[
+'FLOAT'
+,
+'EXACT'
+]
+) â
+Solver, Which Boolean solver to use (optional)
+FLOAT
+Float â Faster solver, some limitations.
+EXACT
+Exact â Exact solver, slower, handles more cases.
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+knife_project
+(
+*
+,
+cut_through
+=
+False
+)
+Â¶
+Use other objects outlines and boundaries to project knife cuts
+Parameters
+:
+cut_through
+(
+bool
+) â Cut Through, Cut through all faces, not just visible ones (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+knife_tool
+(
+*
+,
+use_occlude_geometry
+=
+True
+,
+only_selected
+=
+False
+,
+xray
+=
+True
+,
+visible_measurements
+=
+'NONE'
+,
+angle_snapping
+=
+'NONE'
+,
+angle_snapping_increment
+=
+0.523599
+,
+wait_for_input
+=
+True
+)
+Â¶
+Cut new topology
+Parameters
+:
+use_occlude_geometry
+(
+bool
+) â Occlude Geometry, Only cut the front most geometry (optional)
+only_selected
+(
+bool
+) â Only Selected, Only cut selected geometry (optional)
+xray
+(
+bool
+) â X-Ray, Show cuts hidden by geometry (optional)
+visible_measurements
+(
+Literal
+[
+'NONE'
+,
+'BOTH'
+,
+'DISTANCE'
+,
+'ANGLE'
+]
+) â
+Measurements, Visible distance and angle measurements (optional)
+NONE
+None â Show no measurements.
+BOTH
+Both â Show both distances and angles.
+DISTANCE
+Distance â Show just distance measurements.
+ANGLE
+Angle â Show just angle measurements.
+angle_snapping
+(
+Literal
+[
+'NONE'
+,
+'SCREEN'
+,
+'RELATIVE'
+]
+) â
+Angle Snapping, Angle snapping mode (optional)
+NONE
+None â No angle snapping.
+SCREEN
+Screen â Screen space angle snapping.
+RELATIVE
+Relative â Angle snapping relative to the previous cut edge.
+angle_snapping_increment
+(
+float
+) â Angle Snap Increment, The angle snap increment used when in constrained angle mode (in [0, 3.14159], optional)
+wait_for_input
+(
+bool
+) â Wait for Input, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+loop_select
+(
+*
+,
+delimit_edge_loop
+=
+{'NGONS',
+'OUTER_CORNERS'}
+,
+delimit_face_loop
+=
+set()
+,
+extend
+=
+False
+,
+deselect
+=
+False
+,
+toggle
+=
+False
+,
+object_index
+=
+-1
+,
+edge_index
+=
+-1
+,
+vert_index
+=
+-1
+,
+face_index
+=
+-1
+)
+Â¶
+Select a loop of connected edges
+Parameters
+:
+delimit_edge_loop
+(set[Literal[
+Mesh Walk Delimit Edge Loop Items
+]]) â Delimit, Delimit edge loop selection (optional)
+delimit_face_loop
+(set[Literal[
+Mesh Walk Delimit Face Loop Items
+]]) â Face Loop Delimit, Delimit face loop selection (optional)
+extend
+(
+bool
+) â Extend Select, Extend the selection (optional)
+deselect
+(
+bool
+) â Deselect, Remove from the selection (optional)
+toggle
+(
+bool
+) â Toggle Select, Toggle the selection (optional)
+object_index
+(
+int
+) â (in [-1, inf], optional)
+edge_index
+(
+int
+) â (in [-1, inf], optional)
+vert_index
+(
+int
+) â (in [-1, inf], optional)
+face_index
+(
+int
+) â (in [-1, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+loop_to_region
+(
+*
+,
+select_bigger
+=
+False
+)
+Â¶
+Select region of faces inside of a selected loop of edges
+Parameters
+:
+select_bigger
+(
+bool
+) â Select Bigger, Select bigger regions instead of smaller ones (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+loopcut
+(
+*
+,
+number_cuts
+=
+1
+,
+smoothness
+=
+0.0
+,
+falloff
+=
+'INVERSE_SQUARE'
+,
+object_index
+=
+-1
+,
+edge_index
+=
+-1
+,
+mesh_select_mode_init
+=
+(False,
+False,
+False)
+)
+Â¶
+Add a new loop between existing loops
+Parameters
+:
+number_cuts
+(
+int
+) â Number of Cuts, (in [1, 1000000], optional)
+smoothness
+(
+float
+) â Smoothness, Smoothness factor (in [-1000, 1000], optional)
+falloff
+(Literal[
+Proportional Falloff Curve Only Items
+]) â Falloff, Falloff type of the feather (optional)
+object_index
+(
+int
+) â Object Index, (in [-1, inf], optional)
+edge_index
+(
+int
+) â Edge Index, (in [-1, inf], optional)
+mesh_select_mode_init
+(
+Sequence
+[
+bool
+]
+) â (array of 3 items, optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+loopcut_slide
+(
+*
+,
+MESH_OT_loopcut
+=
+{}
+,
+TRANSFORM_OT_edge_slide
+=
+{}
+)
+Â¶
+Cut mesh loop and slide it
+Parameters
+:
+MESH_OT_loopcut
+(
+dict
+[
+str
+,
+Any
+]
+) â Loop Cut, Add a new loop between existing loops (optional,
+bpy.ops.mesh.loopcut()
+keyword arguments)
+TRANSFORM_OT_edge_slide
+(
+dict
+[
+str
+,
+Any
+]
+) â Edge Slide, Slide an edge loop along a mesh (optional,
+bpy.ops.transform.edge_slide()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+mark_freestyle_edge
+(
+*
+,
+clear
+=
+False
+)
+Â¶
+(Un)mark selected edges as Freestyle feature edges
+Parameters
+:
+clear
+(
+bool
+) â Clear, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+mark_freestyle_face
+(
+*
+,
+clear
+=
+False
+)
+Â¶
+(Un)mark selected faces for exclusion from Freestyle feature edge detection
+Parameters
+:
+clear
+(
+bool
+) â Clear, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+mark_seam
+(
+*
+,
+clear
+=
+False
+)
+Â¶
+(Un)mark selected edges as a seam
+Parameters
+:
+clear
+(
+bool
+) â Clear, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+mark_sharp
+(
+*
+,
+clear
+=
+False
+,
+use_verts
+=
+False
+)
+Â¶
+(Un)mark selected edges as sharp
+Parameters
+:
+clear
+(
+bool
+) â Clear, (optional)
+use_verts
+(
+bool
+) â Vertices, Consider vertices instead of edges to select which edges to (un)tag as sharp (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+merge
+(
+*
+,
+type
+=
+'CENTER'
+,
+uvs
+=
+False
+)
+Â¶
+Merge selected vertices
+Parameters
+:
+type
+(
+Literal
+[
+'CENTER'
+,
+'CURSOR'
+,
+'COLLAPSE'
+,
+'FIRST'
+,
+'LAST'
+]
+) â Type, Merge method to use (optional)
+uvs
+(
+bool
+) â UVs, Move UVs according to merge (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+merge_normals
+(
+)
+Â¶
+Merge custom normals of selected vertices
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+mod_weighted_strength
+(
+*
+,
+set
+=
+False
+,
+face_strength
+=
+'MEDIUM'
+)
+Â¶
+Set/Get strength of face (used in Weighted Normal modifier)
+Parameters
+:
+set
+(
+bool
+) â Set Value, Set value of faces (optional)
+face_strength
+(
+Literal
+[
+'WEAK'
+,
+'MEDIUM'
+,
+'STRONG'
+]
+) â Face Strength, Strength to use for assigning or selecting face influence for weighted normal modifier (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+normals_make_consistent
+(
+*
+,
+inside
+=
+False
+)
+Â¶
+Make face and vertex normals point either outside or inside the mesh
+Parameters
+:
+inside
+(
+bool
+) â Inside, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+normals_tools
+(
+*
+,
+mode
+=
+'COPY'
+,
+absolute
+=
+False
+)
+Â¶
+Custom normals tools using Normal Vector of UI
+Parameters
+:
+mode
+(
+Literal
+[
+'COPY'
+,
+'PASTE'
+,
+'ADD'
+,
+'MULTIPLY'
+,
+'RESET'
+]
+) â
+Mode, Mode of tools taking input from interface (optional)
+COPY
+Copy Normal â Copy normal to the internal clipboard.
+PASTE
+Paste Normal â Paste normal from the internal clipboard.
+ADD
+Add Normal â Add normal vector with selection.
+MULTIPLY
+Multiply Normal â Multiply normal vector with selection.
+RESET
+Reset Normal â Reset the internal clipboard and/or normal of selected element.
+absolute
+(
+bool
+) â Absolute Coordinates, Copy Absolute coordinates of Normal vector (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+offset_edge_loops
+(
+*
+,
+use_cap_endpoint
+=
+False
+)
+Â¶
+Create offset edge loop from the current selection
+Parameters
+:
+use_cap_endpoint
+(
+bool
+) â Cap Endpoint, Extend loop around end-points (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+offset_edge_loops_slide
+(
+*
+,
+MESH_OT_offset_edge_loops
+=
+{}
+,
+TRANSFORM_OT_edge_slide
+=
+{}
+)
+Â¶
+Offset edge loop slide
+Parameters
+:
+MESH_OT_offset_edge_loops
+(
+dict
+[
+str
+,
+Any
+]
+) â Offset Edge Loop, Create offset edge loop from the current selection (optional,
+bpy.ops.mesh.offset_edge_loops()
+keyword arguments)
+TRANSFORM_OT_edge_slide
+(
+dict
+[
+str
+,
+Any
+]
+) â Edge Slide, Slide an edge loop along a mesh (optional,
+bpy.ops.transform.edge_slide()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+point_normals
+(
+*
+,
+mode
+=
+'COORDINATES'
+,
+invert
+=
+False
+,
+align
+=
+False
+,
+target_location
+=
+(0.0,
+0.0,
+0.0)
+,
+spherize
+=
+False
+,
+spherize_strength
+=
+0.1
+)
+Â¶
+Point selected custom normals to specified Target
+Parameters
+:
+mode
+(
+Literal
+[
+'COORDINATES'
+,
+'MOUSE'
+]
+) â
+Mode, How to define coordinates to point custom normals to (optional)
+COORDINATES
+Coordinates â Use static coordinates (defined by various means).
+MOUSE
+Mouse â Follow mouse cursor.
+invert
+(
+bool
+) â Invert, Invert affected normals (optional)
+align
+(
+bool
+) â Align, Make all affected normals parallel (optional)
+target_location
+(
+mathutils.Vector
+) â Target, Target location to which normals will point (array of 3 items, in [-inf, inf], optional)
+spherize
+(
+bool
+) â Spherize, Interpolate between original and new normals (optional)
+spherize_strength
+(
+float
+) â Spherize Strength, Ratio of spherized normal to original normal (in [0, 1], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+poke
+(
+*
+,
+offset
+=
+0.0
+,
+use_relative_offset
+=
+False
+,
+center_mode
+=
+'MEDIAN_WEIGHTED'
+)
+Â¶
+Split a face into a fan
+Parameters
+:
+offset
+(
+float
+) â Poke Offset, Poke Offset (in [-1000, 1000], optional)
+use_relative_offset
+(
+bool
+) â Offset Relative, Scale the offset by surrounding geometry (optional)
+center_mode
+(
+Literal
+[
+'MEDIAN_WEIGHTED'
+,
+'MEDIAN'
+,
+'BOUNDS'
+]
+) â
+Poke Center, Poke face center calculation (optional)
+MEDIAN_WEIGHTED
+Weighted Median â Weighted median face center.
+MEDIAN
+Median â Median face center.
+BOUNDS
+Bounds â Face bounds center.
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+polybuild_delete_at_cursor
+(
+*
+,
+mirror
+=
+False
+,
+use_proportional_edit
+=
+False
+,
+proportional_edit_falloff
+=
+'SMOOTH'
+,
+proportional_size
+=
+1.0
+,
+use_proportional_connected
+=
+False
+,
+use_proportional_projected
+=
+False
+,
+release_confirm
+=
+False
+,
+use_accurate
+=
+False
+)
+Â¶
+Undocumented, consider
+contributing
+.
+Parameters
+:
+mirror
+(
+bool
+) â Mirror Editing, (optional)
+use_proportional_edit
+(
+bool
+) â Proportional Editing, (optional)
+proportional_edit_falloff
+(Literal[
+Proportional Falloff Items
+]) â Proportional Falloff, Falloff type for proportional editing mode (optional)
+proportional_size
+(
+float
+) â Proportional Size, (in [1e-06, inf], optional)
+use_proportional_connected
+(
+bool
+) â Connected, (optional)
+use_proportional_projected
+(
+bool
+) â Projected (2D), (optional)
+release_confirm
+(
+bool
+) â Confirm on Release, Always confirm operation when releasing button (optional)
+use_accurate
+(
+bool
+) â Accurate, Use accurate transformation (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+polybuild_dissolve_at_cursor
+(
+)
+Â¶
+Undocumented, consider
+contributing
+.
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+polybuild_extrude_at_cursor_move
+(
+*
+,
+MESH_OT_polybuild_transform_at_cursor
+=
+{}
+,
+MESH_OT_extrude_edges_indiv
+=
+{}
+,
+TRANSFORM_OT_translate
+=
+{}
+)
+Â¶
+Undocumented, consider
+contributing
+.
+Parameters
+:
+MESH_OT_polybuild_transform_at_cursor
+(
+dict
+[
+str
+,
+Any
+]
+) â Poly Build Transform at Cursor, (optional,
+bpy.ops.mesh.polybuild_transform_at_cursor()
+keyword arguments)
+MESH_OT_extrude_edges_indiv
+(
+dict
+[
+str
+,
+Any
+]
+) â Extrude Only Edges, Extrude individual edges only (optional,
+bpy.ops.mesh.extrude_edges_indiv()
+keyword arguments)
+TRANSFORM_OT_translate
+(
+dict
+[
+str
+,
+Any
+]
+) â Move, Move selected items (optional,
+bpy.ops.transform.translate()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+polybuild_face_at_cursor
+(
+*
+,
+create_quads
+=
+True
+,
+mirror
+=
+False
+,
+use_proportional_edit
+=
+False
+,
+proportional_edit_falloff
+=
+'SMOOTH'
+,
+proportional_size
+=
+1.0
+,
+use_proportional_connected
+=
+False
+,
+use_proportional_projected
+=
+False
+,
+release_confirm
+=
+False
+,
+use_accurate
+=
+False
+)
+Â¶
+Undocumented, consider
+contributing
+.
+Parameters
+:
+create_quads
+(
+bool
+) â Create Quads, Automatically split edges in triangles to maintain quad topology (optional)
+mirror
+(
+bool
+) â Mirror Editing, (optional)
+use_proportional_edit
+(
+bool
+) â Proportional Editing, (optional)
+proportional_edit_falloff
+(Literal[
+Proportional Falloff Items
+]) â Proportional Falloff, Falloff type for proportional editing mode (optional)
+proportional_size
+(
+float
+) â Proportional Size, (in [1e-06, inf], optional)
+use_proportional_connected
+(
+bool
+) â Connected, (optional)
+use_proportional_projected
+(
+bool
+) â Projected (2D), (optional)
+release_confirm
+(
+bool
+) â Confirm on Release, Always confirm operation when releasing button (optional)
+use_accurate
+(
+bool
+) â Accurate, Use accurate transformation (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+polybuild_face_at_cursor_move
+(
+*
+,
+MESH_OT_polybuild_face_at_cursor
+=
+{}
+,
+TRANSFORM_OT_translate
+=
+{}
+)
+Â¶
+Undocumented, consider
+contributing
+.
+Parameters
+:
+MESH_OT_polybuild_face_at_cursor
+(
+dict
+[
+str
+,
+Any
+]
+) â Poly Build Face at Cursor, (optional,
+bpy.ops.mesh.polybuild_face_at_cursor()
+keyword arguments)
+TRANSFORM_OT_translate
+(
+dict
+[
+str
+,
+Any
+]
+) â Move, Move selected items (optional,
+bpy.ops.transform.translate()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+polybuild_split_at_cursor
+(
+*
+,
+mirror
+=
+False
+,
+use_proportional_edit
+=
+False
+,
+proportional_edit_falloff
+=
+'SMOOTH'
+,
+proportional_size
+=
+1.0
+,
+use_proportional_connected
+=
+False
+,
+use_proportional_projected
+=
+False
+,
+release_confirm
+=
+False
+,
+use_accurate
+=
+False
+)
+Â¶
+Undocumented, consider
+contributing
+.
+Parameters
+:
+mirror
+(
+bool
+) â Mirror Editing, (optional)
+use_proportional_edit
+(
+bool
+) â Proportional Editing, (optional)
+proportional_edit_falloff
+(Literal[
+Proportional Falloff Items
+]) â Proportional Falloff, Falloff type for proportional editing mode (optional)
+proportional_size
+(
+float
+) â Proportional Size, (in [1e-06, inf], optional)
+use_proportional_connected
+(
+bool
+) â Connected, (optional)
+use_proportional_projected
+(
+bool
+) â Projected (2D), (optional)
+release_confirm
+(
+bool
+) â Confirm on Release, Always confirm operation when releasing button (optional)
+use_accurate
+(
+bool
+) â Accurate, Use accurate transformation (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+polybuild_split_at_cursor_move
+(
+*
+,
+MESH_OT_polybuild_split_at_cursor
+=
+{}
+,
+TRANSFORM_OT_translate
+=
+{}
+)
+Â¶
+Undocumented, consider
+contributing
+.
+Parameters
+:
+MESH_OT_polybuild_split_at_cursor
+(
+dict
+[
+str
+,
+Any
+]
+) â Poly Build Split at Cursor, (optional,
+bpy.ops.mesh.polybuild_split_at_cursor()
+keyword arguments)
+TRANSFORM_OT_translate
+(
+dict
+[
+str
+,
+Any
+]
+) â Move, Move selected items (optional,
+bpy.ops.transform.translate()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+polybuild_transform_at_cursor
+(
+*
+,
+mirror
+=
+False
+,
+use_proportional_edit
+=
+False
+,
+proportional_edit_falloff
+=
+'SMOOTH'
+,
+proportional_size
+=
+1.0
+,
+use_proportional_connected
+=
+False
+,
+use_proportional_projected
+=
+False
+,
+release_confirm
+=
+False
+,
+use_accurate
+=
+False
+)
+Â¶
+Undocumented, consider
+contributing
+.
+Parameters
+:
+mirror
+(
+bool
+) â Mirror Editing, (optional)
+use_proportional_edit
+(
+bool
+) â Proportional Editing, (optional)
+proportional_edit_falloff
+(Literal[
+Proportional Falloff Items
+]) â Proportional Falloff, Falloff type for proportional editing mode (optional)
+proportional_size
+(
+float
+) â Proportional Size, (in [1e-06, inf], optional)
+use_proportional_connected
+(
+bool
+) â Connected, (optional)
+use_proportional_projected
+(
+bool
+) â Projected (2D), (optional)
+release_confirm
+(
+bool
+) â Confirm on Release, Always confirm operation when releasing button (optional)
+use_accurate
+(
+bool
+) â Accurate, Use accurate transformation (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+polybuild_transform_at_cursor_move
+(
+*
+,
+MESH_OT_polybuild_transform_at_cursor
+=
+{}
+,
+TRANSFORM_OT_translate
+=
+{}
+)
+Â¶
+Undocumented, consider
+contributing
+.
+Parameters
+:
+MESH_OT_polybuild_transform_at_cursor
+(
+dict
+[
+str
+,
+Any
+]
+) â Poly Build Transform at Cursor, (optional,
+bpy.ops.mesh.polybuild_transform_at_cursor()
+keyword arguments)
+TRANSFORM_OT_translate
+(
+dict
+[
+str
+,
+Any
+]
+) â Move, Move selected items (optional,
+bpy.ops.transform.translate()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+primitive_circle_add
+(
+*
+,
+vertices
+=
+32
+,
+radius
+=
+1.0
+,
+fill_type
+=
+'NOTHING'
+,
+calc_uvs
+=
+True
+,
+enter_editmode
+=
+False
+,
+align
+=
+'WORLD'
+,
+location
+=
+(0.0,
+0.0,
+0.0)
+,
+rotation
+=
+(0.0,
+0.0,
+0.0)
+,
+scale
+=
+(0.0,
+0.0,
+0.0)
+)
+Â¶
+Construct a circle mesh
+Parameters
+:
+vertices
+(
+int
+) â Vertices, (in [3, 10000000], optional)
+radius
+(
+float
+) â Radius, (in [0, inf], optional)
+fill_type
+(
+Literal
+[
+'NOTHING'
+,
+'NGON'
+,
+'TRIFAN'
+]
+) â
+Fill Type, (optional)
+NOTHING
+Nothing â Donât fill at all.
+NGON
+N-Gon â Use n-gons.
+TRIFAN
+Triangle Fan â Use triangle fans.
+calc_uvs
+(
+bool
+) â Generate UVs, Generate a default UV map (optional)
+enter_editmode
+(
+bool
+) â Enter Edit Mode, Enter edit mode when adding this object (optional)
+align
+(
+Literal
+[
+'WORLD'
+,
+'VIEW'
+,
+'CURSOR'
+]
+) â
+Align, The alignment of the new object (optional)
+WORLD
+World â Align the new object to the world.
+VIEW
+View â Align the new object to the view.
+CURSOR
+3D Cursor â Use the 3D cursor orientation for the new object.
+location
+(
+mathutils.Vector
+) â Location, Location for the newly added object (array of 3 items, in [-inf, inf], optional)
+rotation
+(
+mathutils.Euler
+) â Rotation, Rotation for the newly added object (array of 3 items, in [-inf, inf], optional)
+scale
+(
+mathutils.Vector
+) â Scale, Scale for the newly added object (array of 3 items, in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+primitive_cone_add
+(
+*
+,
+vertices
+=
+32
+,
+radius1
+=
+1.0
+,
+radius2
+=
+0.0
+,
+depth
+=
+2.0
+,
+end_fill_type
+=
+'NGON'
+,
+calc_uvs
+=
+True
+,
+enter_editmode
+=
+False
+,
+align
+=
+'WORLD'
+,
+location
+=
+(0.0,
+0.0,
+0.0)
+,
+rotation
+=
+(0.0,
+0.0,
+0.0)
+,
+scale
+=
+(0.0,
+0.0,
+0.0)
+)
+Â¶
+Construct a conic mesh
+Parameters
+:
+vertices
+(
+int
+) â Vertices, (in [3, 10000000], optional)
+radius1
+(
+float
+) â Radius 1, (in [0, inf], optional)
+radius2
+(
+float
+) â Radius 2, (in [0, inf], optional)
+depth
+(
+float
+) â Depth, (in [0, inf], optional)
+end_fill_type
+(
+Literal
+[
+'NOTHING'
+,
+'NGON'
+,
+'TRIFAN'
+]
+) â
+Base Fill Type, (optional)
+NOTHING
+Nothing â Donât fill at all.
+NGON
+N-Gon â Use n-gons.
+TRIFAN
+Triangle Fan â Use triangle fans.
+calc_uvs
+(
+bool
+) â Generate UVs, Generate a default UV map (optional)
+enter_editmode
+(
+bool
+) â Enter Edit Mode, Enter edit mode when adding this object (optional)
+align
+(
+Literal
+[
+'WORLD'
+,
+'VIEW'
+,
+'CURSOR'
+]
+) â
+Align, The alignment of the new object (optional)
+WORLD
+World â Align the new object to the world.
+VIEW
+View â Align the new object to the view.
+CURSOR
+3D Cursor â Use the 3D cursor orientation for the new object.
+location
+(
+mathutils.Vector
+) â Location, Location for the newly added object (array of 3 items, in [-inf, inf], optional)
+rotation
+(
+mathutils.Euler
+) â Rotation, Rotation for the newly added object (array of 3 items, in [-inf, inf], optional)
+scale
+(
+mathutils.Vector
+) â Scale, Scale for the newly added object (array of 3 items, in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+primitive_cube_add
+(
+*
+,
+size
+=
+2.0
+,
+calc_uvs
+=
+True
+,
+enter_editmode
+=
+False
+,
+align
+=
+'WORLD'
+,
+location
+=
+(0.0,
+0.0,
+0.0)
+,
+rotation
+=
+(0.0,
+0.0,
+0.0)
+,
+scale
+=
+(0.0,
+0.0,
+0.0)
+)
+Â¶
+Construct a cube mesh that consists of six square faces
+Parameters
+:
+size
+(
+float
+) â Size, (in [0, inf], optional)
+calc_uvs
+(
+bool
+) â Generate UVs, Generate a default UV map (optional)
+enter_editmode
+(
+bool
+) â Enter Edit Mode, Enter edit mode when adding this object (optional)
+align
+(
+Literal
+[
+'WORLD'
+,
+'VIEW'
+,
+'CURSOR'
+]
+) â
+Align, The alignment of the new object (optional)
+WORLD
+World â Align the new object to the world.
+VIEW
+View â Align the new object to the view.
+CURSOR
+3D Cursor â Use the 3D cursor orientation for the new object.
+location
+(
+mathutils.Vector
+) â Location, Location for the newly added object (array of 3 items, in [-inf, inf], optional)
+rotation
+(
+mathutils.Euler
+) â Rotation, Rotation for the newly added object (array of 3 items, in [-inf, inf], optional)
+scale
+(
+mathutils.Vector
+) â Scale, Scale for the newly added object (array of 3 items, in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+primitive_cube_add_gizmo
+(
+*
+,
+calc_uvs
+=
+True
+,
+enter_editmode
+=
+False
+,
+align
+=
+'WORLD'
+,
+location
+=
+(0.0,
+0.0,
+0.0)
+,
+rotation
+=
+(0.0,
+0.0,
+0.0)
+,
+scale
+=
+(0.0,
+0.0,
+0.0)
+,
+matrix
+=
+((0.0,
+0.0,
+0.0,
+0.0),
+(0.0,
+0.0,
+0.0,
+0.0),
+(0.0,
+0.0,
+0.0,
+0.0),
+(0.0,
+0.0,
+0.0,
+0.0))
+)
+Â¶
+Construct a cube mesh
+Parameters
+:
+calc_uvs
+(
+bool
+) â Generate UVs, Generate a default UV map (optional)
+enter_editmode
+(
+bool
+) â Enter Edit Mode, Enter edit mode when adding this object (optional)
+align
+(
+Literal
+[
+'WORLD'
+,
+'VIEW'
+,
+'CURSOR'
+]
+) â
+Align, The alignment of the new object (optional)
+WORLD
+World â Align the new object to the world.
+VIEW
+View â Align the new object to the view.
+CURSOR
+3D Cursor â Use the 3D cursor orientation for the new object.
+location
+(
+mathutils.Vector
+) â Location, Location for the newly added object (array of 3 items, in [-inf, inf], optional)
+rotation
+(
+mathutils.Euler
+) â Rotation, Rotation for the newly added object (array of 3 items, in [-inf, inf], optional)
+scale
+(
+mathutils.Vector
+) â Scale, Scale for the newly added object (array of 3 items, in [-inf, inf], optional)
+matrix
+(
+mathutils.Matrix
+) â Matrix, (multi-dimensional array of 4 * 4 items, in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+primitive_cylinder_add
+(
+*
+,
+vertices
+=
+32
+,
+radius
+=
+1.0
+,
+depth
+=
+2.0
+,
+end_fill_type
+=
+'NGON'
+,
+calc_uvs
+=
+True
+,
+enter_editmode
+=
+False
+,
+align
+=
+'WORLD'
+,
+location
+=
+(0.0,
+0.0,
+0.0)
+,
+rotation
+=
+(0.0,
+0.0,
+0.0)
+,
+scale
+=
+(0.0,
+0.0,
+0.0)
+)
+Â¶
+Construct a cylinder mesh
+Parameters
+:
+vertices
+(
+int
+) â Vertices, (in [3, 10000000], optional)
+radius
+(
+float
+) â Radius, (in [0, inf], optional)
+depth
+(
+float
+) â Depth, (in [0, inf], optional)
+end_fill_type
+(
+Literal
+[
+'NOTHING'
+,
+'NGON'
+,
+'TRIFAN'
+]
+) â
+Cap Fill Type, (optional)
+NOTHING
+Nothing â Donât fill at all.
+NGON
+N-Gon â Use n-gons.
+TRIFAN
+Triangle Fan â Use triangle fans.
+calc_uvs
+(
+bool
+) â Generate UVs, Generate a default UV map (optional)
+enter_editmode
+(
+bool
+) â Enter Edit Mode, Enter edit mode when adding this object (optional)
+align
+(
+Literal
+[
+'WORLD'
+,
+'VIEW'
+,
+'CURSOR'
+]
+) â
+Align, The alignment of the new object (optional)
+WORLD
+World â Align the new object to the world.
+VIEW
+View â Align the new object to the view.
+CURSOR
+3D Cursor â Use the 3D cursor orientation for the new object.
+location
+(
+mathutils.Vector
+) â Location, Location for the newly added object (array of 3 items, in [-inf, inf], optional)
+rotation
+(
+mathutils.Euler
+) â Rotation, Rotation for the newly added object (array of 3 items, in [-inf, inf], optional)
+scale
+(
+mathutils.Vector
+) â Scale, Scale for the newly added object (array of 3 items, in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+primitive_grid_add
+(
+*
+,
+x_subdivisions
+=
+10
+,
+y_subdivisions
+=
+10
+,
+size
+=
+2.0
+,
+calc_uvs
+=
+True
+,
+enter_editmode
+=
+False
+,
+align
+=
+'WORLD'
+,
+location
+=
+(0.0,
+0.0,
+0.0)
+,
+rotation
+=
+(0.0,
+0.0,
+0.0)
+,
+scale
+=
+(0.0,
+0.0,
+0.0)
+)
+Â¶
+Construct a subdivided plane mesh
+Parameters
+:
+x_subdivisions
+(
+int
+) â X Subdivisions, (in [1, 10000000], optional)
+y_subdivisions
+(
+int
+) â Y Subdivisions, (in [1, 10000000], optional)
+size
+(
+float
+) â Size, (in [0, inf], optional)
+calc_uvs
+(
+bool
+) â Generate UVs, Generate a default UV map (optional)
+enter_editmode
+(
+bool
+) â Enter Edit Mode, Enter edit mode when adding this object (optional)
+align
+(
+Literal
+[
+'WORLD'
+,
+'VIEW'
+,
+'CURSOR'
+]
+) â
+Align, The alignment of the new object (optional)
+WORLD
+World â Align the new object to the world.
+VIEW
+View â Align the new object to the view.
+CURSOR
+3D Cursor â Use the 3D cursor orientation for the new object.
+location
+(
+mathutils.Vector
+) â Location, Location for the newly added object (array of 3 items, in [-inf, inf], optional)
+rotation
+(
+mathutils.Euler
+) â Rotation, Rotation for the newly added object (array of 3 items, in [-inf, inf], optional)
+scale
+(
+mathutils.Vector
+) â Scale, Scale for the newly added object (array of 3 items, in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+primitive_ico_sphere_add
+(
+*
+,
+subdivisions
+=
+2
+,
+radius
+=
+1.0
+,
+calc_uvs
+=
+True
+,
+enter_editmode
+=
+False
+,
+align
+=
+'WORLD'
+,
+location
+=
+(0.0,
+0.0,
+0.0)
+,
+rotation
+=
+(0.0,
+0.0,
+0.0)
+,
+scale
+=
+(0.0,
+0.0,
+0.0)
+)
+Â¶
+Construct a spherical mesh that consists of equally sized triangles
+Parameters
+:
+subdivisions
+(
+int
+) â Subdivisions, (in [1, 10], optional)
+radius
+(
+float
+) â Radius, (in [0, inf], optional)
+calc_uvs
+(
+bool
+) â Generate UVs, Generate a default UV map (optional)
+enter_editmode
+(
+bool
+) â Enter Edit Mode, Enter edit mode when adding this object (optional)
+align
+(
+Literal
+[
+'WORLD'
+,
+'VIEW'
+,
+'CURSOR'
+]
+) â
+Align, The alignment of the new object (optional)
+WORLD
+World â Align the new object to the world.
+VIEW
+View â Align the new object to the view.
+CURSOR
+3D Cursor â Use the 3D cursor orientation for the new object.
+location
+(
+mathutils.Vector
+) â Location, Location for the newly added object (array of 3 items, in [-inf, inf], optional)
+rotation
+(
+mathutils.Euler
+) â Rotation, Rotation for the newly added object (array of 3 items, in [-inf, inf], optional)
+scale
+(
+mathutils.Vector
+) â Scale, Scale for the newly added object (array of 3 items, in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+primitive_monkey_add
+(
+*
+,
+size
+=
+2.0
+,
+calc_uvs
+=
+True
+,
+enter_editmode
+=
+False
+,
+align
+=
+'WORLD'
+,
+location
+=
+(0.0,
+0.0,
+0.0)
+,
+rotation
+=
+(0.0,
+0.0,
+0.0)
+,
+scale
+=
+(0.0,
+0.0,
+0.0)
+)
+Â¶
+Construct a Suzanne mesh
+Parameters
+:
+size
+(
+float
+) â Size, (in [0, inf], optional)
+calc_uvs
+(
+bool
+) â Generate UVs, Generate a default UV map (optional)
+enter_editmode
+(
+bool
+) â Enter Edit Mode, Enter edit mode when adding this object (optional)
+align
+(
+Literal
+[
+'WORLD'
+,
+'VIEW'
+,
+'CURSOR'
+]
+) â
+Align, The alignment of the new object (optional)
+WORLD
+World â Align the new object to the world.
+VIEW
+View â Align the new object to the view.
+CURSOR
+3D Cursor â Use the 3D cursor orientation for the new object.
+location
+(
+mathutils.Vector
+) â Location, Location for the newly added object (array of 3 items, in [-inf, inf], optional)
+rotation
+(
+mathutils.Euler
+) â Rotation, Rotation for the newly added object (array of 3 items, in [-inf, inf], optional)
+scale
+(
+mathutils.Vector
+) â Scale, Scale for the newly added object (array of 3 items, in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+primitive_plane_add
+(
+*
+,
+size
+=
+2.0
+,
+calc_uvs
+=
+True
+,
+enter_editmode
+=
+False
+,
+align
+=
+'WORLD'
+,
+location
+=
+(0.0,
+0.0,
+0.0)
+,
+rotation
+=
+(0.0,
+0.0,
+0.0)
+,
+scale
+=
+(0.0,
+0.0,
+0.0)
+)
+Â¶
+Construct a filled planar mesh with 4 vertices
+Parameters
+:
+size
+(
+float
+) â Size, (in [0, inf], optional)
+calc_uvs
+(
+bool
+) â Generate UVs, Generate a default UV map (optional)
+enter_editmode
+(
+bool
+) â Enter Edit Mode, Enter edit mode when adding this object (optional)
+align
+(
+Literal
+[
+'WORLD'
+,
+'VIEW'
+,
+'CURSOR'
+]
+) â
+Align, The alignment of the new object (optional)
+WORLD
+World â Align the new object to the world.
+VIEW
+View â Align the new object to the view.
+CURSOR
+3D Cursor â Use the 3D cursor orientation for the new object.
+location
+(
+mathutils.Vector
+) â Location, Location for the newly added object (array of 3 items, in [-inf, inf], optional)
+rotation
+(
+mathutils.Euler
+) â Rotation, Rotation for the newly added object (array of 3 items, in [-inf, inf], optional)
+scale
+(
+mathutils.Vector
+) â Scale, Scale for the newly added object (array of 3 items, in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+primitive_torus_add
+(
+*
+,
+align
+=
+'WORLD'
+,
+location
+=
+(0.0,
+0.0,
+0.0)
+,
+rotation
+=
+(0.0,
+0.0,
+0.0)
+,
+major_segments
+=
+48
+,
+minor_segments
+=
+12
+,
+mode
+=
+'MAJOR_MINOR'
+,
+major_radius
+=
+1.0
+,
+minor_radius
+=
+0.25
+,
+abso_major_rad
+=
+1.25
+,
+abso_minor_rad
+=
+0.75
+,
+generate_uvs
+=
+True
+)
+Â¶
+Construct a torus mesh
+Parameters
+:
+align
+(
+Literal
+[
+'WORLD'
+,
+'VIEW'
+,
+'CURSOR'
+]
+) â
+Align, (optional)
+WORLD
+World â Align the new object to the world.
+VIEW
+View â Align the new object to the view.
+CURSOR
+3D Cursor â Use the 3D cursor orientation for the new object.
+location
+(
+mathutils.Vector
+) â Location, (array of 3 items, in [-inf, inf], optional)
+rotation
+(
+mathutils.Euler
+) â Rotation, (array of 3 items, in [-inf, inf], optional)
+major_segments
+(
+int
+) â Major Segments, Number of segments for the main ring of the torus (in [3, 256], optional)
+minor_segments
+(
+int
+) â Minor Segments, Number of segments for the minor ring of the torus (in [3, 256], optional)
+mode
+(
+Literal
+[
+'MAJOR_MINOR'
+,
+'EXT_INT'
+]
+) â
+Dimensions Mode, (optional)
+MAJOR_MINOR
+Major/Minor â Use the major/minor radii for torus dimensions.
+EXT_INT
+Exterior/Interior â Use the exterior/interior radii for torus dimensions.
+major_radius
+(
+float
+) â Major Radius, Radius from the origin to the center of the cross sections (in [0, 10000], optional)
+minor_radius
+(
+float
+) â Minor Radius, Radius of the torusâs cross section (in [0, 10000], optional)
+abso_major_rad
+(
+float
+) â Exterior Radius, Total Exterior Radius of the torus (in [0, 10000], optional)
+abso_minor_rad
+(
+float
+) â Interior Radius, Total Interior Radius of the torus (in [0, 10000], optional)
+generate_uvs
+(
+bool
+) â Generate UVs, Generate a default UV map (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+File
+:
+startup/bl_operators/add_mesh_torus.py:222
+bpy.ops.mesh.
+primitive_uv_sphere_add
+(
+*
+,
+segments
+=
+32
+,
+ring_count
+=
+16
+,
+radius
+=
+1.0
+,
+calc_uvs
+=
+True
+,
+enter_editmode
+=
+False
+,
+align
+=
+'WORLD'
+,
+location
+=
+(0.0,
+0.0,
+0.0)
+,
+rotation
+=
+(0.0,
+0.0,
+0.0)
+,
+scale
+=
+(0.0,
+0.0,
+0.0)
+)
+Â¶
+Construct a spherical mesh with quad faces, except for triangle faces at the top and bottom
+Parameters
+:
+segments
+(
+int
+) â Segments, (in [3, 100000], optional)
+ring_count
+(
+int
+) â Rings, (in [3, 100000], optional)
+radius
+(
+float
+) â Radius, (in [0, inf], optional)
+calc_uvs
+(
+bool
+) â Generate UVs, Generate a default UV map (optional)
+enter_editmode
+(
+bool
+) â Enter Edit Mode, Enter edit mode when adding this object (optional)
+align
+(
+Literal
+[
+'WORLD'
+,
+'VIEW'
+,
+'CURSOR'
+]
+) â
+Align, The alignment of the new object (optional)
+WORLD
+World â Align the new object to the world.
+VIEW
+View â Align the new object to the view.
+CURSOR
+3D Cursor â Use the 3D cursor orientation for the new object.
+location
+(
+mathutils.Vector
+) â Location, Location for the newly added object (array of 3 items, in [-inf, inf], optional)
+rotation
+(
+mathutils.Euler
+) â Rotation, Rotation for the newly added object (array of 3 items, in [-inf, inf], optional)
+scale
+(
+mathutils.Vector
+) â Scale, Scale for the newly added object (array of 3 items, in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+quads_convert_to_tris
+(
+*
+,
+quad_method
+=
+'BEAUTY'
+,
+ngon_method
+=
+'BEAUTY'
+)
+Â¶
+Triangulate selected faces
+Parameters
+:
+quad_method
+(Literal[
+Modifier Triangulate Quad Method Items
+]) â Quad Method, Method for splitting the quads into triangles (optional)
+ngon_method
+(Literal[
+Modifier Triangulate Ngon Method Items
+]) â N-gon Method, Method for splitting the n-gons into triangles (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+region_to_loop
+(
+)
+Â¶
+Select boundary edges around the selected faces
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+remove_doubles
+(
+*
+,
+threshold
+=
+0.0001
+,
+use_centroid
+=
+True
+,
+use_unselected
+=
+False
+,
+use_sharp_edge_from_normals
+=
+False
+)
+Â¶
+Merge vertices based on their proximity
+Parameters
+:
+threshold
+(
+float
+) â Merge Distance, Maximum distance between elements to merge (in [1e-06, 50], optional)
+use_centroid
+(
+bool
+) â Centroid Merge, Move vertices to the centroid of the duplicate cluster, otherwise the vertex closest to the centroid is used. (optional)
+use_unselected
+(
+bool
+) â Unselected, Merge selected to other unselected vertices (optional)
+use_sharp_edge_from_normals
+(
+bool
+) â Sharp Edges, Calculate sharp edges using custom normal data (when available) (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+reorder_vertices_spatial
+(
+)
+Â¶
+Reorder mesh faces and vertices based on their spatial position for better BVH building and sculpting performance.
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+reveal
+(
+*
+,
+select
+=
+True
+)
+Â¶
+Reveal all hidden vertices, edges and faces
+Parameters
+:
+select
+(
+bool
+) â Select, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+rip
+(
+*
+,
+mirror
+=
+False
+,
+use_proportional_edit
+=
+False
+,
+proportional_edit_falloff
+=
+'SMOOTH'
+,
+proportional_size
+=
+1.0
+,
+use_proportional_connected
+=
+False
+,
+use_proportional_projected
+=
+False
+,
+release_confirm
+=
+False
+,
+use_accurate
+=
+False
+,
+use_fill
+=
+False
+)
+Â¶
+Disconnect vertices or edges from connected geometry
+Parameters
+:
+mirror
+(
+bool
+) â Mirror Editing, (optional)
+use_proportional_edit
+(
+bool
+) â Proportional Editing, (optional)
+proportional_edit_falloff
+(Literal[
+Proportional Falloff Items
+]) â Proportional Falloff, Falloff type for proportional editing mode (optional)
+proportional_size
+(
+float
+) â Proportional Size, (in [1e-06, inf], optional)
+use_proportional_connected
+(
+bool
+) â Connected, (optional)
+use_proportional_projected
+(
+bool
+) â Projected (2D), (optional)
+release_confirm
+(
+bool
+) â Confirm on Release, Always confirm operation when releasing button (optional)
+use_accurate
+(
+bool
+) â Accurate, Use accurate transformation (optional)
+use_fill
+(
+bool
+) â Fill, Fill the ripped region (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+rip_edge
+(
+*
+,
+location
+=
+(0.0,
+0.0,
+0.0)
+,
+direction
+=
+(0.0,
+0.0,
+0.0)
+)
+Â¶
+Extend vertices along the edge closest to the cursor
+Parameters
+:
+location
+(
+mathutils.Vector
+) â Location, World-space ray origin for extending vertices (array of 3 items, in [-inf, inf], optional)
+direction
+(
+mathutils.Vector
+) â Direction, World-space direction vector for extending vertices (array of 3 items, in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+rip_edge_move
+(
+*
+,
+MESH_OT_rip_edge
+=
+{}
+,
+TRANSFORM_OT_translate
+=
+{}
+)
+Â¶
+Extend vertices and move the result
+Parameters
+:
+MESH_OT_rip_edge
+(
+dict
+[
+str
+,
+Any
+]
+) â Extend Vertices, Extend vertices along the edge closest to the cursor (optional,
+bpy.ops.mesh.rip_edge()
+keyword arguments)
+TRANSFORM_OT_translate
+(
+dict
+[
+str
+,
+Any
+]
+) â Move, Move selected items (optional,
+bpy.ops.transform.translate()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+rip_move
+(
+*
+,
+MESH_OT_rip
+=
+{}
+,
+TRANSFORM_OT_translate
+=
+{}
+)
+Â¶
+Rip polygons and move the result
+Parameters
+:
+MESH_OT_rip
+(
+dict
+[
+str
+,
+Any
+]
+) â Rip, Disconnect vertices or edges from connected geometry (optional,
+bpy.ops.mesh.rip()
+keyword arguments)
+TRANSFORM_OT_translate
+(
+dict
+[
+str
+,
+Any
+]
+) â Move, Move selected items (optional,
+bpy.ops.transform.translate()
+keyword arguments)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+screw
+(
+*
+,
+steps
+=
+9
+,
+turns
+=
+1
+,
+center
+=
+(0.0,
+0.0,
+0.0)
+,
+axis
+=
+(0.0,
+0.0,
+0.0)
+)
+Â¶
+Extrude selected vertices in screw-shaped rotation around the cursor in indicated viewport
+Parameters
+:
+steps
+(
+int
+) â Steps, Steps (in [1, 100000], optional)
+turns
+(
+int
+) â Turns, Turns (in [1, 100000], optional)
+center
+(
+mathutils.Vector
+) â Center, Center in global view space (array of 3 items, in [-inf, inf], optional)
+axis
+(
+mathutils.Vector
+) â Axis, Axis in global view space (array of 3 items, in [-1, 1], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_all
+(
+*
+,
+action
+=
+'TOGGLE'
+)
+Â¶
+(De)select all vertices, edges or faces
+Parameters
+:
+action
+(
+Literal
+[
+'TOGGLE'
+,
+'SELECT'
+,
+'DESELECT'
+,
+'INVERT'
+]
+) â
+Action, Selection action to execute (optional)
+TOGGLE
+Toggle â Toggle selection for all elements.
+SELECT
+Select â Select all elements.
+DESELECT
+Deselect â Deselect all elements.
+INVERT
+Invert â Invert selection of all elements.
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_axis
+(
+*
+,
+orientation
+=
+'LOCAL'
+,
+sign
+=
+'POS'
+,
+axis
+=
+'X'
+,
+threshold
+=
+0.0001
+)
+Â¶
+Select all data in the mesh on a single axis
+Parameters
+:
+orientation
+(Literal[
+Transform Orientation Items
+]) â Axis Mode, Axis orientation (optional)
+sign
+(
+Literal
+[
+'POS'
+,
+'NEG'
+,
+'ALIGN'
+]
+) â Axis Sign, Side to select (optional)
+axis
+(Literal[
+Axis Xyz Items
+]) â Axis, Select the axis to compare each vertex on (optional)
+threshold
+(
+float
+) â Threshold, (in [1e-06, 50], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_by_attribute
+(
+)
+Â¶
+Select elements based on the active boolean attribute
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_by_pole_count
+(
+*
+,
+pole_count
+=
+4
+,
+type
+=
+'NOTEQUAL'
+,
+extend
+=
+False
+,
+exclude_nonmanifold
+=
+True
+)
+Â¶
+Select vertices at poles by the number of connected edges. In edge and face mode the geometry connected to the vertices is selected
+Parameters
+:
+pole_count
+(
+int
+) â Pole Count, (in [0, inf], optional)
+type
+(
+Literal
+[
+'LESS'
+,
+'EQUAL'
+,
+'GREATER'
+,
+'NOTEQUAL'
+]
+) â Type, Type of comparison to make (optional)
+extend
+(
+bool
+) â Extend, Extend the selection (optional)
+exclude_nonmanifold
+(
+bool
+) â Exclude Non Manifold, Exclude non-manifold poles (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_edge_loop_multi
+(
+*
+,
+delimit_edge_loop
+=
+{'NGONS',
+'OUTER_CORNERS'}
+)
+Â¶
+Select loops of connected edges from each selected edge
+Parameters
+:
+delimit_edge_loop
+(set[Literal[
+Mesh Walk Delimit Edge Loop Items
+]]) â Delimit, Delimit edge loop selection (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_edge_ring_multi
+(
+*
+,
+delimit_edge_ring
+=
+{'NGONS'}
+)
+Â¶
+Select rings of connected edges from each selected edge
+Parameters
+:
+delimit_edge_ring
+(set[Literal[
+Mesh Walk Delimit Edge Ring Items
+]]) â Edge Ring Delimit, Delimit edge ring selection (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_face_by_sides
+(
+*
+,
+number
+=
+4
+,
+type
+=
+'EQUAL'
+,
+extend
+=
+True
+)
+Â¶
+Select vertices or faces by the number of face sides
+Parameters
+:
+number
+(
+int
+) â Number of Vertices, (in [3, inf], optional)
+type
+(
+Literal
+[
+'LESS'
+,
+'EQUAL'
+,
+'GREATER'
+,
+'NOTEQUAL'
+]
+) â Type, Type of comparison to make (optional)
+extend
+(
+bool
+) â Extend, Extend the selection (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_interior_faces
+(
+)
+Â¶
+Select faces where all edges have more than 2 face users
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_less
+(
+*
+,
+use_face_step
+=
+True
+)
+Â¶
+Deselect vertices, edges or faces at the boundary of each selection region
+Parameters
+:
+use_face_step
+(
+bool
+) â Face Step, Connected faces (instead of edges) (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_linked
+(
+*
+,
+delimit
+=
+{'SEAM'}
+)
+Â¶
+Select all vertices connected to the current selection
+Parameters
+:
+delimit
+(set[Literal[
+Mesh Delimit Mode Items
+]]) â Delimit, Delimit selected region (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_linked_pick
+(
+*
+,
+deselect
+=
+False
+,
+delimit
+=
+{'SEAM'}
+,
+object_index
+=
+-1
+,
+index
+=
+-1
+)
+Â¶
+(De)select all vertices linked to the edge under the mouse cursor
+Parameters
+:
+deselect
+(
+bool
+) â Deselect, (optional)
+delimit
+(set[Literal[
+Mesh Delimit Mode Items
+]]) â Delimit, Delimit selected region (optional)
+object_index
+(
+int
+) â (in [-1, inf], optional)
+index
+(
+int
+) â (in [-1, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_loose
+(
+*
+,
+extend
+=
+False
+)
+Â¶
+Select loose geometry based on the selection mode
+Parameters
+:
+extend
+(
+bool
+) â Extend, Extend the selection (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_mirror
+(
+*
+,
+axis
+=
+{'X'}
+,
+extend
+=
+False
+)
+Â¶
+Select mesh items at mirrored locations
+Parameters
+:
+axis
+(set[Literal[
+Axis Flag Xyz Items
+]]) â Axis, (optional)
+extend
+(
+bool
+) â Extend, Extend the existing selection (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_mode
+(
+*
+,
+use_extend
+=
+False
+,
+use_expand
+=
+False
+,
+type
+=
+'VERT'
+,
+action
+=
+'TOGGLE'
+)
+Â¶
+Change selection mode
+Parameters
+:
+use_extend
+(
+bool
+) â Extend, (optional)
+use_expand
+(
+bool
+) â Expand, (optional)
+type
+(Literal[
+Mesh Select Mode Items
+]) â Type, (optional)
+action
+(
+Literal
+[
+'DISABLE'
+,
+'ENABLE'
+,
+'TOGGLE'
+]
+) â
+Action, Selection action to execute (optional)
+DISABLE
+Disable â Disable the selection mode.
+ENABLE
+Enable â Enable the selection mode.
+TOGGLE
+Toggle â Toggle the selection mode.
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_more
+(
+*
+,
+use_face_step
+=
+True
+)
+Â¶
+Select more vertices, edges or faces connected to initial selection
+Parameters
+:
+use_face_step
+(
+bool
+) â Face Step, Connected faces (instead of edges) (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_next_item
+(
+)
+Â¶
+Select the next element (using selection order)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+File
+:
+startup/bl_operators/mesh.py:18
+bpy.ops.mesh.
+select_non_manifold
+(
+*
+,
+extend
+=
+True
+,
+use_wire
+=
+True
+,
+use_boundary
+=
+True
+,
+use_multi_face
+=
+True
+,
+use_non_contiguous
+=
+True
+,
+use_verts
+=
+True
+)
+Â¶
+Select all non-manifold vertices or edges
+Parameters
+:
+extend
+(
+bool
+) â Extend, Extend the selection (optional)
+use_wire
+(
+bool
+) â Wire, Wire edges (optional)
+use_boundary
+(
+bool
+) â Boundaries, Boundary edges (optional)
+use_multi_face
+(
+bool
+) â Multiple Faces, Edges shared by more than two faces (optional)
+use_non_contiguous
+(
+bool
+) â Non Contiguous, Edges between faces pointing in alternate directions (optional)
+use_verts
+(
+bool
+) â Vertices, Vertices connecting multiple face regions (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_nth
+(
+*
+,
+skip
+=
+1
+,
+nth
+=
+1
+,
+offset
+=
+0
+)
+Â¶
+Deselect every Nth element starting from the active vertex, edge or face
+Parameters
+:
+skip
+(
+int
+) â Deselected, Number of deselected elements in the repetitive sequence (in [1, inf], optional)
+nth
+(
+int
+) â Selected, Number of selected elements in the repetitive sequence (in [1, inf], optional)
+offset
+(
+int
+) â Offset, Offset from the starting point (in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_prev_item
+(
+)
+Â¶
+Select the previous element (using selection order)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+File
+:
+startup/bl_operators/mesh.py:43
+bpy.ops.mesh.
+select_random
+(
+*
+,
+ratio
+=
+0.5
+,
+seed
+=
+0
+,
+action
+=
+'SELECT'
+)
+Â¶
+Randomly select vertices
+Parameters
+:
+ratio
+(
+float
+) â Ratio, Portion of items to select randomly (in [0, 1], optional)
+seed
+(
+int
+) â Random Seed, Seed for the random number generator (in [0, inf], optional)
+action
+(
+Literal
+[
+'SELECT'
+,
+'DESELECT'
+]
+) â
+Action, Selection action to execute (optional)
+SELECT
+Select â Select all elements.
+DESELECT
+Deselect â Deselect all elements.
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_similar
+(
+*
+,
+type
+=
+'VERT_NORMAL'
+,
+compare
+=
+'EQUAL'
+,
+threshold
+=
+0.0
+)
+Â¶
+Select similar vertices, edges or faces by property types
+Parameters
+:
+type
+(
+Literal
+[
+'VERT_NORMAL'
+,
+'VERT_FACES'
+,
+'VERT_GROUPS'
+,
+'VERT_EDGES'
+,
+'VERT_CREASE'
+,
+'EDGE_LENGTH'
+,
+'EDGE_DIR'
+,
+'EDGE_FACES'
+,
+'EDGE_FACE_ANGLE'
+,
+'EDGE_CREASE'
+,
+'EDGE_BEVEL'
+,
+'EDGE_SEAM'
+,
+'EDGE_SHARP'
+,
+'EDGE_FREESTYLE'
+,
+'FACE_MATERIAL'
+,
+'FACE_AREA'
+,
+'FACE_SIDES'
+,
+'FACE_PERIMETER'
+,
+'FACE_NORMAL'
+,
+'FACE_COPLANAR'
+,
+'FACE_SMOOTH'
+,
+'FACE_FREESTYLE'
+]
+) â Type, (optional)
+compare
+(
+Literal
+[
+'EQUAL'
+,
+'GREATER'
+,
+'LESS'
+]
+) â Compare, (optional)
+threshold
+(
+float
+) â Threshold, (in [0, 100000], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_similar_region
+(
+)
+Â¶
+Select similar face regions to the current selection
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+select_ungrouped
+(
+*
+,
+extend
+=
+False
+)
+Â¶
+Select vertices without a group
+Parameters
+:
+extend
+(
+bool
+) â Extend, Extend the selection (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+separate
+(
+*
+,
+type
+=
+'SELECTED'
+)
+Â¶
+Separate selected geometry into a new mesh
+Parameters
+:
+type
+(
+Literal
+[
+'SELECTED'
+,
+'MATERIAL'
+,
+'LOOSE'
+]
+) â Type, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+set_normals_from_faces
+(
+*
+,
+keep_sharp
+=
+False
+)
+Â¶
+Set the custom normals from the selected faces ones
+Parameters
+:
+keep_sharp
+(
+bool
+) â Keep Sharp Edges, Do not set sharp edges to face (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+set_sharpness_by_angle
+(
+*
+,
+angle
+=
+0.523599
+,
+extend
+=
+False
+)
+Â¶
+Set edge sharpness based on the angle between neighboring faces
+Parameters
+:
+angle
+(
+float
+) â Angle, (in [0.000174533, 3.14159], optional)
+extend
+(
+bool
+) â Extend, Add new sharp edges without clearing existing sharp edges (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+shape_propagate_to_all
+(
+)
+Â¶
+Apply selected vertex locations to all other shape keys
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+shortest_path_pick
+(
+*
+,
+edge_mode
+=
+'SELECT'
+,
+use_face_step
+=
+False
+,
+use_topology_distance
+=
+False
+,
+use_fill
+=
+False
+,
+skip
+=
+0
+,
+nth
+=
+1
+,
+offset
+=
+0
+,
+index
+=
+-1
+)
+Â¶
+Select shortest path between two selections
+Parameters
+:
+edge_mode
+(
+Literal
+[
+'SELECT'
+,
+'SEAM'
+,
+'SHARP'
+,
+'CREASE'
+,
+'BEVEL'
+,
+'FREESTYLE'
+]
+) â Edge Tag, The edge flag to tag when selecting the shortest path (optional)
+use_face_step
+(
+bool
+) â Face Stepping, Traverse connected faces (includes diagonals and edge-rings) (optional)
+use_topology_distance
+(
+bool
+) â Topology Distance, Find the minimum number of steps, ignoring spatial distance (optional)
+use_fill
+(
+bool
+) â Fill Region, Select all paths between the source/destination elements (optional)
+skip
+(
+int
+) â Deselected, Number of deselected elements in the repetitive sequence (in [0, inf], optional)
+nth
+(
+int
+) â Selected, Number of selected elements in the repetitive sequence (in [1, inf], optional)
+offset
+(
+int
+) â Offset, Offset from the starting point (in [-inf, inf], optional)
+index
+(
+int
+) â (in [-1, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+shortest_path_select
+(
+*
+,
+edge_mode
+=
+'SELECT'
+,
+use_face_step
+=
+False
+,
+use_topology_distance
+=
+False
+,
+use_fill
+=
+False
+,
+skip
+=
+0
+,
+nth
+=
+1
+,
+offset
+=
+0
+)
+Â¶
+Select shortest path between two vertices/edges/faces
+Parameters
+:
+edge_mode
+(
+Literal
+[
+'SELECT'
+,
+'SEAM'
+,
+'SHARP'
+,
+'CREASE'
+,
+'BEVEL'
+,
+'FREESTYLE'
+]
+) â Edge Tag, The edge flag to tag when selecting the shortest path (optional)
+use_face_step
+(
+bool
+) â Face Stepping, Traverse connected faces (includes diagonals and edge-rings) (optional)
+use_topology_distance
+(
+bool
+) â Topology Distance, Find the minimum number of steps, ignoring spatial distance (optional)
+use_fill
+(
+bool
+) â Fill Region, Select all paths between the source/destination elements (optional)
+skip
+(
+int
+) â Deselected, Number of deselected elements in the repetitive sequence (in [0, inf], optional)
+nth
+(
+int
+) â Selected, Number of selected elements in the repetitive sequence (in [1, inf], optional)
+offset
+(
+int
+) â Offset, Offset from the starting point (in [-inf, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+smooth_normals
+(
+*
+,
+factor
+=
+0.5
+)
+Â¶
+Smooth custom normals based on adjacent vertex normals
+Parameters
+:
+factor
+(
+float
+) â Factor, Specifies weight of smooth vs original normal (in [0, 1], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+solidify
+(
+*
+,
+thickness
+=
+0.01
+)
+Â¶
+Create a solid skin by extruding, compensating for sharp angles
+Parameters
+:
+thickness
+(
+float
+) â Thickness, (in [-10000, 10000], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+sort_elements
+(
+*
+,
+type
+=
+'VIEW_ZAXIS'
+,
+elements
+=
+{'VERT'}
+,
+reverse
+=
+False
+,
+seed
+=
+0
+)
+Â¶
+The order of selected vertices/edges/faces is modified, based on a given method
+Parameters
+:
+type
+(
+Literal
+[
+'VIEW_ZAXIS'
+,
+'VIEW_XAXIS'
+,
+'CURSOR_DISTANCE'
+,
+'MATERIAL'
+,
+'SELECTED'
+,
+'RANDOMIZE'
+,
+'REVERSE'
+]
+) â
+Type, Type of reordering operation to apply (optional)
+VIEW_ZAXIS
+View Z Axis â Sort selected elements from farthest to nearest one in current view.
+VIEW_XAXIS
+View X Axis â Sort selected elements from left to right one in current view.
+CURSOR_DISTANCE
+Cursor Distance â Sort selected elements from nearest to farthest from 3D cursor.
+MATERIAL
+Material â Sort selected faces from smallest to greatest material index.
+SELECTED
+Selected â Move all selected elements in first places, preserving their relative order.
+Warning: This will affect unselected elementsâ indices as well.
+RANDOMIZE
+Randomize â Randomize order of selected elements.
+REVERSE
+Reverse â Reverse current order of selected elements.
+elements
+(
+set
+[
+Literal
+[
+'VERT'
+,
+'EDGE'
+,
+'FACE'
+]
+]
+) â Elements, Which elements to affect (vertices, edges and/or faces) (optional)
+reverse
+(
+bool
+) â Reverse, Reverse the sorting effect (optional)
+seed
+(
+int
+) â Seed, Seed for random-based operations (in [0, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+spin
+(
+*
+,
+steps
+=
+12
+,
+dupli
+=
+False
+,
+angle
+=
+1.5708
+,
+use_auto_merge
+=
+True
+,
+use_normal_flip
+=
+False
+,
+center
+=
+(0.0,
+0.0,
+0.0)
+,
+axis
+=
+(0.0,
+0.0,
+0.0)
+)
+Â¶
+Extrude selected vertices in a circle around the cursor in indicated viewport
+Parameters
+:
+steps
+(
+int
+) â Steps, Steps (in [0, 1000000], optional)
+dupli
+(
+bool
+) â Use Duplicates, (optional)
+angle
+(
+float
+) â Angle, Rotation for each step (in [-inf, inf], optional)
+use_auto_merge
+(
+bool
+) â Auto Merge, Merge first/last when the angle is a full revolution (optional)
+use_normal_flip
+(
+bool
+) â Flip Normals, (optional)
+center
+(
+mathutils.Vector
+) â Center, Center in global view space (array of 3 items, in [-inf, inf], optional)
+axis
+(
+mathutils.Vector
+) â Axis, Axis in global view space (array of 3 items, in [-1, 1], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+split
+(
+)
+Â¶
+Split off selected geometry from connected unselected geometry
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+split_normals
+(
+)
+Â¶
+Split custom normals of selected vertices
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+subdivide
+(
+*
+,
+number_cuts
+=
+1
+,
+smoothness
+=
+0.0
+,
+ngon
+=
+True
+,
+quadcorner
+=
+'STRAIGHT_CUT'
+,
+fractal
+=
+0.0
+,
+fractal_along_normal
+=
+0.0
+,
+seed
+=
+0
+)
+Â¶
+Subdivide selected edges
+Parameters
+:
+number_cuts
+(
+int
+) â Number of Cuts, (in [1, 100], optional)
+smoothness
+(
+float
+) â Smoothness, Smoothness factor (in [0, 1000], optional)
+ngon
+(
+bool
+) â Create N-Gons, When disabled, newly created faces are limited to 3 and 4 sided faces (optional)
+quadcorner
+(
+Literal
+[
+'INNERVERT'
+,
+'PATH'
+,
+'STRAIGHT_CUT'
+,
+'FAN'
+]
+) â Quad Corner Type, How to subdivide quad corners (anything other than Straight Cut will prevent n-gons) (optional)
+fractal
+(
+float
+) â Fractal, Fractal randomness factor (in [0, 1e+06], optional)
+fractal_along_normal
+(
+float
+) â Along Normal, Apply fractal displacement along normal only (in [0, 1], optional)
+seed
+(
+int
+) â Random Seed, Seed for the random number generator (in [0, inf], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+subdivide_edgering
+(
+*
+,
+number_cuts
+=
+10
+,
+interpolation
+=
+'PATH'
+,
+smoothness
+=
+1.0
+,
+profile_shape_factor
+=
+0.0
+,
+profile_shape
+=
+'SMOOTH'
+)
+Â¶
+Subdivide perpendicular edges to the selected edge-ring
+Parameters
+:
+number_cuts
+(
+int
+) â Number of Cuts, (in [0, 1000], optional)
+interpolation
+(
+Literal
+[
+'LINEAR'
+,
+'PATH'
+,
+'SURFACE'
+]
+) â Interpolation, Interpolation method (optional)
+smoothness
+(
+float
+) â Smoothness, Smoothness factor (in [0, 1000], optional)
+profile_shape_factor
+(
+float
+) â Profile Factor, How much intermediary new edges are shrunk/expanded (in [-1000, 1000], optional)
+profile_shape
+(Literal[
+Proportional Falloff Curve Only Items
+]) â Profile Shape, Shape of the profile (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+symmetrize
+(
+*
+,
+direction
+=
+'NEGATIVE_X'
+,
+threshold
+=
+0.0001
+)
+Â¶
+Enforce symmetry (both form and topological) across an axis
+Parameters
+:
+direction
+(Literal[
+Symmetrize Direction Items
+]) â Direction, Which sides to copy from and to (optional)
+threshold
+(
+float
+) â Threshold, Limit for snap middle vertices to the axis center (in [0, 10], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+symmetry_snap
+(
+*
+,
+direction
+=
+'NEGATIVE_X'
+,
+threshold
+=
+0.05
+,
+factor
+=
+0.5
+,
+use_center
+=
+True
+)
+Â¶
+Snap vertex pairs to their mirrored locations
+Parameters
+:
+direction
+(Literal[
+Symmetrize Direction Items
+]) â Direction, Which sides to copy from and to (optional)
+threshold
+(
+float
+) â Threshold, Distance within which matching vertices are searched (in [0, 10], optional)
+factor
+(
+float
+) â Factor, Mix factor of the locations of the vertices (in [0, 1], optional)
+use_center
+(
+bool
+) â Center, Snap middle vertices to the axis center (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+tris_convert_to_quads
+(
+*
+,
+face_threshold
+=
+0.698132
+,
+shape_threshold
+=
+0.698132
+,
+topology_influence
+=
+0.0
+,
+uvs
+=
+False
+,
+vcols
+=
+False
+,
+seam
+=
+False
+,
+sharp
+=
+False
+,
+materials
+=
+False
+,
+deselect_joined
+=
+False
+)
+Â¶
+Merge triangles into four sided polygons where possible
+Parameters
+:
+face_threshold
+(
+float
+) â Max Face Angle, Face angle limit (in [0, 3.14159], optional)
+shape_threshold
+(
+float
+) â Max Shape Angle, Shape angle limit (in [0, 3.14159], optional)
+topology_influence
+(
+float
+) â Topology Influence, How much to prioritize regular grids of quads as well as quads that touch existing quads (in [0, 2], optional)
+uvs
+(
+bool
+) â Compare UVs, (optional)
+vcols
+(
+bool
+) â Compare Color Attributes, (optional)
+seam
+(
+bool
+) â Compare Seam, (optional)
+sharp
+(
+bool
+) â Compare Sharp, (optional)
+materials
+(
+bool
+) â Compare Materials, (optional)
+deselect_joined
+(
+bool
+) â Deselect Joined, Only select remaining triangles that were not merged (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+unsubdivide
+(
+*
+,
+iterations
+=
+2
+)
+Â¶
+Un-subdivide selected edges and faces
+Parameters
+:
+iterations
+(
+int
+) â Iterations, Number of times to un-subdivide (in [1, 1000], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+uv_texture_add
+(
+)
+Â¶
+Add UV map
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+uv_texture_remove
+(
+)
+Â¶
+Remove UV map
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+uvs_reverse
+(
+)
+Â¶
+Flip direction of UV coordinates inside faces
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+uvs_rotate
+(
+*
+,
+use_ccw
+=
+False
+)
+Â¶
+Rotate UV coordinates inside faces
+Parameters
+:
+use_ccw
+(
+bool
+) â Counter Clockwise, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+vert_connect
+(
+)
+Â¶
+Connect selected vertices of faces, splitting the face
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+vert_connect_concave
+(
+)
+Â¶
+Split concave faces by connecting vertices to make them convex
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+vert_connect_nonplanar
+(
+*
+,
+angle_limit
+=
+0.0872665
+)
+Â¶
+Split non-planar faces that exceed the angle threshold
+Parameters
+:
+angle_limit
+(
+float
+) â Max Angle, Angle limit (in [0, 3.14159], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+vert_connect_path
+(
+)
+Â¶
+Connect vertices by their selection order, creating edges, splitting faces
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+vertices_smooth
+(
+*
+,
+factor
+=
+0.0
+,
+repeat
+=
+1
+,
+xaxis
+=
+True
+,
+yaxis
+=
+True
+,
+zaxis
+=
+True
+,
+wait_for_input
+=
+True
+)
+Â¶
+Flatten angles of selected vertices
+Parameters
+:
+factor
+(
+float
+) â Smoothing, Smoothing factor (in [-10, 10], optional)
+repeat
+(
+int
+) â Repeat, Number of times to smooth the mesh (in [1, 1000], optional)
+xaxis
+(
+bool
+) â X-Axis, Smooth along the X axis (optional)
+yaxis
+(
+bool
+) â Y-Axis, Smooth along the Y axis (optional)
+zaxis
+(
+bool
+) â Z-Axis, Smooth along the Z axis (optional)
+wait_for_input
+(
+bool
+) â Wait for Input, (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+vertices_smooth_laplacian
+(
+*
+,
+repeat
+=
+1
+,
+lambda_factor
+=
+1.0
+,
+lambda_border
+=
+5e-05
+,
+use_x
+=
+True
+,
+use_y
+=
+True
+,
+use_z
+=
+True
+,
+preserve_volume
+=
+True
+)
+Â¶
+Laplacian smooth of selected vertices
+Parameters
+:
+repeat
+(
+int
+) â Number of iterations to smooth the mesh, (in [1, 1000], optional)
+lambda_factor
+(
+float
+) â Lambda factor, (in [1e-07, 1000], optional)
+lambda_border
+(
+float
+) â Lambda factor in border, (in [1e-07, 1000], optional)
+use_x
+(
+bool
+) â Smooth X Axis, Smooth object along X axis (optional)
+use_y
+(
+bool
+) â Smooth Y Axis, Smooth object along Y axis (optional)
+use_z
+(
+bool
+) â Smooth Z Axis, Smooth object along Z axis (optional)
+preserve_volume
+(
+bool
+) â Preserve Volume, Apply volume preservation after smooth (optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+bpy.ops.mesh.
+wireframe
+(
+*
+,
+use_boundary
+=
+True
+,
+use_even_offset
+=
+True
+,
+use_relative_offset
+=
+False
+,
+use_replace
+=
+True
+,
+thickness
+=
+0.01
+,
+offset
+=
+0.01
+,
+use_crease
+=
+False
+,
+crease_weight
+=
+0.01
+)
+Â¶
+Create a solid wireframe from faces
+Parameters
+:
+use_boundary
+(
+bool
+) â Boundary, Inset face boundaries (optional)
+use_even_offset
+(
+bool
+) â Offset Even, Scale the offset to give more even thickness (optional)
+use_relative_offset
+(
+bool
+) â Offset Relative, Scale the offset by surrounding geometry (optional)
+use_replace
+(
+bool
+) â Replace, Remove original faces (optional)
+thickness
+(
+float
+) â Thickness, (in [0, 10000], optional)
+offset
+(
+float
+) â Offset, (in [0, 10000], optional)
+use_crease
+(
+bool
+) â Crease, Crease hub edges for an improved subdivision surface (optional)
+crease_weight
+(
+float
+) â Crease Weight, (in [0, 1000], optional)
+Returns
+:
+Result of the operator call.
+Return type
+:
+set[Literal[
+Operator Return Items
+]]
+On this page
+Mesh Operators
+attribute_set()
+average_normals()
+beautify_fill()
+bevel()
+bisect()
+blend_from_shape()
+bridge_edge_loops()
+colors_reverse()
+colors_rotate()
+convex_hull()
+customdata_custom_splitnormals_add()
+customdata_custom_splitnormals_clear()
+customdata_mask_clear()
+customdata_skin_add()
+customdata_skin_clear()
+decimate()
+delete()
+delete_edgeloop()
+delete_loose()
+dissolve_degenerate()
+dissolve_edges()
+dissolve_faces()
+dissolve_limited()
+dissolve_mode()
+dissolve_verts()
+dupli_extrude_cursor()
+duplicate()
+duplicate_move()
+edge_collapse()
+edge_face_add()
+edge_rotate()
+edge_split()
+edgering_select()
+edges_select_sharp()
+extrude_context()
+extrude_context_move()
+extrude_edges_indiv()
+extrude_edges_move()
+extrude_faces_indiv()
+extrude_faces_move()
+extrude_manifold()
+extrude_region()
+extrude_region_move()
+extrude_region_shrink_fatten()
+extrude_repeat()
+extrude_vertices_move()
+extrude_verts_indiv()
+face_make_planar()
+face_split_by_edges()
+faces_select_linked_flat()
+faces_shade_flat()
+faces_shade_smooth()
+fill()
+fill_grid()
+fill_holes()
+flip_normals()
+flip_quad_tessellation()
+hide()
+inset()
+intersect()
+intersect_boolean()
+knife_project()
+knife_tool()
+loop_select()
+loop_to_region()
+loopcut()
+loopcut_slide()
+mark_freestyle_edge()
+mark_freestyle_face()
+mark_seam()
+mark_sharp()
+merge()
+merge_normals()
+mod_weighted_strength()
+normals_make_consistent()
+normals_tools()
+offset_edge_loops()
+offset_edge_loops_slide()
+point_normals()
+poke()
+polybuild_delete_at_cursor()
+polybuild_dissolve_at_cursor()
+polybuild_extrude_at_cursor_move()
+polybuild_face_at_cursor()
+polybuild_face_at_cursor_move()
+polybuild_split_at_cursor()
+polybuild_split_at_cursor_move()
+polybuild_transform_at_cursor()
+polybuild_transform_at_cursor_move()
+primitive_circle_add()
+primitive_cone_add()
+primitive_cube_add()
+primitive_cube_add_gizmo()
+primitive_cylinder_add()
+primitive_grid_add()
+primitive_ico_sphere_add()
+primitive_monkey_add()
+primitive_plane_add()
+primitive_torus_add()
+primitive_uv_sphere_add()
+quads_convert_to_tris()
+region_to_loop()
+remove_doubles()
+reorder_vertices_spatial()
+reveal()
+rip()
+rip_edge()
+rip_edge_move()
+rip_move()
+screw()
+select_all()
+select_axis()
+select_by_attribute()
+select_by_pole_count()
+select_edge_loop_multi()
+select_edge_ring_multi()
+select_face_by_sides()
+select_interior_faces()
+select_less()
+select_linked()
+select_linked_pick()
+select_loose()
+select_mirror()
+select_mode()
+select_more()
+select_next_item()
+select_non_manifold()
+select_nth()
+select_prev_item()
+select_random()
+select_similar()
+select_similar_region()
+select_ungrouped()
+separate()
+set_normals_from_faces()
+set_sharpness_by_angle()
+shape_propagate_to_all()
+shortest_path_pick()
+shortest_path_select()
+smooth_normals()
+solidify()
+sort_elements()
+spin()
+split()
+split_normals()
+subdivide()
+subdivide_edgering()
+symmetrize()
+symmetry_snap()
+tris_convert_to_quads()
+unsubdivide()
+uv_texture_add()
+uv_texture_remove()
+uvs_reverse()
+uvs_rotate()
+vert_connect()
+vert_connect_concave()
+vert_connect_nonplanar()
+vert_connect_path()
+vertices_smooth()
+vertices_smooth_laplacian()
+wireframe()
